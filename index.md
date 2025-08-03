@@ -43,7 +43,7 @@ layout: default
 
 - [GitHub](https://github.com/arslanakra)
 - [LinkedIn](https://www.linkedin.com/in/sqa-arslan-akram/)
-- 📧 [Email Me](mailto:arsalantaqi255@gmail.com)
+- [Email Me](mailto:arsalantaqi255@gmail.com)
 
 ---
 
