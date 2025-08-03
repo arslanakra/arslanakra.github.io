@@ -35,7 +35,7 @@ layout: default
 ---
 ## 📄 Resume
 
-[📥 Download My Resume](/assets/resume/MArslanSQAResume.pdf)
+[📥 Download My Resume](/assets/certificates/MArslanSQAResume.pdf)
 
 ---
 
