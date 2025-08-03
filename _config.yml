@@ -1,7 +1,7 @@
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-title: Muhammad Arslan- SQA Engineer
+title: Muhammad Arslan – SQA Engineer
 description: Experienced Software QA Engineer specializing in manual testing, API testing, and POS systems. Skilled in identifying bugs, improving product quality, and ensuring seamless user experiences across web and mobile applications.
 logo: /assets/certificates/qa_favicon.png
 show_downloads: true 
