@@ -3,6 +3,7 @@ layout: default
 ---
 
 <link rel="icon" href="/assets/qa_favicon.png" type="image/png">
+<title>Muhammad Arslan – SQA Engineer</title>
 
 # Muhammad Arslan Akram – SQA Engineer & Backend Tester
 
