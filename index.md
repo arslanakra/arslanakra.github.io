@@ -100,7 +100,6 @@ I'm open to QA roles, freelance testing, or collaborations. Feel free to connect
 - 📧 Email: [arsalantaqi255@gmail.com](mailto:arsalantaqi255@gmail.com)
 - 🔗 LinkedIn: [linkedin.com/in/sqa-arslan-akram](https://www.linkedin.com/in/sqa-arslan-akram/)
 - 💻 GitHub: [github.com/arslanakra](https://github.com/arslanakra)
-- 📞 Phone: +92-319-4589049
 
 
 ---
