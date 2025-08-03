@@ -26,7 +26,13 @@ layout: default
 - **Check Cashing App QA** – Led testing cycles for a mobile app, reported bugs, and created test scenarios
 
 ---
+## 🏅 Certifications
 
+- ✅ [Six Sigma Yellow Belt – GoLeanSixSigma](/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf)
+- ✅ [Test Case Management – Testworthy](/assets/certificates/TestCaseManagement-MArslanAkram.pdf)
+- ✅ [API Testing – Hands-On Training](/assets/certificates/APITesting-MArslan.pdf)
+
+---
 ## 📄 Resume
 
 [📥 Download My Resume](C:\Users\Admin\Dropbox\Assets\MArslanSQAResume.pdf)
