@@ -89,7 +89,7 @@ Muhammad Nawaz Sharif University of Agriculture, Multan
 
 ## 📄 Resume
 
-<a href="/assets/M_Arslan_SQA_Resume.pdf" download="M_Arslan_SQA_Resume.pdf">📥 Download My Resume</a>
+<a href="/M_Arslan_SQA_Resume.pdf" download="M_Arslan_SQA_Resume.pdf">📥 Download My Resume</a>
 
 ---
 
