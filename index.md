@@ -1,3 +1,5 @@
+<link rel="icon" href="/assets/qa_favicon.png" type="image/png">
+
 ---
 layout: default
 ---
