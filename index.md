@@ -35,7 +35,7 @@ layout: default
 ---
 ## 📄 Resume
 
-[📥 Download My Resume](C:\Users\Admin\Dropbox\Assets\MArslanSQAResume.pdf)
+[📥 Download My Resume](/assets/resume/MArslanSQAResume.pdf)
 
 ---
 
