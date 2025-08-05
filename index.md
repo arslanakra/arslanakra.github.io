@@ -132,10 +132,9 @@ layout: default
 </div>
 
 ---
-
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📜 Certifications</h2>
-  
+
   <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1rem; align-items: start;">
     <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank" style="
       background-color: #4CAF50;
@@ -145,6 +144,9 @@ layout: default
       border-radius: 6px;
       font-weight: bold;
       display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
     ">
       ✅ Six Sigma Yellow Belt – GoLeanSixSigma
     </a>
@@ -157,10 +159,13 @@ layout: default
       border-radius: 6px;
       font-weight: bold;
       display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
     ">
       ✅ Test Case Management – Testworthy
     </a>
-    
+
     <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank" style="
       background-color: #4CAF50;
       color: white;
@@ -169,6 +174,9 @@ layout: default
       border-radius: 6px;
       font-weight: bold;
       display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
     ">
       ✅ API Testing – Hands-On Training
     </a>
