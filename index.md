@@ -159,12 +159,20 @@ layout: default
 
 ---
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>📄 Resume</h2>
-  <p>You can view or download my resume using the link below:</p>
-  <a href="/assets/M_Arslan_SQA_Resume.pdf" target="_blank" style="font-weight: bold;">📥 Download My Resume</a>
+<div style="text-align: center; margin-top: 1.5rem;">
+  <a href="/assets/certificates/M_Arslan_SQA_Resume.pdf" target="_blank" style="
+    background-color: #007ACC;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: inline-block;
+  ">
+    📄 Download My Resume
+  </a>
 </div>
-
 
 ---
 
