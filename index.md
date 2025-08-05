@@ -131,7 +131,6 @@ layout: default
 
 </div>
 
----
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📜 Certifications</h2>
@@ -144,55 +143,20 @@ layout: default
     align-items: center;
     width: 100%;
   ">
-    <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank" style="
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      box-sizing: border-box;
-    ">
+    <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
       ✅ Six Sigma Yellow Belt – GoLeanSixSigma
     </a>
-
-    <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank" style="
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      box-sizing: border-box;
-    ">
+    -
+    <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
       ✅ Test Case Management – Testworthy
     </a>
-
-    <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank" style="
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      box-sizing: border-box;
-    ">
+-
+    <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
       ✅ API Testing – Hands-On Training
     </a>
   </div>
 </div>
 
-
----
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🎓 Education</h2>
