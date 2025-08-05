@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<link rel="icon" href="/assets/qa_favicon.png" type="image/png">
+<link rel="icon" href="/assets/Mylogo.jpg" type="image/png">
 <title>Muhammad Arslan – QA Engineer</title>
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
