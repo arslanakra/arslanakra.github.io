@@ -132,10 +132,18 @@ layout: default
 </div>
 
 ---
+
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📜 Certifications</h2>
 
-  <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1rem; align-items: start;">
+  <div style="
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1rem;
+    align-items: center;
+    width: 100%;
+  ">
     <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank" style="
       background-color: #4CAF50;
       color: white;
@@ -143,10 +151,10 @@ layout: default
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      display: inline-block;
-      width: 100%;
+      width: 90%;
       max-width: 400px;
       text-align: center;
+      box-sizing: border-box;
     ">
       ✅ Six Sigma Yellow Belt – GoLeanSixSigma
     </a>
@@ -158,10 +166,10 @@ layout: default
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      display: inline-block;
-      width: 100%;
+      width: 90%;
       max-width: 400px;
       text-align: center;
+      box-sizing: border-box;
     ">
       ✅ Test Case Management – Testworthy
     </a>
@@ -173,15 +181,16 @@ layout: default
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      display: inline-block;
-      width: 100%;
+      width: 90%;
       max-width: 400px;
       text-align: center;
+      box-sizing: border-box;
     ">
       ✅ API Testing – Hands-On Training
     </a>
   </div>
 </div>
+
 
 ---
 
