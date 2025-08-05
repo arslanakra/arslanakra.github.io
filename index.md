@@ -1,11 +1,9 @@
----
+  ---
 layout: default
 ---
 
-<head>
-  <link rel="icon" href="/assets/qa_favicon.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/assets/qa_favicon.png">
-</head>
+<link rel="icon" href="/assets/qa_favicon.png" type="image/png">
+<title>Muhammad Arslan – QA Engineer</title>
 
 # Muhammad Arslan – QA Engineer & Backend Tester
 ...
