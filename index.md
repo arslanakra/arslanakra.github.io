@@ -83,6 +83,17 @@ Experienced SQA Engineer with 2+ years of expertise in identifying and resolving
       <li>Tested TestFlight builds and assisted in minimizing production issues</li>
       <li>Created test cases and simulated edge-case crash scenarios</li>
     </ul>
+    
+  </div>
+    <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+    <h3>📱 Salarium – Mobile Payroll App</h3>
+    <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
+    <ul>
+      <li>Created wireframes and collaborated with designers for improved UX</li>
+      <li>Managed full QA lifecycle: functional, regression, backend, and API testing</li>
+      <li>Tested TestFlight app builds and reduced pre-launch bug ratio</li>
+      <li>Proactively monitored crash logs and built test cases for fast resolution</li>
+    </ul>
   </div>
 
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
@@ -93,17 +104,6 @@ Experienced SQA Engineer with 2+ years of expertise in identifying and resolving
       <li>Regression tested UI on POS touch displays and tablets</li>
       <li>Collaborated with developers and reviewed backend error logs</li>
       <li>Designed targeted tests based on crash logs and user feedback</li>
-    </ul>
-  </div>
-
-  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-    <h3>📱 Salarium – Mobile Payroll App</h3>
-    <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
-    <ul>
-      <li>Created wireframes and collaborated with designers for improved UX</li>
-      <li>Managed full QA lifecycle: functional, regression, backend, and API testing</li>
-      <li>Tested TestFlight app builds and reduced pre-launch bug ratio</li>
-      <li>Proactively monitored crash logs and built test cases for fast resolution</li>
     </ul>
   </div>
 
