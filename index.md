@@ -146,11 +146,9 @@ layout: default
     <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
       ✅ Six Sigma Yellow Belt – GoLeanSixSigma
     </a>
-    -
     <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
       ✅ Test Case Management – Testworthy
     </a>
--
     <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
       ✅ API Testing – Hands-On Training
     </a>
