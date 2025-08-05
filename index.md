@@ -165,7 +165,7 @@ layout: default
     You can download my latest resume in PDF format using the button below:
   </p>
   <div style="text-align: center;">
-    <a href="/assets/certificates/M_Arslan_SQA_Resume.pdf" target="_blank" style="
+    <a href="/assets/M_Arslan_SQA_Resume.pdf" target="_blank" style="
       background-color: #007ACC;
       color: white;
       padding: 12px 24px;
