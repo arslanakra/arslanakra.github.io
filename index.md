@@ -159,20 +159,27 @@ layout: default
 
 ---
 
-<div style="text-align: center; margin-top: 1.5rem;">
-  <a href="/assets/certificates/M_Arslan_SQA_Resume.pdf" target="_blank" style="
-    background-color: #007ACC;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: inline-block;
-  ">
-    📄 Download My Resume
-  </a>
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
+  <h2>📎 Resume</h2>
+  <p style="margin-bottom: 1rem;">
+    You can download my latest resume in PDF format using the button below:
+  </p>
+  <div style="text-align: center;">
+    <a href="/assets/certificates/M_Arslan_SQA_Resume.pdf" target="_blank" style="
+      background-color: #007ACC;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: inline-block;
+    ">
+      📄 Download My Resume
+    </a>
+  </div>
 </div>
+
 
 ---
 
