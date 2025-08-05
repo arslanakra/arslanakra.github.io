@@ -49,7 +49,7 @@ layout: default
   <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
   <p><strong>Aug 2024 – Present</strong></p>
   <ul>
-    <li>Performed functional, regression, UI/UX, and API testing across banking and mobile platforms</li>
+    <li>Performed functional, regression, UI/UX, and API testing across web and mobile platforms</li>
     <li>Validated backend APIs with Postman; load tested endpoints using JMeter</li>
     <li>Reviewed error logs and created high-priority test scenarios to catch issues early</li>
     <li>Tested and validated TestFlight builds for mobile apps before production releases</li>
