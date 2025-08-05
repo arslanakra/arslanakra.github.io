@@ -5,44 +5,71 @@ layout: default
 <link rel="icon" href="/assets/qa_favicon.png" type="image/png">
 <title>Muhammad Arslan – SQA Engineer</title>
 
-# Muhammad Arslan Akram – SQA Engineer & Backend Tester
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+  <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
+    Muhammad Arslan Akram – QA Engineer
+  </h1>
+  <p style="font-size: 1.1rem; color: #555;">
+    Web, Mobile & Backend Testing
+  </p>
+</div>
+
 
 ---
 
-## 🔍 Summary
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>🔍 Summary</h2>
+  <p>
+    I'm a detail-oriented <strong>Software QA Engineer</strong> with 2+ years of experience in delivering quality across web and mobile platforms. I specialize in <strong>manual testing, API testing, regression cycles, and backend validation</strong> using tools like Postman, JMeter, and SQL.
+  </p>
+  <p>
+    Proven success in domains such as <strong>Banking, Restaurant POS, Hotel Management, and Check Cashing</strong>. I’ve collaborated with cross-functional teams, reviewed logs to create high-priority scenarios, and played a key role in reducing production bugs and improving user experience.
+  </p>
+</div>
 
-Experienced SQA Engineer with 2+ years of expertise in identifying and resolving defects, optimizing processes, and ensuring timely project delivery. Proven track record in the Banking, Restaurant POS, Hotel Management, and Check Cashing domains. Skilled in both frontend and backend QA, documentation, and collaborative development environments.
-
----
-
-## 🧪 Skills
-
-- **Testing Expertise:** Functional, Non-Functional, API (Postman), Regression, Localization, Database Testing, Scripting
-- **Tools:** JMeter, Postman, Browser Dev Tools, Jira, Git, SQL, GitHub, BrowserStack, Figma
-- **Documentation:** QA Test Reports, Test Cases, Test Plans, Error Logs, Feedback Reports, Closure Reports
-- **Project Management:** SDLC, STLC, Requirement Analysis, Test Strategy, Agile/Scrum Collaboration
-- **Soft Skills:** Time Management, Communication, Problem Solving, Pressure Handling, Attention to Detail
 
 ---
 
-## 📁 Work Experience
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>🧪 Skills</h2>
+  <ul>
+    <li>Manual Testing – Web, Mobile, and POS Systems</li>
+    <li>API Testing – Postman</li>
+    <li>Functional, Regression, and UI/UX Testing</li>
+    <li>Database Testing – SQL Queries & Validation</li>
+    <li>Error Log Analysis & Scenario Creation</li>
+    <li>Test Documentation – Test Cases, Reports, Logs</li>
+    <li>Tools: Jira, Git, JMeter, Figma, Testworthy</li>
+  </ul>
+</div>
 
-### 🔸 Green Fin Technologies — *SQA Engineer*  
-**Aug 2024 – Present**
+---
 
-- Performed functional, regression, and API testing on banking & mobile apps  
-- Used Postman for API validations; JMeter for performance testing  
-- Executed database queries, backend validations, and integration testing  
-- Debugged using dev tools; collaborated on UAT & developer troubleshooting  
-- Produced reports, test plans, and shared updates with stakeholders
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>💼 Work Experience</h2>
 
-### 🔸 Software Technologies — *SQA Engineer*  
-**Sep 2022 – July 2024**
+  <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
+  <p><strong>Aug 2024 – Present</strong></p>
+  <ul>
+    <li>Performed functional, regression, UI/UX, and API testing across banking and mobile platforms</li>
+    <li>Validated backend APIs with Postman; load tested endpoints using JMeter</li>
+    <li>Reviewed error logs and created high-priority test scenarios to catch issues early</li>
+    <li>Tested and validated TestFlight builds for mobile apps before production releases</li>
+    <li>Reduced bug ratio by proactively resolving recurring errors and improving QA coverage</li>
+    <li>Collaborated with developers, designers, and product managers during UAT cycles</li>
+    <li>Produced QA reports, wrote test plans, and shared progress with stakeholders</li>
+  </ul>
 
-- Led QA for a multi-restaurant POS system (Pistachio)  
-- Created test cases, test plans, and conducted full E2E testing  
-- Validated hotel management system operations  
-- Managed testing cycles using Jira, with clear documentation & reporting
+  <h3>🔸 Software Technologies — <em>SQA Engineer</em></h3>
+  <p><strong>Sep 2022 – Jul 2024</strong></p>
+  <ul>
+    <li>Led QA for a multi-restaurant POS system (Pistachio) and handled hotel management app QA</li>
+    <li>Created detailed test cases, resolution reports, and executed complete E2E testing</li>
+    <li>Performed regression testing and documented bugs in Jira with clear reproduction steps</li>
+    <li>Collaborated across UI/UX, frontend, and backend teams for quality assurance</li>
+    <li>Contributed to improving QA processes through better documentation and error tracking</li>
+  </ul>
+</div>
 
 ---
 
@@ -111,38 +138,53 @@ Experienced SQA Engineer with 2+ years of expertise in identifying and resolving
 
 ---
 
-## 🏅 Certifications
-
-- ✅ [Six Sigma Yellow Belt – VMedu](/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf)  
-- ✅ [Test Case Management – Testworthy](/assets/certificates/TestCaseManagement-MArslanAkram.pdf)  
-- ✅ [API Testing – Hands-On Training](/assets/certificates/APITesting-MArslan.pdf)
-
----
-
-## 🎓 Education
-
-**BS in Information Technology**  
-Muhammad Nawaz Sharif University of Agriculture, Multan  
-*Major in Software Engineering, Android Development, and DBMS*  
-📅 *Aug 2018 – July 2022*
-
----
-
-## 📄 Resume
-
-<a href="/M_Arslan_SQA_Resume.pdf" download="M_Arslan_SQA_Resume.pdf">📥 Download My Resume</a>
-
----
-
-## 📬 Contact
-
-I'm open to QA roles, freelance testing, or collaborations. Feel free to connect:
-
-- 📧 Email: [arsalantaqi255@gmail.com](mailto:arsalantaqi255@gmail.com)
-- 🔗 LinkedIn: [linkedin.com/in/sqa-arslan-akram](https://www.linkedin.com/in/sqa-arslan-akram/)
-- 💻 GitHub: [github.com/arslanakra](https://github.com/arslanakra)
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>🏅 Certifications</h2>
+  <ul>
+    <li>✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a></li>
+    <li>✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a></li>
+    <li>✅ <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank">API Testing – Hands-On Training</a></li>
+  </ul>
+</div>
 
 
 ---
 
-Thanks for visiting my portfolio! 👋
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>🎓 Education</h2>
+
+  <h3>BS in Information Technology</h3>
+  <p><strong>Muhammad Nawaz Sharif University of Agriculture, Multan</strong></p>
+  <p><em>Aug 2018 – Jul 2022</em></p>
+  <ul>
+    <li>Major Focus: Software Engineering, Android Development, and DBMS</li>
+    <li>Graduated with strong academic foundation in software quality and system design</li>
+  </ul>
+</div>
+
+---
+
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>📄 Resume</h2>
+  <p>You can view or download my resume using the link below:</p>
+  <a href="/assets/M_Arslan_SQA_Resume.pdf" target="_blank" style="font-weight: bold;">📥 Download My Resume</a>
+</div>
+
+
+---
+
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>🔗 Connect with Me</h2>
+  <ul>
+    <li><a href="https://github.com/arslanakra" target="_blank">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/sqa-arslan-akram/" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:arsalantaqi255@gmail.com">Email Me</a></li>
+  </ul>
+</div>
+
+
+---
+
+<div style="text-align: center; margin-top: 2rem; font-style: italic;">
+  Thanks for visiting my portfolio! I'm open to QA roles, freelance projects, and great conversations. 😊
+</div>
