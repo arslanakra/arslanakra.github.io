@@ -7,7 +7,7 @@ layout: default
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
-    Muhammad Arslan Akram – QA Engineer
+    Muhammad Arslan Akram – SQA Engineer
   </h1>
   <p style="font-size: 1.1rem; color: #555;">
     Web, Mobile & Backend Testing
@@ -20,18 +20,16 @@ layout: default
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔍 Summary</h2>
   <p>
-    I'm a detail-oriented <strong>Software QA Engineer</strong> with 2+ years of experience in delivering quality across web and mobile platforms. I specialize in <strong>manual testing, API testing, regression cycles, and backend validation</strong> using tools like Postman, JMeter, and SQL.
-  </p>
-  <p>
-    Proven success in domains such as <strong>Banking, Restaurant POS, Hotel Management, and Check Cashing</strong>. I’ve collaborated with cross-functional teams, reviewed logs to create high-priority scenarios, and played a key role in reducing production bugs and improving user experience.
+    I'm a detail-oriented <strong>Software QA Engineer</strong> with 2+ years of experience in delivering quality across web and mobile platforms. I specialize in <strong>manual testing, API testing, regression cycles, and backend validation</strong> using tools like Postman, JMeter, and SQL. Proven success in domains such as <strong>Banking, Restaurant POS, Hotel Management, and Check Cashing</strong>. I’ve collaborated with cross-functional teams, reviewed logs to create high-priority scenarios, and played a key role in reducing production bugs and improving user experience.
   </p>
 </div>
+
 
 
 ---
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>🧪 Skills</h2>
+  <h2>✅ Skills</h2>
   <ul>
     <li>Manual Testing – Web, Mobile, and POS Systems</li>
     <li>API Testing – Postman</li>
