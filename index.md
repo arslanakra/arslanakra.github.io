@@ -1,13 +1,9 @@
-  ---
+---
 layout: default
+title: Muhammad Arslan – QA Engineer
 ---
 
-<link rel="icon" href="/assets/qa_favicon.png" type="image/png">
-<title>Muhammad Arslan – QA Engineer</title>
-
-# Muhammad Arslan – QA Engineer & Backend Tester
-...
-
+<!-- The favicon is handled in _includes/head.html -->
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
