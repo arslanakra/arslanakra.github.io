@@ -112,9 +112,8 @@ title: Muhammad Arslan – QA Engineer
     </ul>
   </div>
   
-  <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 1rem;">🗂️ QA Artifacts</h2>
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
-  
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
+  <h2>🗂️ QA Artifacts</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
     <a href="/assets/documentation/Test Cases Automation Playground CRM.pdf" target="_blank" style="
       background-color: #007ACC;
@@ -171,7 +170,6 @@ title: Muhammad Arslan – QA Engineer
     </a>
   </div>
 </div>
-
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🎓 Education</h2>
