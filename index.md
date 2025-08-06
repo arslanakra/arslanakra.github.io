@@ -215,11 +215,6 @@ title: Muhammad Arslan – QA Engineer
     </a>
   </div>
 </div>
-<p style="text-align: center; margin-top: 2rem;">
-  <a href="[https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/](https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/)" target="_blank" style="font-weight: bold; text-decoration: none;">
-    👉 View More Recommendations on LinkedIn
-  </a>
-</p>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔗 Connect with Me</h2>
@@ -229,6 +224,22 @@ title: Muhammad Arslan – QA Engineer
     <li><a href="mailto:arsalantaqi255@gmail.com">Email Me</a></li>
   </ul>
 </div>
+<h2 style="text-align: center; font-size: 1.5rem; margin-top: 3rem;">🌟 LinkedIn Recommendations</h2>
+
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 1rem; background-color: #f9f9f9;">
+  <p style="font-style: italic; font-size: 1rem; color: #444;">
+    "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
+  </p>
+  <p style="text-align: right; font-weight: bold; margin-top: 1rem;">
+    Asim Junaid — |.Net Developer| Asp.Net Core|ASP.Net MVC|
+  </p>
+</div>
+
+<p style="text-align: center; margin-top: 1.5rem;">
+  <a href="https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/" target="_blank" style="font-weight: bold; text-decoration: none; color: #007ACC;">
+    👉 View more on LinkedIn
+  </a>
+</p>
 
 <div style="text-align: center; margin-top: 2rem; font-style: italic;">
   Thanks for visiting my portfolio! I'm open to QA roles, freelance projects, and great conversations. 😊
