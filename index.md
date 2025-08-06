@@ -215,6 +215,11 @@ title: Muhammad Arslan – QA Engineer
     </a>
   </div>
 </div>
+<p style="text-align: center; margin-top: 2rem;">
+  <a href="[https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/](https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/)" target="_blank" style="font-weight: bold; text-decoration: none;">
+    👉 View More Recommendations on LinkedIn
+  </a>
+</p>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔗 Connect with Me</h2>
