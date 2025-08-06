@@ -15,7 +15,7 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h3>🔎 Summary</h3>
+  <h2>🔎 Summary</h2>
   <p>
     I'm a detail-oriented <strong>Software QA Engineer</strong> with 2+ years of experience in delivering quality across web and mobile platforms. I specialize in <strong>manual testing, API testing, regression cycles, backend validation</strong>, and scenario design using tools like Postman, JMeter, and SQL. Proven success in testing <strong>financial applications</strong>, <strong>chat-based communication apps</strong>, <strong>mobile payroll systems</strong>, and <strong>check cashing platforms</strong>. I've consistently collaborated with cross-functional teams, validated error logs to create high-priority test cases, and helped reduce production bug rates — with additional hands-on experience in <strong>Restaurant POS systems</strong>.
   </p>
@@ -23,7 +23,7 @@ title: Muhammad Arslan – QA Engineer
 
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h3>✅ Skills</h3>
+  <h2>✅ Skills</h2>
   <ul>
     <li>Manual Testing – Web, Mobile, and POS Systems</li>
     <li>API Testing – Postman</li>
@@ -36,9 +36,9 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h3>💼 Work Experience</h3>
+  <h2>💼 Work Experience</h2>
 
-  <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
+  <h2>🔸 Green Fin Technologies — <em>SQA Engineer</em></h2>
   <p><strong>Aug 2024 – Present</strong></p>
   <ul>
     <li>Performed functional, regression, UI/UX, and API testing across web and mobile platforms</li>
@@ -50,7 +50,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Produced QA reports, wrote test plans, and shared progress with stakeholders</li>
   </ul>
 
-  <h3>🔸 Software Technologies — <em>SQA Engineer</em></h3>
+  <h2>🔸 Software Technologies — <em>SQA Engineer</em></h2>
   <p><strong>Sep 2022 – Jul 2024</strong></p>
   <ul>
     <li>Led QA for a multi-restaurant POS system (Pistachio) and handled hotel management app QA</li>
@@ -65,7 +65,7 @@ title: Muhammad Arslan – QA Engineer
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
 
-  <h3>💬 Chat App QA – Web & Mobile</h3>
+  <h2>💬 Chat App QA – Web & Mobile</h2>
   <p>End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
   <ul>
     <li>Performed manual testing on both web and mobile clients</li>
@@ -75,7 +75,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Tested TestFlight builds and reduced post-release bug count</li>
   </ul>
 
-  <h3>💼 Check Cashing Web App + Back Office</h3>
+  <h2>💼 Check Cashing Web App + Back Office</h2>
   <p>Worked on both the customer-facing platform and its Back Office for accounts & approval handling.</p>
   <ul>
     <li>Tested modules like approvals, user permissions, and reporting</li>
@@ -85,7 +85,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Regularly analyzed error logs and helped resolve issues early in the cycle</li>
   </ul>
 
-  <h3>📱 Check Cashing Mobile App</h3>
+  <h2>📱 Check Cashing Mobile App</h2>
   <p>Led QA efforts on the mobile version of a check cashing app built for real-time financial transactions.</p>
   <ul>
     <li>Tested transaction, KYC flow, receipt, and history modules</li>
@@ -94,7 +94,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Created test cases and simulated edge-case crash scenarios</li>
   </ul>
 
-  <h3>📱 Salarium – Mobile Payroll App</h3>
+  <h2>📱 Salarium – Mobile Payroll App</h2>
   <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
   <ul>
     <li>Created wireframes and collaborated with designers for improved UX</li>
@@ -107,8 +107,8 @@ title: Muhammad Arslan – QA Engineer
 
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h3>🗂️ QA Artifacts</h3>
-  <h3 style="margin-bottom: 1rem;">📄 Documents</h3>
+  <h2>🗂️ QA Artifacts</h2>
+  <h2 style="margin-bottom: 1rem;">📄 Documents</h2>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
       📎 
@@ -124,7 +124,7 @@ title: Muhammad Arslan – QA Engineer
     </li>
   </ul>
 
-  <h3 style="margin-top: 2rem; margin-bottom: 1rem;">🖼️ Screenshots</h3>
+  <h2 style="margin-top: 2rem; margin-bottom: 1rem;">🖼️ Screenshots</h2>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
       📸 
@@ -153,10 +153,10 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h3>📚 Profile Highlights</h3>
+  <h2>📚 Profile Highlights</h2>
   <!-- Certifications -->
   <div style="margin-bottom: 1.5rem;">
-    <h3>🏅 Certifications</h3>
+    <h2>🏅 Certifications</h2>
     <ul style="list-style: none; padding-left: 0;">
       <li>✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a></li>
       <li>✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a></li>
@@ -171,7 +171,7 @@ title: Muhammad Arslan – QA Engineer
 
   <!-- Resume -->
   <div>
- <h3>📄 Resume</h3>
+ <h2>📄 Resume</h2>
 <p style="font-size: 1rem; line-height: 1.6;">
 You can <a href="M_Arslan_SQA_Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
 download my latest resume
@@ -180,7 +180,7 @@ download my latest resume
 </div>
   <!-- Education -->
   <div>
-    <h3>🎓 Education</h3>
+    <h2>🎓 Education</h2>
     <p><strong>BS in Information Technology</strong><br>
     Muhammad Nawaz Sharif University of Agriculture, Multan<br>
     <em>Major in Software Engineering, Android Development, and DBMS</em><br>
@@ -189,7 +189,7 @@ download my latest resume
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h3>🔗 Connect with Me</h3>
+  <h2>🔗 Connect with Me</h2>
   <ul>
     <li><a href="https://github.com/arslanakra" target="_blank">GitHub</a></li>
     <li><a href="https://www.linkedin.com/in/sqa-arslan-akram/" target="_blank">LinkedIn</a></li>
@@ -197,7 +197,7 @@ download my latest resume
   </ul>
 </div>
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h3>🌟 LinkedIn Recommendations</h3>
+  <h2>🌟 LinkedIn Recommendations</h2>
   <p style="font-style: italic; font-size: 1rem; color: #444;">
     "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
   </p>
