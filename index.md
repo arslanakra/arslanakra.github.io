@@ -224,17 +224,15 @@ title: Muhammad Arslan – QA Engineer
     <li><a href="mailto:arsalantaqi255@gmail.com">Email Me</a></li>
   </ul>
 </div>
-<h2 style="text-align: center; font-size: 1.5rem; margin-top: 3rem;">🌟 LinkedIn Recommendations</h2>
-
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 1rem; background-color: #f9f9f9;">
+  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <h2>🌟 LinkedIn Recommendations</h2>
   <p style="font-style: italic; font-size: 1rem; color: #444;">
     "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
   </p>
   <p style="text-align: right; font-weight: bold; margin-top: 1rem;">
-    Asim Junaid — |.Net Developer| Asp.Net Core|ASP.Net MVC|
+    Asim Junaid — |.Net Developer| Asp.Net Core|ASP.Net MVC| 
   </p>
 </div>
-
 <p style="text-align: center; margin-top: 1.5rem;">
   <a href="https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/" target="_blank" style="font-weight: bold; text-decoration: none; color: #007ACC;">
     👉 View more on LinkedIn
