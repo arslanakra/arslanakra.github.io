@@ -118,13 +118,10 @@ title: Muhammad Arslan – QA Engineer
     </ul>
   </div>
 
-</div>
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2 style="margin-bottom: 1rem;">📎 QA Artifacts</h2>
-  <p style="margin-bottom: 1rem;">
-    Explore real-world examples of my QA documentation and structured testing approach.
-  </p>
-  <div style="text-align: center;">
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+  <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 1rem;">🗂️ QA Artifacts</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
     <a href="/assets/documentation/Test Cases Automation Playground CRM.pdf" target="_blank" style="
       background-color: #007ACC;
       color: white;
@@ -134,11 +131,28 @@ title: Muhammad Arslan – QA Engineer
       font-weight: bold;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       display: inline-block;
+      width: 260px;
+      text-align: center;
     ">
-      📝 Download Test Cases (PDF)
+      📋 Playground CRM – Test Case
+    </a>
+    <a href="/assets/documentation/Login_Bypass_Report_Bug_001.pdf" target="_blank" style="
+      background-color: #DC3545;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: inline-block;
+      width: 260px;
+      text-align: center;
+    ">
+      🐞 Login Bypass – Bug Report
     </a>
   </div>
 </div>
+
 
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
