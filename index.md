@@ -232,13 +232,12 @@ title: Muhammad Arslan – QA Engineer
   <p style="text-align: right; font-weight: bold; margin-top: 1rem;">
     Asim Junaid — |.Net Developer| Asp.Net Core|ASP.Net MVC| 
   </p>
-</div>
-<p style="text-align: center; margin-top: 1.5rem;">
+    <p style="text-align: center; margin-top: 1.5rem;">
   <a href="https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/" target="_blank" style="font-weight: bold; text-decoration: none; color: #007ACC;">
     👉 View more on LinkedIn
   </a>
 </p>
-
+</div>
 <div style="text-align: center; margin-top: 2rem; font-style: italic;">
   Thanks for visiting my portfolio! I'm open to QA roles, freelance projects, and great conversations. 😊
 </div>
