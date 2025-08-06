@@ -96,7 +96,6 @@ title: Muhammad Arslan – QA Engineer
       <li>Tested TestFlight builds and assisted in minimizing production issues</li>
       <li>Created test cases and simulated edge-case crash scenarios</li>
     </ul>
-    
     <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
     <h3>📱 Salarium – Mobile Payroll App</h3>
     <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
