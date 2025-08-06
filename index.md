@@ -63,55 +63,48 @@ title: Muhammad Arslan – QA Engineer
 
 ## 🚀 Projects
 
-<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
 
-  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-    <h3>💬 Chat App QA – Web & Mobile</h3>
-    <p>End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
-    <ul>
-      <li>Performed manual testing on both web and mobile clients</li>
-      <li>Reviewed frontend codebase and validated socket responses</li>
-      <li>Tested API endpoints and ensured message sync across devices</li>
-      <li>Analyzed error logs to identify bugs and created targeted test scenarios</li>
-      <li>Tested TestFlight builds and reduced post-release bug count</li>
-    </ul>
-  </div>
+  <h3>💬 Chat App QA – Web & Mobile</h3>
+  <p>End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
+  <ul>
+    <li>Performed manual testing on both web and mobile clients</li>
+    <li>Reviewed frontend codebase and validated socket responses</li>
+    <li>Tested API endpoints and ensured message sync across devices</li>
+    <li>Analyzed error logs to identify bugs and created targeted test scenarios</li>
+    <li>Tested TestFlight builds and reduced post-release bug count</li>
+  </ul>
 
-  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-    <h3>💼 Check Cashing Web App + Back Office</h3>
-    <p>Worked on both the customer-facing platform and its Back Office for accounts & approval handling.</p>
-    <ul>
-      <li>Tested modules like approvals, user permissions, and reporting</li>
-      <li>Created test cases, resolution reports, and QA documentation</li>
-      <li>Performed regression testing during critical rollouts</li>
-      <li>Reduced bug ratio by 30% through preemptive scenario writing</li>
-      <li>Regularly analyzed error logs and helped resolve issues early in the cycle</li>
-    </ul>
-  </div>
+  <h3>💼 Check Cashing Web App + Back Office</h3>
+  <p>Worked on both the customer-facing platform and its Back Office for accounts & approval handling.</p>
+  <ul>
+    <li>Tested modules like approvals, user permissions, and reporting</li>
+    <li>Created test cases, resolution reports, and QA documentation</li>
+    <li>Performed regression testing during critical rollouts</li>
+    <li>Reduced bug ratio by 30% through preemptive scenario writing</li>
+    <li>Regularly analyzed error logs and helped resolve issues early in the cycle</li>
+  </ul>
 
-  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-    <h3>📱 Check Cashing Mobile App</h3>
-    <p>Led QA efforts on the mobile version of a check cashing app built for real-time financial transactions.</p>
-    <ul>
-      <li>Tested transaction, KYC flow, receipt, and history modules</li>
-      <li>Performed API testing via Postman and backend data validation</li>
-      <li>Tested TestFlight builds and assisted in minimizing production issues</li>
-      <li>Created test cases and simulated edge-case crash scenarios</li>
-    </ul>
-  </div>
+  <h3>📱 Check Cashing Mobile App</h3>
+  <p>Led QA efforts on the mobile version of a check cashing app built for real-time financial transactions.</p>
+  <ul>
+    <li>Tested transaction, KYC flow, receipt, and history modules</li>
+    <li>Performed API testing via Postman and backend data validation</li>
+    <li>Tested TestFlight builds and assisted in minimizing production issues</li>
+    <li>Created test cases and simulated edge-case crash scenarios</li>
+  </ul>
 
-  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-    <h3>📱 Salarium – Mobile Payroll App</h3>
-    <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
-    <ul>
-      <li>Created wireframes and collaborated with designers for improved UX</li>
-      <li>Managed full QA lifecycle: functional, regression, backend, and API testing</li>
-      <li>Tested TestFlight app builds and reduced pre-launch bug ratio</li>
-      <li>Proactively monitored crash logs and built test cases for fast resolution</li>
-    </ul>
-  </div>
+  <h3>📱 Salarium – Mobile Payroll App</h3>
+  <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
+  <ul>
+    <li>Created wireframes and collaborated with designers for improved UX</li>
+    <li>Managed full QA lifecycle: functional, regression, backend, and API testing</li>
+    <li>Tested TestFlight app builds and reduced pre-launch bug ratio</li>
+    <li>Proactively monitored crash logs and built test cases for fast resolution</li>
+  </ul>
 
 </div>
+
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🗂️ QA Artifacts</h2>
