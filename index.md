@@ -156,41 +156,45 @@ title: Muhammad Arslan – QA Engineer
       </a>
     </li>
   </ul>
-
 </div>
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-<h2>🏅 Certifications</h2>
-<ul style="padding-left: 1.2rem; line-height: 1.8;">
-  <li>
-    ✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a>
-  </li>
-  <li>
-    ✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a>
-  </li>
-  <li>
-    ✅ <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank">API Testing – Hands-On Training</a>
-  </li>
-</ul>
-</div>
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>🎓 Education</h2>
-  <h3>BS in Information Technology</h3>
-  <p><strong>Muhammad Nawaz Sharif University of Agriculture, Multan</strong></p>
-  <p><em>Aug 2018 – Jul 2022</em></p>
-  <ul>
-    <li>Major Focus: Software Engineering, Android Development, and DBMS</li>
-    <li>Graduated with strong academic foundation in software quality and system design</li>
-  </ul>
-</div>
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; margin-bottom: 2rem;">
+  <h2 style="text-align: center; margin-bottom: 1.5rem;">📚 Profile Highlights</h2>
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-<h2>📄 Resume</h2>
-<p style="font-size: 1rem; line-height: 1.6;">
-👉here you can <a href="M_Arslan_SQA_Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
-download my latest resume
-</a> in PDF format.
-</p>
+  <!-- Certifications -->
+  <div style="margin-bottom: 1.5rem;">
+    <h3>🏅 Certifications</h3>
+    <ul style="list-style: none; padding-left: 0;">
+      <li>✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a></li>
+      <li>✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a></li>
+      <li>✅ <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank">API Testing – Hands-On Training</a></li>
+    </ul>
+  </div>
+  
+  <!-- Resume -->
+  <div style="margin-bottom: 1.5rem;">
+    <h3>📄 Resume</h3>
+    <p>You can download my latest resume here:</p>
+    <a href="/assets/documentation/M_Arslan_SQA_Resume.pdf" target="_blank" style="
+      background-color: #007ACC;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: inline-block;
+    ">Download Resume</a>
+  </div>
+  
+  <!-- Education -->
+  <div>
+    <h3>🎓 Education</h3>
+    <p><strong>BS in Information Technology</strong><br>
+    Muhammad Nawaz Sharif University of Agriculture, Multan<br>
+    <em>Major in Software Engineering, Android Development, and DBMS</em><br>
+    📅 <em>Aug 2018 – July 2022</em></p>
+  </div>
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
