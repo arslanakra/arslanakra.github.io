@@ -64,6 +64,7 @@ title: Muhammad Arslan – QA Engineer
 ## 🚀 Projects
 
 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
     <h3>💬 Chat App QA – Web & Mobile</h3>
     <p>End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
@@ -74,6 +75,7 @@ title: Muhammad Arslan – QA Engineer
       <li>Analyzed error logs to identify bugs and created targeted test scenarios</li>
       <li>Tested TestFlight builds and reduced post-release bug count</li>
     </ul>
+  </div>
 
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
     <h3>💼 Check Cashing Web App + Back Office</h3>
@@ -85,7 +87,8 @@ title: Muhammad Arslan – QA Engineer
       <li>Reduced bug ratio by 30% through preemptive scenario writing</li>
       <li>Regularly analyzed error logs and helped resolve issues early in the cycle</li>
     </ul>
-    
+  </div>
+
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
     <h3>📱 Check Cashing Mobile App</h3>
     <p>Led QA efforts on the mobile version of a check cashing app built for real-time financial transactions.</p>
@@ -95,7 +98,9 @@ title: Muhammad Arslan – QA Engineer
       <li>Tested TestFlight builds and assisted in minimizing production issues</li>
       <li>Created test cases and simulated edge-case crash scenarios</li>
     </ul>
-    <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  </div>
+
+  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
     <h3>📱 Salarium – Mobile Payroll App</h3>
     <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
     <ul>
@@ -105,10 +110,8 @@ title: Muhammad Arslan – QA Engineer
       <li>Proactively monitored crash logs and built test cases for fast resolution</li>
     </ul>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
+
+</div>
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🗂️ QA Artifacts</h2>
