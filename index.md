@@ -161,31 +161,21 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>📜 Certifications</h2>
-
-  <div style="
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 1rem;
-    align-items: center;
-    width: 100%;
-  ">
-    <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
-      ✅ Six Sigma Yellow Belt – GoLeanSixSigma
-    </a>
-    <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
-      ✅ Test Case Management – Testworthy
-    </a>
-    <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 90%; max-width: 400px; text-align: center; box-sizing: border-box; display: inline-block;">
-      ✅ API Testing – Hands-On Training
-    </a>
-  </div>
-</div>
+<h2>🏅 Certifications</h2>
+<ul style="padding-left: 1.2rem; line-height: 1.8;">
+  <li>
+    ✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a>
+  </li>
+  <li>
+    ✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a>
+  </li>
+  <li>
+    ✅ <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank">API Testing – Hands-On Training</a>
+  </li>
+</ul>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🎓 Education</h2>
-
   <h3>BS in Information Technology</h3>
   <p><strong>Muhammad Nawaz Sharif University of Agriculture, Multan</strong></p>
   <p><em>Aug 2018 – Jul 2022</em></p>
@@ -194,28 +184,13 @@ title: Muhammad Arslan – QA Engineer
     <li>Graduated with strong academic foundation in software quality and system design</li>
   </ul>
 </div>
-
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>📎 Resume</h2>
-  <p style="margin-bottom: 1rem;">
-    You can download my latest resume in PDF format using the button below:
-  </p>
-  <div style="text-align: center;">
-    <a href="/M_Arslan_SQA_Resume.pdf" target="_blank" style="
-      background-color: #007ACC;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      display: inline-block;
-    ">
-      📄 Download My Resume
-    </a>
-  </div>
-</div>
-
+<h2>📄 Resume</h2>
+<p style="font-size: 1rem; line-height: 1.6;">
+You can <a href="/assets/M_Arslan_SQA_Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
+download my latest resume
+</a> in PDF format.
+</p>
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔗 Connect with Me</h2>
   <ul>
