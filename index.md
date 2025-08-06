@@ -118,17 +118,26 @@ title: Muhammad Arslan – QA Engineer
     </ul>
   </div>
 
-  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-    <h3>🍽️ Restaurant POS QA</h3>
-    <p>Tested a multi-branch restaurant POS system for dine-in and takeaway order workflows.</p>
-    <ul>
-      <li>Validated bill printing, KOT slips, payment handling, and discounts</li>
-      <li>Regression tested UI on POS touch displays and tablets</li>
-      <li>Collaborated with developers and reviewed backend error logs</li>
-      <li>Designed targeted tests based on crash logs and user feedback</li>
-    </ul>
+</div>
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
+  <h2 style="margin-bottom: 1rem;">📎 QA Artifacts</h2>
+  <p style="margin-bottom: 1rem;">
+    Explore real-world examples of my QA documentation and structured testing approach.
+  </p>
+  <div style="text-align: center;">
+    <a href="/assets/Test Cases Automation Playground CRM.pdf" target="_blank" style="
+      background-color: #007ACC;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: inline-block;
+    ">
+      📝 Download Test Cases (PDF)
+    </a>
   </div>
-
 </div>
 
 
