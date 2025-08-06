@@ -61,7 +61,6 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 
-
 ## 🚀 Projects
 
 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
@@ -105,6 +104,10 @@ title: Muhammad Arslan – QA Engineer
       <li>Tested TestFlight app builds and reduced pre-launch bug ratio</li>
       <li>Proactively monitored crash logs and built test cases for fast resolution</li>
     </ul>
+  </div>
+  </div>
+  </div>
+  </div>
   </div>
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
