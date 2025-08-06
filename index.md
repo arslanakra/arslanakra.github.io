@@ -3,8 +3,6 @@ layout: default
 title: Muhammad Arslan – QA Engineer
 ---
 
-<!-- The favicon is handled in _includes/head.html -->
-
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
     Muhammad Arslan Akram – QA Engineer
@@ -22,7 +20,7 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>✅ Skills</h2>
   <ul>
     <li>Manual Testing – Web, Mobile, and POS Systems</li>
@@ -35,7 +33,7 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>💼 Work Experience</h2>
 
   <h2>🔸 Green Fin Technologies — <em>SQA Engineer</em></h2>
@@ -154,7 +152,6 @@ title: Muhammad Arslan – QA Engineer
 </div>
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📚 Profile Highlights</h2>
-  <!-- Certifications -->
   <div style="margin-bottom: 1.5rem;">
     <h2>🏅 Certifications</h2>
     <ul style="list-style: none; padding-left: 0;">
@@ -169,7 +166,6 @@ title: Muhammad Arslan – QA Engineer
   </p>
   </div>
 
-  <!-- Resume -->
   <div>
  <h2>📄 Resume</h2>
 <p style="font-size: 1rem; line-height: 1.6;">
@@ -178,7 +174,6 @@ download my latest resume
 </a> in PDF format.
 </p>
 </div>
-  <!-- Education -->
   <div>
     <h2>🎓 Education</h2>
     <p><strong>BS in Information Technology</strong><br>
@@ -188,7 +183,7 @@ download my latest resume
   </div>
 </div>
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🔗 Connect with Me</h2>
   <ul>
     <li><a href="https://github.com/arslanakra" target="_blank">GitHub</a></li>
@@ -196,7 +191,7 @@ download my latest resume
     <li><a href="mailto:arsalantaqi255@gmail.com">Email Me</a></li>
   </ul>
 </div>
-  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🌟 LinkedIn Recommendations</h2>
   <p style="font-style: italic; font-size: 1rem; color: #444;">
     "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
