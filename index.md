@@ -112,41 +112,53 @@ title: Muhammad Arslan – QA Engineer
     </ul>
   </div>
   
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
+  <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🗂️ QA Artifacts</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-    <a href="/assets/documentation/Test Cases Automation Playground CRM.pdf" target="_blank" style="
-      background-color: #007ACC;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      display: inline-block;
-      width: 260px;
-      text-align: center;
-    ">
-      📋 Playground CRM – Test Case
-    </a>
-    <a href="/assets/documentation/Login_Bypass_Report_Bug_001.pdf" target="_blank" style="
-      background-color: #DC3545;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      display: inline-block;
-      width: 260px;
-      text-align: center;
-    ">
-      🐞 Login Bypass – Bug Report
-    </a>
-  </div>
+  <h3 style="margin-bottom: 1rem;">📄 Documents</h3>
+  <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
+    <li style="margin-bottom: 0.5rem;">
+      📎 
+      <a href="/assets/documentation/Test Cases Automation Playground CRM.pdf" target="_blank">
+        Playground CRM - Test Case (PDF)
+      </a>
+    </li>
+    <li style="margin-bottom: 0.5rem;">
+      🐞 
+      <a href="/assets/documentation/Login_Bypass_Report_Bug_001.pdf" target="_blank">
+        Bug Report – Login Bypass (PDF)
+      </a>
+    </li>
+  </ul>
+
+  <h3 style="margin-top: 2rem; margin-bottom: 1rem;">🖼️ Screenshots</h3>
+  <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
+    <li style="margin-bottom: 0.5rem;">
+      📸 
+      <a href="/assets/screenshots/DB1.jpg" target="_blank">
+        Database Query SS1
+      </a>
+    </li>
+    <li style="margin-bottom: 0.5rem;">
+      📸 
+      <a href="/assets/screenshots/DB2.jpg" target="_blank">
+        Database Query SS2
+      </a>
+    </li>
+    <li style="margin-bottom: 0.5rem;">
+      📸 
+      <a href="/assets/screenshots/DB3.jpg" target="_blank">
+        Database Query SS3
+      </a>
+    </li>
+    <li style="margin-bottom: 0.5rem;">
+      🧾 
+      <a href="/assets/screenshots/Postman.jpg" target="_blank">
+        Postman Json & Results
+      </a>
+    </li>
+  </ul>
+
 </div>
-
-
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📜 Certifications</h2>
