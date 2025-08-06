@@ -14,16 +14,12 @@ title: Muhammad Arslan – QA Engineer
   </p>
 </div>
 
----
-
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔎 Summary</h2>
   <p>
     I'm a detail-oriented <strong>Software QA Engineer</strong> with 2+ years of experience in delivering quality across web and mobile platforms. I specialize in <strong>manual testing, API testing, regression cycles, backend validation</strong>, and scenario design using tools like Postman, JMeter, and SQL. Proven success in testing <strong>financial applications</strong>, <strong>chat-based communication apps</strong>, <strong>mobile payroll systems</strong>, and <strong>check cashing platforms</strong>. I've consistently collaborated with cross-functional teams, validated error logs to create high-priority test cases, and helped reduce production bug rates — with additional hands-on experience in <strong>Restaurant POS systems</strong>.
   </p>
 </div>
-
----
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>✅ Skills</h2>
@@ -38,7 +34,6 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 
----
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>💼 Work Experience</h2>
@@ -66,7 +61,6 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 
----
 
 ## 🚀 Projects
 
@@ -191,8 +185,6 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 
----
-
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📎 Resume</h2>
   <p style="margin-bottom: 1rem;">
@@ -214,9 +206,6 @@ title: Muhammad Arslan – QA Engineer
   </div>
 </div>
 
-
----
-
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔗 Connect with Me</h2>
   <ul>
@@ -225,9 +214,6 @@ title: Muhammad Arslan – QA Engineer
     <li><a href="mailto:arsalantaqi255@gmail.com">Email Me</a></li>
   </ul>
 </div>
-
-
----
 
 <div style="text-align: center; margin-top: 2rem; font-style: italic;">
   Thanks for visiting my portfolio! I'm open to QA roles, freelance projects, and great conversations. 😊
