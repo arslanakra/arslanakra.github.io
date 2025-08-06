@@ -134,25 +134,25 @@ title: Muhammad Arslan – QA Engineer
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
       📸 
-      <a href="/assets/screenshots/DB1.jpg" target="_blank">
+      <a href="assets/screenshots/DB1.jpeg" target="_blank">
         Database Query SS1
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
       📸 
-      <a href="/assets/screenshots/DB2.jpg" target="_blank">
+      <a href="assets/screenshots/DB2.jpeg" target="_blank">
         Database Query SS2
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
       📸 
-      <a href="/assets/screenshots/DB3.jpg" target="_blank">
+      <a href="assets/screenshots/DB3.jpeg" target="_blank">
         Database Query SS3
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
       🧾 
-      <a href="/assets/screenshots/Postman.jpg" target="_blank">
+      <a href="assets/screenshots/Postman.jpeg" target="_blank">
         Postman Json & Results
       </a>
     </li>
