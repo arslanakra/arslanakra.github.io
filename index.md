@@ -59,9 +59,8 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 
-## 🚀 Projects
-
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
+<h2>🚀 Projects</h2>
 
   <h2>💬 Chat App QA – Web & Mobile</h2>
   <p>End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
