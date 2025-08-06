@@ -183,6 +183,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Graduated with strong academic foundation in software quality and system design</li>
   </ul>
 </div>
+
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
 <h2>📄 Resume</h2>
 <p style="font-size: 1rem; line-height: 1.6;">
@@ -190,6 +191,8 @@ title: Muhammad Arslan – QA Engineer
 download my latest resume
 </a> in PDF format.
 </p>
+</div>
+
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔗 Connect with Me</h2>
   <ul>
