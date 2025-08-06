@@ -125,7 +125,7 @@ title: Muhammad Arslan – QA Engineer
     Explore real-world examples of my QA documentation and structured testing approach.
   </p>
   <div style="text-align: center;">
-    <a href="/assets/Test Cases Automation Playground CRM.pdf" target="_blank" style="
+    <a href="/assets/documentation/Test Cases Automation Playground CRM.pdf" target="_blank" style="
       background-color: #007ACC;
       color: white;
       padding: 12px 24px;
