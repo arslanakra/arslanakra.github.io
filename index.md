@@ -15,7 +15,7 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>🔎 Summary</h2>
+  <h3>🔎 Summary</h3>
   <p>
     I'm a detail-oriented <strong>Software QA Engineer</strong> with 2+ years of experience in delivering quality across web and mobile platforms. I specialize in <strong>manual testing, API testing, regression cycles, backend validation</strong>, and scenario design using tools like Postman, JMeter, and SQL. Proven success in testing <strong>financial applications</strong>, <strong>chat-based communication apps</strong>, <strong>mobile payroll systems</strong>, and <strong>check cashing platforms</strong>. I've consistently collaborated with cross-functional teams, validated error logs to create high-priority test cases, and helped reduce production bug rates — with additional hands-on experience in <strong>Restaurant POS systems</strong>.
   </p>
@@ -23,7 +23,7 @@ title: Muhammad Arslan – QA Engineer
 
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>✅ Skills</h2>
+  <h3>✅ Skills</h3>
   <ul>
     <li>Manual Testing – Web, Mobile, and POS Systems</li>
     <li>API Testing – Postman</li>
@@ -36,7 +36,7 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>💼 Work Experience</h2>
+  <h3>💼 Work Experience</h3>
 
   <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
   <p><strong>Aug 2024 – Present</strong></p>
@@ -107,7 +107,7 @@ title: Muhammad Arslan – QA Engineer
 
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>🗂️ QA Artifacts</h2>
+  <h3>🗂️ QA Artifacts</h3>
   <h3 style="margin-bottom: 1rem;">📄 Documents</h3>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
@@ -153,7 +153,7 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>📚 Profile Highlights</h2>
+  <h3>📚 Profile Highlights</h3>
   <!-- Certifications -->
   <div style="margin-bottom: 1.5rem;">
     <h3>🏅 Certifications</h3>
@@ -189,7 +189,7 @@ download my latest resume
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>🔗 Connect with Me</h2>
+  <h3>🔗 Connect with Me</h3>
   <ul>
     <li><a href="https://github.com/arslanakra" target="_blank">GitHub</a></li>
     <li><a href="https://www.linkedin.com/in/sqa-arslan-akram/" target="_blank">LinkedIn</a></li>
@@ -197,7 +197,7 @@ download my latest resume
   </ul>
 </div>
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
-  <h2>🌟 LinkedIn Recommendations</h2>
+  <h3>🌟 LinkedIn Recommendations</h3>
   <p style="font-style: italic; font-size: 1rem; color: #444;">
     "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
   </p>
