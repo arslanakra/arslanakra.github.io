@@ -230,7 +230,7 @@ title: Muhammad Arslan – QA Engineer
     "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
   </p>
   <p style="text-align: right; font-weight: bold; margin-top: 1rem;">
-    Asim Junaid — |.Net Developer| Asp.Net Core|ASP.Net MVC| 
+  Asim Junaid — |.Net Developer| Asp.Net Core|ASP.Net MVC| 
   </p>
     <p style="text-align: center; margin-top: 1.5rem;">
   <a href="https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/" target="_blank" style="font-weight: bold; text-decoration: none; color: #007ACC;">
