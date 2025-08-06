@@ -158,9 +158,8 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; margin-bottom: 2rem;">
-  <h2 style="text-align: center; margin-bottom: 1.5rem;">📚 Profile Highlights</h2>
-
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
+  <h2>📚 Profile Highlights</h2>
   <!-- Certifications -->
   <div style="margin-bottom: 1.5rem;">
     <h3>🏅 Certifications</h3>
@@ -169,24 +168,22 @@ title: Muhammad Arslan – QA Engineer
       <li>✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a></li>
       <li>✅ <a href="/assets/certificates/APITesting-MArslan.pdf" target="_blank">API Testing – Hands-On Training</a></li>
     </ul>
+    <p style="margin-top: 0.5rem;">
+    📌 <a href="https://www.linkedin.com/in/sqa-arslan-akram/details/certifications/" target="_blank" style="color: #007ACC; text-decoration: underline;">
+      View more certifications on LinkedIn
+    </a>
+  </p>
   </div>
   
   <!-- Resume -->
-  <div style="margin-bottom: 1.5rem;">
-    <h3>📄 Resume</h3>
-    <p>You can download my latest resume here:</p>
-    <a href="/assets/documentation/M_Arslan_SQA_Resume.pdf" target="_blank" style="
-      background-color: #007ACC;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      display: inline-block;
-    ">Download Resume</a>
-  </div>
-  
+  <div>
+ <h3>📄 Resume</h3>
+<p style="font-size: 1rem; line-height: 1.6;">
+You can <a href="M_Arslan_SQA_Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
+download my latest resume
+</a> in PDF format.
+</p>
+</div>
   <!-- Education -->
   <div>
     <h3>🎓 Education</h3>
