@@ -157,7 +157,6 @@ title: Muhammad Arslan – QA Engineer
     </li>
   </ul>
 </div>
-
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📚 Profile Highlights</h2>
   <!-- Certifications -->
@@ -174,7 +173,7 @@ title: Muhammad Arslan – QA Engineer
     </a>
   </p>
   </div>
-  
+
   <!-- Resume -->
   <div>
  <h3>📄 Resume</h3>
