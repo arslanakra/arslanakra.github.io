@@ -36,7 +36,7 @@ title: Muhammad Arslan – QA Engineer
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>💼 Work Experience</h2>
 
-  <h2>🔸 Green Fin Technologies — <em>SQA Engineer</em></h2>
+  <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
   <p><strong>Aug 2024 – Present</strong></p>
   <ul>
     <li>Performed functional, regression, UI/UX, and API testing across web and mobile platforms</li>
@@ -48,7 +48,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Produced QA reports, wrote test plans, and shared progress with stakeholders</li>
   </ul>
 
-  <h2>🔸 Software Technologies — <em>SQA Engineer</em></h2>
+  <h3>🔸 Software Technologies — <em>SQA Engineer</em></h3>
   <p><strong>Sep 2022 – Jul 2024</strong></p>
   <ul>
     <li>Led QA for a multi-restaurant POS system (Pistachio) and handled hotel management app QA</li>
@@ -62,7 +62,7 @@ title: Muhammad Arslan – QA Engineer
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
 <h2>🚀 Projects</h2>
 
-  <h2>💬 Chat App QA – Web & Mobile</h2>
+  <h3>💬 Chat App QA – Web & Mobile</h3>
   <p>End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
   <ul>
     <li>Performed manual testing on both web and mobile clients</li>
@@ -72,7 +72,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Tested TestFlight builds and reduced post-release bug count</li>
   </ul>
 
-  <h2>💼 Check Cashing Web App + Back Office</h2>
+  <h3>💼 Check Cashing Web App + Back Office</h3>
   <p>Worked on both the customer-facing platform and its Back Office for accounts & approval handling.</p>
   <ul>
     <li>Tested modules like approvals, user permissions, and reporting</li>
@@ -82,7 +82,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Regularly analyzed error logs and helped resolve issues early in the cycle</li>
   </ul>
 
-  <h2>📱 Check Cashing Mobile App</h2>
+  <h3>📱 Check Cashing Mobile App</h3>
   <p>Led QA efforts on the mobile version of a check cashing app built for real-time financial transactions.</p>
   <ul>
     <li>Tested transaction, KYC flow, receipt, and history modules</li>
@@ -91,7 +91,7 @@ title: Muhammad Arslan – QA Engineer
     <li>Created test cases and simulated edge-case crash scenarios</li>
   </ul>
 
-  <h2>📱 Salarium – Mobile Payroll App</h2>
+  <h3>📱 Salarium – Mobile Payroll App</h3>
   <p>Handled UI/UX design input, QA ownership, and post-production validation for a salary disbursement app.</p>
   <ul>
     <li>Created wireframes and collaborated with designers for improved UX</li>
@@ -105,7 +105,7 @@ title: Muhammad Arslan – QA Engineer
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🗂️ QA Artifacts</h2>
-  <h2 style="margin-bottom: 1rem;">📄 Documents</h2>
+  <h3 style="margin-bottom: 1rem;">📄 Documents</h3>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
       📎 
@@ -132,7 +132,7 @@ title: Muhammad Arslan – QA Engineer
     </li>
   </ul>
 
-  <h2 style="margin-top: 2rem; margin-bottom: 1rem;">🖼️ Screenshots</h2>
+  <h3 style="margin-top: 2rem; margin-bottom: 1rem;">🖼️ Screenshots</h3>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
       📸 
@@ -163,7 +163,7 @@ title: Muhammad Arslan – QA Engineer
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📚 Profile Highlights</h2>
   <div style="margin-bottom: 1.5rem;">
-    <h2>🏅 Certifications</h2>
+    <h3>🏅 Certifications</h3>
     <ul style="list-style: none; padding-left: 0;">
       <li>✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a></li>
       <li>✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a></li>
@@ -177,7 +177,7 @@ title: Muhammad Arslan – QA Engineer
   </div>
 
   <div>
- <h2>📄 Resume</h2>
+ <h3>📄 Resume</h3>
 <p style="font-size: 1rem; line-height: 1.6;">
 You can <a href="/resume/M Arslan SQA Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
 download my latest resume
@@ -185,7 +185,7 @@ download my latest resume
 </p>
 </div>
   <div>
-    <h2>🎓 Education</h2>
+    <h3>🎓 Education</h3>
     <p><strong>BS in Information Technology</strong><br>
     Muhammad Nawaz Sharif University of Agriculture, Multan<br>
     <em>Major in Software Engineering, Android Development, and DBMS</em><br>
