@@ -168,7 +168,7 @@ title: Muhammad Arslan – QA Engineer
   <div>
  <h2>📄 Resume</h2>
 <p style="font-size: 1rem; line-height: 1.6;">
-You can <a href="M_Arslan_SQA_Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
+You can <a href="/resume/M Arslan SQA Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
 download my latest resume
 </a> in PDF format.
 </p>
