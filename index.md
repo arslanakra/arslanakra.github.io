@@ -230,25 +230,40 @@ download my latest resume
 <div style="text-align: center; margin-top: 2rem; font-style: italic;">
   Thanks for visiting my portfolio! I'm open to QA roles, freelance projects, and great conversations. 😊
 </div>
+
 <!-- 🌙 Minimalist Dark Mode Toggle -->
 <style>
   :root {
     --bg-color: #ffffff;
     --text-color: #000000;
+    --heading-color: #000000;
+    --bold-color: #000000;
     --link-color: #007ACC;
     --link-hover: #0056b3;
+    --border-color: #ccc;
   }
 
   .dark-mode {
-  --bg-color: #1a1a1a;
-  --text-color: #ffffff;  /* ✅ Best visibility */
-  --link-color: #66b2ff;
-  --link-hover: #99ccff;
-}
+    --bg-color: #1a1a1a;
+    --text-color: #f1f1f1;
+    --heading-color: #ffffff;
+    --bold-color: #ffffff;
+    --link-color: #66b2ff;
+    --link-hover: #99ccff;
+    --border-color: #333;
+  }
 
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+  }
+
+  strong, b {
+    color: var(--bold-color);
   }
 
   a {
@@ -260,6 +275,10 @@ download my latest resume
   a:hover {
     color: var(--link-hover);
     text-decoration: underline;
+  }
+
+  hr, .box, .bordered-section {
+    border-color: var(--border-color);
   }
 
   #themeToggle {
@@ -291,5 +310,4 @@ download my latest resume
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 </script>
-
 
