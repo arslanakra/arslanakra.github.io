@@ -2,6 +2,18 @@
 layout: default
 title: Muhammad Arslan – QA Engineer
 ---
+<style>
+a {
+  color: #007ACC;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+</style>
+
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -21,7 +33,7 @@ title: Muhammad Arslan – QA Engineer
 
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>✅ Skills</h2>
+  <h2>🛠️ Skills</h2>
   <ul>
     <li>Manual Testing – Web, Mobile, and POS Systems</li>
     <li>API Testing – Postman</li>
@@ -34,7 +46,7 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>💼 Work Experience</h2>
+  <h2>🧑‍💻 Work Experience</h2>
 
   <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
   <p><strong>Aug 2024 – Present</strong></p>
@@ -60,7 +72,7 @@ title: Muhammad Arslan – QA Engineer
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-<h2>🚀 Projects</h2>
+<h2>📂 Projects</h2>
 
   <h3>💬 Chat App QA – Web & Mobile</h3>
   <p>End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
@@ -104,22 +116,22 @@ title: Muhammad Arslan – QA Engineer
 
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>🗂️ QA Artifacts</h2>
-  <h3 style="margin-bottom: 1rem;">📄 Documents</h3>
+  <h2>📁 QA Artifacts</h2>
+  <h3 style="margin-bottom: 1rem;">📁 Documents</h3>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
-      📎 
+      🧾 
       <a href="/assets/documentation/Test Cases Automation Playground CRM.pdf" target="_blank">
         Playground CRM - Test Cases (PDF)
       </a>
     </li>
       <li style="margin-bottom: 0.5rem;">
-      📎 
+      🧾 
       <a href="assets/documentation/Test_Cases_Module1.xlsx" target="_blank">
         Module1 - Test Cases (xlsx)
       </a>
     </li>  <li style="margin-bottom: 0.5rem;">
-      📎 
+      🧾 
       <a href="assets/documentation/Pentest_Vulnerabilty_Report.pdf" target="_blank">
         Pentest - Vulnerability Report (PDF)
       </a>
@@ -135,19 +147,19 @@ title: Muhammad Arslan – QA Engineer
   <h3 style="margin-top: 2rem; margin-bottom: 1rem;">🖼️ Screenshots</h3>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
-      📸 
+      🖥️ 
       <a href="assets/screenshots/DB1.jpeg" target="_blank">
         Database Query SS1
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
-      📸 
+      🖥️ 
       <a href="assets/screenshots/DB2.jpeg" target="_blank">
         Database Query SS2
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
-      📸 
+      🖥️ 
       <a href="assets/screenshots/DB3.jpeg" target="_blank">
         Database Query SS3
       </a>
@@ -161,9 +173,9 @@ title: Muhammad Arslan – QA Engineer
   </ul>
 </div>
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>📚 Profile Highlights</h2>
+  <h2>📊 Profile Highlights</h2>
   <div style="margin-bottom: 1.5rem;">
-    <h3>🏅 Certifications</h3>
+    <h3>📜 Certifications</h3>
     <ul style="list-style: none; padding-left: 0;">
       <li>✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a></li>
       <li>✅ <a href="/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management – Testworthy</a></li>
@@ -177,7 +189,7 @@ title: Muhammad Arslan – QA Engineer
   </div>
 
   <div>
- <h3>📄 Resume</h3>
+ <h3>🧾 Resume</h3>
 <p style="font-size: 1rem; line-height: 1.6;">
 You can <a href="/resume/M Arslan SQA Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
 download my latest resume
@@ -194,7 +206,7 @@ download my latest resume
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>🔗 Connect with Me</h2>
+  <h2>🌐 Connect with Me</h2>
   <ul>
     <li><a href="https://github.com/arslanakra" target="_blank">GitHub</a></li>
     <li><a href="https://www.linkedin.com/in/sqa-arslan-akram/" target="_blank">LinkedIn</a></li>
@@ -202,7 +214,7 @@ download my latest resume
   </ul>
 </div>
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>🌟 LinkedIn Recommendations</h2>
+  <h2>🗣️ LinkedIn Recommendations</h2>
   <p style="font-style: italic; font-size: 1rem; color: #444;">
     "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
   </p>
