@@ -37,11 +37,11 @@ a:hover {
   <ul>
     <li>Manual Testing – Web, Mobile, and POS Systems</li>
     <li>API Testing – Postman</li>
-    <li>Functional, Regression, Integration and Security Testing</li>
+    <li>Functional, Regression, Integration, and Security Testing</li>
     <li>Database Testing – SQL Queries & Validation</li>
     <li>Error Log Analysis & Scenario Creation</li>
-    <li>Test Documentation – Test Cases, Vulnerabilty Reports, Resolution Reports</li>
-    <li>Tools: Jira, Git, JMeter,MySql , Playwright, Figma</li>
+    <li>Test Documentation – Test Cases, Vulnerabilty Reports, Resolution Logs</li>
+    <li>Tools: Jira, Git, Postman,JMeter, MySQL, Playwright, Figma</li>
   </ul>
 </div>
 
@@ -230,39 +230,4 @@ download my latest resume
 <div style="text-align: center; margin-top: 2rem; font-style: italic;">
   Thanks for visiting my portfolio! I'm open to QA roles, freelance projects, and great conversations. 😊
 </div>
-<!-- 🌙 Dark Mode Toggle -->
-<style>
-  .dark-mode {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-  }
-  .dark-mode a {
-    color: #66b2ff;
-  }
-  .dark-mode a:hover {
-    color: #99ccff;
-  }
-  #darkModeToggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background-color: #007ACC;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-    font-size: 0.9rem;
-  }
-</style>
-
-<button id="darkModeToggle">🌓 Toggle Theme</button>
-
-<script>
-  const toggleButton = document.getElementById("darkModeToggle");
-  toggleButton.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
 
