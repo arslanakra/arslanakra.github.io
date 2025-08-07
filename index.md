@@ -240,11 +240,11 @@ download my latest resume
   }
 
   .dark-mode {
-    --bg-color: #1a1a1a;
-    --text-color: #f0f0f0;
-    --link-color: #66b2ff;
-    --link-hover: #99ccff;
-  }
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;  /* ✅ Best visibility */
+  --link-color: #66b2ff;
+  --link-hover: #99ccff;
+}
 
   body {
     background-color: var(--bg-color);
