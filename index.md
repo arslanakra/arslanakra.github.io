@@ -19,9 +19,9 @@ a:hover {
   <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
     Muhammad Arslan Akram – QA Engineer
   </h1>
-  <p style="font-size: 1.1rem; color: #555;">
-    Web, Mobile & Backend Testing
-  </p>
+<p style="font-size: 1.1rem; color: var(--text-color);">
+  Web, Mobile & Backend Testing
+</p>
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
@@ -215,8 +215,8 @@ download my latest resume
 </div>
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🗣️ LinkedIn Recommendations</h2>
-  <p style="font-style: italic; font-size: 1rem; color: #444;">
-    "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
+<p style="font-style: italic; font-size: 1rem; color: var(--text-color);">
+  "Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!☺️"
   </p>
  <p style="text-align: right; font-weight: bold; margin-top: 1rem; font-size: 0.95rem; word-wrap: break-word;">
   — Asim Junaid — | .NET Developer | ASP.NET Core | ASP.NET MVC |
