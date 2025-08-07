@@ -110,7 +110,18 @@ title: Muhammad Arslan – QA Engineer
     <li style="margin-bottom: 0.5rem;">
       📎 
       <a href="/assets/documentation/Test Cases Automation Playground CRM.pdf" target="_blank">
-        Playground CRM - Test Case (PDF)
+        Playground CRM - Test Cases (PDF)
+      </a>
+    </li>
+      <li style="margin-bottom: 0.5rem;">
+      📎 
+      <a href="assets/documentation/Test_Cases_Module1.xlsx" target="_blank">
+        Module1 - Test Cases (xlsx)
+      </a>
+    </li>  <li style="margin-bottom: 0.5rem;">
+      📎 
+      <a href="assets/documentation/Pentest_Vulnerabilty_Report.pdf" target="_blank">
+        Pentest - Vulnerability Report (PDF)
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
