@@ -49,7 +49,7 @@ a:hover {
   <h2>🏢 Work Experience</h2>
 
   <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
-  <p><strong>Aug 2024 – Present</strong></p>
+      <p><strong>Aug 2024 – Present</strong></p>
   <ul>
     <li>Performed functional, regression, UI/UX, and API testing across web and mobile platforms</li>
     <li>Validated backend APIs with Postman; load tested endpoints using JMeter</li>
@@ -61,7 +61,7 @@ a:hover {
   </ul>
 
   <h3>🔸 Software Technologies — <em>SQA Engineer</em></h3>
-  <p><strong>Sep 2022 – Jul 2024</strong></p>
+      <p><strong>Sep 2022 – Jul 2024</strong></p>
   <ul>
     <li>Led QA for a multi-restaurant POS system (Pistachio) and handled hotel management app QA</li>
     <li>Created detailed test cases, resolution reports, and executed complete E2E testing</li>
