@@ -41,7 +41,7 @@ a:hover {
     <li>Database Testing – SQL Queries & Validation</li>
     <li>Error Log Analysis & Scenario Creation</li>
     <li>Test Documentation – Test Cases, Vulnerabilty Reports, Resolution Logs</li>
-    <li>Tools: Jira, Git, Postman,JMeter, MySQL, Playwright, Figma</li>
+    <li>Tools: Jira, Git, Postman, JMeter, MySQL, Playwright, Figma</li>
   </ul>
 </div>
 
