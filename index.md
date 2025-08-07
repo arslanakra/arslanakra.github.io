@@ -46,7 +46,7 @@ a:hover {
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>🧑‍💻 Work Experience</h2>
+  <h2>🏢 Work Experience</h2>
 
   <h3>🔸 Green Fin Technologies — <em>SQA Engineer</em></h3>
   <p><strong>Aug 2024 – Present</strong></p>
@@ -117,7 +117,7 @@ a:hover {
   
   <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>📁 QA Artifacts</h2>
-  <h3 style="margin-bottom: 1rem;">📁 Documents</h3>
+  <h3 style="margin-bottom: 1rem;">📄 Documents</h3>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
       🧾 
