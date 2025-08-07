@@ -230,4 +230,66 @@ download my latest resume
 <div style="text-align: center; margin-top: 2rem; font-style: italic;">
   Thanks for visiting my portfolio! I'm open to QA roles, freelance projects, and great conversations. 😊
 </div>
+<!-- 🌙 Minimalist Dark Mode Toggle -->
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #007ACC;
+    --link-hover: #0056b3;
+  }
+
+  .dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --link-color: #66b2ff;
+    --link-hover: #99ccff;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+
+  #themeToggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+</style>
+
+<button id="themeToggle" title="Toggle dark mode">🌓</button>
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Load saved theme
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>
+
 
