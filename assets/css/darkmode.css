@@ -1,1 +1,67 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --heading-color: #000000;
+  --bold-color: #000000;
+  --link-color: #007ACC;
+  --link-hover: #0056b3;
+  --border-color: #ccc;
+}
+
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #f1f1f1;
+  --heading-color: #ffffff;
+  --bold-color: #ffffff;
+  --link-color: #66b2ff;
+  --link-hover: #99ccff;
+  --border-color: #333;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+strong, b {
+  color: var(--bold-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+#themeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+#themeToggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #themeToggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
