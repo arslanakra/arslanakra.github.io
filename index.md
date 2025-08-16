@@ -27,7 +27,7 @@ a:hover {
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔎 Summary</h2>
   <p>
-    I'm a detail-oriented <strong>Software QA Engineer</strong> with 2+ years of experience in delivering quality across web and mobile platforms. I specialize in <strong>manual testing, API testing, regression cycles, backend validation</strong>, and scenario design using tools like Postman, JMeter, and SQL. Proven success in testing <strong>financial applications</strong>, <strong>chat-based communication apps</strong>, <strong>mobile payroll systems</strong>, and <strong>check cashing platforms</strong>. I've consistently collaborated with cross-functional teams, validated error logs to create high-priority test cases, and helped reduce production bug rates — with additional hands-on experience in <strong>Restaurant POS systems</strong>.
+    As a **Software QA Engineer** with over two years of experience, I specialize in delivering high-quality, stable products across web, mobile, and backend systems. I excel at **manual testing**, **API testing**, **regression cycles**, and **backend validation** using tools like **Postman**, **JMeter**, and **SQL**. I have a proven track record of reducing production bug rates by designing targeted test scenarios and consistently **collaborating with cross-functional teams**. My experience spans financial applications, chat-based systems, and restaurant POS platforms.
   </p>
 </div>
 
@@ -35,13 +35,13 @@ a:hover {
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
   <h2>🛠️ Skills</h2>
   <ul>
-    <li>Manual Testing – Web, Mobile, and POS Systems</li>
-    <li>API Testing – Postman</li>
-    <li>Functional, Regression, Integration, and Security Testing</li>
-    <li>Database Testing – SQL Queries & Validation</li>
-    <li>Error Log Analysis & Scenario Creation</li>
-    <li>Test Documentation – Test Cases, Vulnerabilty Reports, Resolution Logs</li>
-    <li>Tools: Jira, Git, Postman, JMeter, MySQL, Playwright, Figma</li>
+    <li>✍️ Manual Testing – Web, 📱 Mobile, and POS Systems</li>
+    <li>📮 API Testing – Postman</li>
+    <li>✅ Functional, 🔄 Regression, 🧩 Integration, 🛡️ Security Testing</li>
+    <li>Database Testing – ⚙️ SQL Queries  & ✅ Validations</li>
+    <li>⚠️ Error Log Analysis & 📝 Scenario Creation</li>
+    <li>T📄 Test Documentation – 📝 Test Cases, 🚨 Vulnerability Reports, 🐛 Resolution Logs</li>
+    <li>Tools: 🗂️ Jira,, Git, Postman, JMeter, MySQL, Playwright, 🎨 Figma</li>
   </ul>
 </div>
 
@@ -55,7 +55,7 @@ a:hover {
     <li>Validated backend APIs with Postman; load tested endpoints using JMeter</li>
     <li>Reviewed error logs and created high-priority test scenarios to catch issues early</li>
     <li>Tested and validated TestFlight builds for mobile apps before production releases</li>
-    <li>Reduced bug ratio by proactively resolving recurring errors and improving QA coverage</li>
+    <li>Reduced bug ratio by 15% through proactive error resolution.</li>
     <li>Collaborated with developers, designers, and product managers during UAT cycles</li>
     <li>Produced QA reports, wrote test plans, and shared progress with stakeholders</li>
   </ul>
@@ -80,7 +80,7 @@ a:hover {
     <li>Performed manual testing on both web and mobile clients</li>
     <li>Reviewed frontend codebase and validated socket responses</li>
     <li>Tested API endpoints and ensured message sync across devices</li>
-    <li>Analyzed error logs to identify bugs and created targeted test scenarios</li>
+    <li>Analyzed error logs and created 100+ new test scenarios, leading to a more stable application</li>
     <li>Tested TestFlight builds and reduced post-release bug count</li>
   </ul>
 
