@@ -38,9 +38,9 @@ a:hover {
     <li>✍️ Manual Testing – Web, 📱 Mobile, and POS Systems</li>
     <li>📮 API Testing – Postman</li>
     <li>✅ Functional, 🔄 Regression, 🧩 Integration, 🛡️ Security Testing</li>
-    <li>Database Testing – ⚙️ SQL Queries  & ✅ Validations</li>
+    <li><0xF0><0x9F><0x93><0x80> Database Testing – ⚙️ SQL Queries  & ✅ Validations</li>
     <li>⚠️ Error Log Analysis & 📝 Scenario Creation</li>
-    <li>T📄 Test Documentation – 📝 Test Cases, 🚨 Vulnerability Reports, 🐛 Resolution Logs</li>
+    <li>📄 Test Documentation – 📝 Test Cases, 🚨 Vulnerability Reports, 🐛 Resolution Logs</li>
     <li>Tools: 🗂️ Jira,, Git, Postman, JMeter, MySQL, Playwright, 🎨 Figma</li>
   </ul>
 </div>
