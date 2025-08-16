@@ -149,19 +149,19 @@ a:hover {
     <li style="margin-bottom: 0.5rem;">
       🖥️ 
       <a href="assets/screenshots/DB1.jpeg" target="_blank">
-        Database Query SS1
+       🛢️ Database Query SS1
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
       🖥️ 
       <a href="assets/screenshots/DB2.jpeg" target="_blank">
-        Database Query SS2
+       🛢️ Database Query SS2
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
       🖥️ 
       <a href="assets/screenshots/DB3.jpeg" target="_blank">
-        Database Query SS3
+      🛢️ Database Query SS3
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
