@@ -147,21 +147,21 @@ a:hover {
   <h3 style="margin-top: 2rem; margin-bottom: 1rem;">🖼️ Screenshots</h3>
   <ul style="list-style: none; padding-left: 0; font-size: 1rem;">
     <li style="margin-bottom: 0.5rem;">
-      🖥️ 
+      🛢️ 
       <a href="assets/screenshots/DB1.jpg" target="_blank">
-       🛢️ To find Group By Records.
+        To find Group By Records.
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
-      🖥️ 
+      🛢️ 
       <a href="assets/screenshots/DB2.jpg" target="_blank">
-       🛢️ Query to find Object in DB.
+        Query to find Object in DB.
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
-      🖥️ 
+      🛢️ 
       <a href="assets/screenshots/DB3.jpg" target="_blank">
-      🛢️ Query with Where & Order by...
+        Query with Where & Order by...
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
