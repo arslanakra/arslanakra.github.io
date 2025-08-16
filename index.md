@@ -149,19 +149,19 @@ a:hover {
     <li style="margin-bottom: 0.5rem;">
       🖥️ 
       <a href="assets/screenshots/DB1.jpeg" target="_blank">
-       🛢️ Database Query SS1
+       🛢️ To find Group By Records.
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
       🖥️ 
       <a href="assets/screenshots/DB2.jpeg" target="_blank">
-       🛢️ Database Query SS2
+       🛢️ Query to find Object in DB.
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
       🖥️ 
       <a href="assets/screenshots/DB3.jpeg" target="_blank">
-      🛢️ Database Query SS3
+      🛢️ Query with Where & Order by...
       </a>
     </li>
     <li style="margin-bottom: 0.5rem;">
