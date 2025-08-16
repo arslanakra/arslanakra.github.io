@@ -27,7 +27,7 @@ a:hover {
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
   <h2>🔎 Summary</h2>
   <p>
-    As a **Software QA Engineer** with over two years of experience, I specialize in delivering high-quality, stable products across web, mobile, and backend systems. I excel at **manual testing**, **API testing**, **regression cycles**, and **backend validation** using tools like **Postman**, **JMeter**, and **SQL**. I have a proven track record of reducing production bug rates by designing targeted test scenarios and consistently **collaborating with cross-functional teams**. My experience spans financial applications, chat-based systems, and restaurant POS platforms.
+    As a <strong>Software QA Engineer</strong> with over two years of experience, I specialize in delivering high-quality, stable products across web, mobile, and backend systems. I excel at <strong>manual testing</strong>, <strong>API testing</strong>, <strong>regression cycles</strong>, and <strong>backend validation</strong> using tools like <strong>Postman</strong>, <strong>JMeter</strong>, and <strong>SQL</strong>. I have a proven track record of reducing production bug rates by designing targeted test scenarios and consistently <strong>collaborating with cross-functional teams</strong>. My experience spans financial applications, chat-based systems, and restaurant POS platforms.
   </p>
 </div>
 
