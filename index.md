@@ -92,6 +92,7 @@ a:hover {
     <li>Performed regression testing during critical rollouts</li>
     <li>Reduced bug ratio by 30% through preemptive scenario writing</li>
     <li>Regularly analyzed error logs and helped resolve issues early in the cycle</li>
+    <li>Tested CTR and SAR modules to ensure accurate reporting, compliance, and transaction monitoring</li>
   </ul>
 
   <h3>📱 Check Cashing Mobile App</h3>
@@ -101,7 +102,6 @@ a:hover {
     <li>Performed API testing via Postman and backend data validation</li>
     <li>Tested TestFlight builds and assisted in minimizing production issues</li>
     <li>Created test cases and simulated edge-case crash scenarios</li>
-    <li>Tested CTR and SAR modules to ensure accurate reporting, compliance, and transaction monitoring</li>
   </ul>
 
   <h3>📱 Salarium – Mobile Payroll App</h3>
