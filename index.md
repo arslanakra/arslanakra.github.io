@@ -30,19 +30,29 @@ a:hover {
     As a <strong>Software QA Engineer</strong> with over two years of experience, I specialize in delivering high-quality, stable products across web, mobile, and backend systems. I excel at <strong>manual testing</strong>, <strong>API testing</strong>, <strong>regression cycles</strong>, and <strong>backend validation</strong> using tools like <strong>Postman</strong>, <strong>JMeter</strong>, and <strong>SQL</strong>. I have a proven track record of reducing production bug rates by designing targeted test scenarios and consistently <strong>collaborating with cross-functional teams</strong>. My experience spans financial applications, chat-based systems, and restaurant POS platforms.
   </p>
 </div>
-
+ 
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
-  <h2>🛠️ Skills</h2>
-  <ul>
-    <li>✍️ Manual Testing – Web, 📱 Mobile, and POS Systems</li>
-    <li>📮 API Testing – Postman</li>
-    <li>✅ Functional, 🔄 Regression, 🧩 Integration, 🛡️ Security Testing</li>
-    <li>🛢️ Database Testing – ⚙️ SQL Queries  & ✅ Validations</li>
-    <li>⚠️ Error Log Analysis & 📝 Scenario Creation</li>
-    <li>📄 Test Documentation – 📝 Test Cases, 🚨 Vulnerability Reports, 🐛 Resolution Logs</li>
-    <li>Tools: 🗂️ Jira,, Git, Postman, JMeter, MySQL, Playwright, 🎨 Figma</li>
-  </ul>
+<h2>🛠️ Skills</h2>
+<ul>
+  <li>✍️ Manual Testing – Web, 📱 Mobile, and POS Systems</li>
+  <li>📮 API Testing – Postman</li>
+  <li>✅ Functional, 🔄 Regression, 🧩 Integration, 🛡️ Security Testing</li>
+  <li>🛢️ Database Testing – ⚙️ SQL Queries & ✅ Validations</li>
+  <li>⚠️ Error Log Analysis & 📝 Scenario Creation</li>
+  <li>📄 Test Documentation – 📝 Test Plans, Test Cases, 🚨 Vulnerability Reports, 🐛 Resolution Logs</li>
+  <li>🗂️ Test Planning & Execution, 🎯 Defect Tracking, 🌐 Cross-Browser & Cross-Device Testing</li>
+</ul>
+<h2>Tools</h2>
+<ul>
+  <li>🗂️ Jira</li>
+  <li>Git</li>
+  <li>Postman</li>
+  <li>JMeter</li>
+  <li>MySQL</li>
+  <li>Playwright</li>
+  <li>🎨 Figma</li>
+</ul>
 </div>
 
 <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 2rem;">
