@@ -101,6 +101,7 @@ a:hover {
     <li>Performed API testing via Postman and backend data validation</li>
     <li>Tested TestFlight builds and assisted in minimizing production issues</li>
     <li>Created test cases and simulated edge-case crash scenarios</li>
+    <li>Tested CTR and SAR modules to ensure accurate reporting, compliance, and transaction monitoring</li>
   </ul>
 
   <h3>📱 Salarium – Mobile Payroll App</h3>
