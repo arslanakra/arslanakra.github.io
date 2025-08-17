@@ -192,7 +192,7 @@ a:hover {
   <div>
  <h3>🧾 Resume</h3>
 <p style="font-size: 1rem; line-height: 1.6;">
-You can <a href="/resume/M Arslan SQA Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
+You can <a href="resume/M Arslan SQA-Resume.pdf" target="_blank" style="color: #007ACC; font-weight: 500; text-decoration: underline;">
 download my latest resume
 </a> in PDF format.
 </p>
