@@ -45,13 +45,7 @@ a:hover {
 </ul>
 <h2>Tools</h2>
 <ul>
-  <li>🗂️ Jira</li>
-  <li>Git</li>
-  <li>Postman</li>
-  <li>JMeter</li>
-  <li>MySQL</li>
-  <li>Playwright</li>
-  <li>🎨 Figma</li>
+  <li>🗂️ Jira, Git, Postman, JMeter, MySQL, Playwright, 🎨 Figma</li>
 </ul>
 </div>
 
