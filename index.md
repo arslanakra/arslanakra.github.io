@@ -185,6 +185,7 @@ a:hover {
       <li>✅ <a href="/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank">Six Sigma Yellow Belt – GoLeanSixSigma</a></li>
       <li>✅ <a href="assets/certificates/Adv-Playwright.png" target="_blank">Advanced Playwright - Test Automation University</a></li>
       <li>✅ <a href="assets/certificates/Web-Elements.png" target="_blank">Web Element Locator Strategies - Applitools</a></li>
+      <li>✅ <a href="assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank">Test Case Management - 10Pearls University</a></li>
     </ul>
     <p style="margin-top: 0.5rem;">
     📌 <a href="https://www.linkedin.com/in/sqa-arslan-akram/details/certifications/" target="_blank" style="color: #007ACC; text-decoration: underline;">
