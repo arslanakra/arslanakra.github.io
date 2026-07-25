@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Hero role rotator ---------- */
   const rotateEl = document.getElementById('heroRotate');
   if (rotateEl) {
-    const roles = ['SQA Engineer', 'QA Engineer', 'Bug Hunter', 'Test Case Author'];
+    const roles = ['QA Engineer', 'Bug Hunter', 'Database Tester', 'API Tester', 'Regression Specialist'];
 
     if (reduceMotion) {
       rotateEl.textContent = roles[0];
