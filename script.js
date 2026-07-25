@@ -68,6 +68,51 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(s => observer.observe(s));
   }
 
+  /* ---------- Hero role rotator ---------- */
+  const rotateEl = document.getElementById('heroRotate');
+  if (rotateEl) {
+    const roles = ['SQA Engineer', 'QA Engineer', 'Bug Hunter', 'Test Case Author'];
+
+    if (reduceMotion) {
+      rotateEl.textContent = roles[0];
+    } else {
+      let roleIndex = 0;
+
+      const deleteRole = () => {
+        const current = roles[roleIndex];
+        let charIndex = current.length;
+        const deleteChar = () => {
+          charIndex--;
+          rotateEl.textContent = current.slice(0, charIndex);
+          if (charIndex > 0) {
+            setTimeout(deleteChar, 35);
+          } else {
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeRole();
+          }
+        };
+        deleteChar();
+      };
+
+      const typeRole = () => {
+        const next = roles[roleIndex];
+        let charIndex = 0;
+        const typeChar = () => {
+          charIndex++;
+          rotateEl.textContent = next.slice(0, charIndex);
+          if (charIndex < next.length) {
+            setTimeout(typeChar, 55);
+          } else {
+            setTimeout(deleteRole, 1600);
+          }
+        };
+        typeChar();
+      };
+
+      typeRole();
+    }
+  }
+
   /* ---------- Terminal typing animation ---------- */
   const terminalBody = document.getElementById('terminalBody');
   if (terminalBody) {
