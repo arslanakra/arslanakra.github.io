@@ -705,7 +705,7 @@ a:focus-visible, button:focus-visible{
 }
 .bug-wiggle{
   display:inline-block;
-  animation:bug-wiggle 0.28s steps(2) infinite;
+  animation:bug-wiggle 0.18s steps(2) infinite;
 }
 @keyframes bug-crawl{
   0%{transform:translate(6vw,92vh) rotate(0deg);}
