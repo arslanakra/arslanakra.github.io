@@ -153,6 +153,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* ---------- Fleeing bug ---------- */
+  const bug = document.getElementById('crawlingBug');
+  if (bug) {
+    const placeBugRandomly = () => {
+      const margin = 60;
+      const maxTop = window.innerHeight - margin;
+      const maxLeft = window.innerWidth - margin;
+      const top = margin + Math.random() * (maxTop - margin);
+      const left = margin + Math.random() * (maxLeft - margin);
+      bug.style.top = `${top}px`;
+      bug.style.left = `${left}px`;
+    };
+
+    placeBugRandomly();
+    bug.addEventListener('click', placeBugRandomly);
+    window.addEventListener('resize', placeBugRandomly);
+  }
+
   /* ---------- Contact form -> mailto ---------- */
   const form = document.getElementById('ticketForm');
   if (form) {
