@@ -695,34 +695,18 @@ a:focus-visible, button:focus-visible{
 /* ============ BUG ============ */
 .crawling-bug{
   position:fixed;
-  top:0;
-  left:0;
-  font-size:26px;
+  font-size:28px;
   z-index:9999;
-  pointer-events:none;
-  animation:bug-crawl 18s steps(60) infinite;
+  cursor:pointer;
+  pointer-events:auto;
+  transition:top .45s cubic-bezier(.3,.9,.4,1), left .45s cubic-bezier(.3,.9,.4,1);
+  animation:bug-idle 1.4s ease-in-out infinite;
   filter:drop-shadow(0 2px 4px rgba(0,0,0,0.35));
 }
-.bug-wiggle{
-  display:inline-block;
-  animation:bug-wiggle 0.18s steps(2) infinite;
-}
-@keyframes bug-crawl{
-  0%{transform:translate(6vw,92vh) rotate(0deg);}
-  15%{transform:translate(70vw,80vh) rotate(15deg);}
-  30%{transform:translate(85vw,45vh) rotate(-10deg) scaleX(-1);}
-  45%{transform:translate(40vw,60vh) rotate(20deg) scaleX(-1);}
-  60%{transform:translate(15vw,30vh) rotate(-15deg);}
-  75%{transform:translate(55vw,10vh) rotate(10deg);}
-  90%{transform:translate(90vw,6vh) rotate(-5deg) scaleX(-1);}
-  100%{transform:translate(6vw,92vh) rotate(0deg);}
-}
-@keyframes bug-wiggle{
-  0%{transform:translateY(0) rotate(-4deg);}
-  50%{transform:translateY(-2px) rotate(4deg);}
-  100%{transform:translateY(0) rotate(-4deg);}
+@keyframes bug-idle{
+  0%,100%{transform:translateY(0) rotate(-4deg);}
+  50%{transform:translateY(-3px) rotate(4deg);}
 }
 @media (prefers-reduced-motion: reduce){
-  .crawling-bug, .bug-wiggle{animation:none; display:none;}
-}
+  .crawling-bug{animation:none; transition:none;}
 }
