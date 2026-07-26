@@ -700,8 +700,12 @@ a:focus-visible, button:focus-visible{
   font-size:26px;
   z-index:9999;
   pointer-events:none;
-  animation:bug-crawl 18s linear infinite;
+  animation:bug-crawl 18s steps(60) infinite;
   filter:drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+}
+.bug-wiggle{
+  display:inline-block;
+  animation:bug-wiggle 0.28s steps(2) infinite;
 }
 @keyframes bug-crawl{
   0%{transform:translate(6vw,92vh) rotate(0deg);}
@@ -713,6 +717,12 @@ a:focus-visible, button:focus-visible{
   90%{transform:translate(90vw,6vh) rotate(-5deg) scaleX(-1);}
   100%{transform:translate(6vw,92vh) rotate(0deg);}
 }
+@keyframes bug-wiggle{
+  0%{transform:translateY(0) rotate(-4deg);}
+  50%{transform:translateY(-2px) rotate(4deg);}
+  100%{transform:translateY(0) rotate(-4deg);}
+}
 @media (prefers-reduced-motion: reduce){
-  .crawling-bug{animation:none; display:none;}
+  .crawling-bug, .bug-wiggle{animation:none; display:none;}
+}
 }
