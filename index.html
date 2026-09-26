@@ -236,10 +236,52 @@
   <p class="stage-tag">STAGE 04 · PROJECTS</p>
   <h2 class="section-title">Case files</h2>
   <div class="tc-grid">
+
+   <article class="tc-card">
+      <div class="tc-head">
+        <span class="tc-id">TC-001</span>
+        <span class="badge badge-pass">RUNNING</span>
+      </div>
+      <h3>Salarium — Send Money App</h3>
+      <p class="tc-desc">Mobile remittance app built on Intermex APIs, handling send money transfers to single and multiple payees with real-time status tracking.</p>
+      <div class="tc-tags">
+        <span class="tag">Send Money Flow</span><span class="tag">Multi-Payee Testing</span><span class="tag">Real-Time Status</span><span class="tag">API Testing (Intermex)</span>
+      </div>
+      <ul class="tc-list">
+        <li>Tested the core send money flow and the send again flow for repeat transfers</li>
+        <li>Verified transfers to a single payee and across multiple payees in one session</li>
+        <li>Tested cancel transfer scenarios, including cancellation at different stages of an in-flight transaction</li>
+        <li>Validated real-time status updates against the Intermex API to confirm the app reflected accurate transfer states (pending, sent, cancelled)</li>
+        <li>Tested TestFlight builds and monitored crash logs to catch issues before release</li>
+      </ul>
+    </article>
+ 
+    <article class="tc-card">
+      <div class="tc-head">
+        <span class="tc-id">TC-002</span>
+        <div class="badge-group">
+          <span class="badge badge-bug">🐛 Hardware + OCR</span>
+          <span class="badge badge-pass">RUNNING</span>
+        </div>
+      </div>
+      <h3>Agent POS System — Check Cashing &amp; OCR Automation</h3>
+      <p class="tc-desc">End-to-end QA for an agent-facing POS system handling check cashing, OCR-based check reading, and multi-scanner hardware integration.</p>
+      <div class="tc-tags">
+        <span class="tag">Playwright Automation</span><span class="tag">API Testing (Postman)</span><span class="tag">OCR Validation</span><span class="tag">Hardware Integration</span>
+      </div>
+      <ul class="tc-list">
+        <li>Tested the full check cashing flow, including terminal registration and auto-approve, auto-decline, and pending-decision paths</li>
+        <li>Validated Gemini OCR extraction and failure handling, covering amount mismatches, missing signatures, and CAR/LAR mismatches</li>
+        <li>Verified check data reading via MICR line parsing</li>
+        <li>Tested hardware integration across connected scanners, including flatbed, Aspire, and Epson models</li>
+        <li>Automated core regression scenarios with Playwright and validated backend responses via Postman</li>
+      </ul>
+    </article>
+    
     
  <article class="tc-card">
       <div class="tc-head">
-        <span class="tc-id">TC-001</span>
+        <span class="tc-id">TC-003</span>
         <div class="badge-group">
           <span class="badge badge-bug">🐛 −30% bug ratio</span>
           <span class="badge badge-pass">RUNNING</span>
@@ -259,29 +301,10 @@
       </ul>
       <button class="card-expand" data-clamp-toggle>Show more</button>
     </article>
-
-        <article class="tc-card">
-      <div class="tc-head">
-        <span class="tc-id">TC-002</span>
-        <span class="badge badge-bug">🐛 100+ scenarios</span>
-        <span class="badge badge-pass">RUNNING</span>
-      </div>
-      <h3>MySalarium — Send Money Mobile App</h3>
-      <p class="tc-desc">UI/UX design input, QA ownership, and post-production validation for a Send Money app.</p>
-      <div class="tc-tags">
-        <span class="tag">Wireframing</span><span class="tag">Full QA Lifecycle</span><span class="tag">Crash Monitoring</span>
-      </div>
-      <ul class="tc-list">
-        <li>Created wireframes and collaborated with designers for improved UX</li>
-        <li>Managed full QA lifecycle: functional, regression, backend, and API testing</li>
-        <li>Tested TestFlight app builds and reduced pre-launch bug ratio</li>
-        <li>Proactively monitored crash logs and built test cases for fast resolution</li>
-      </ul>
-    </article>
-    
+           
     <article class="tc-card">
       <div class="tc-head">
-        <span class="tc-id">TC-003</span>
+        <span class="tc-id">TC-004</span>
         <div class="badge-group">
           <span class="badge badge-bug">🐛 100+ scenarios</span>
           <span class="badge badge-pass">RUNNING</span>
@@ -304,7 +327,7 @@
 
        <article class="tc-card">
       <div class="tc-head">
-        <span class="tc-id">TC-004</span>
+        <span class="tc-id">TC-005</span>
         <span class="badge badge-pass">RUNNING</span>
       </div>
       <h3>Check Cashing Mobile App</h3>
@@ -321,6 +344,55 @@
     </article>
 
   </div>
+  <div class="findings-block">
+    <p class="panel-header">CRITICAL BUGS CAUGHT</p>
+    <div class="finding-grid">
+ 
+      <article class="finding-card">
+        <div class="finding-head">
+          <span class="finding-id">BUG-001</span>
+          <span class="badge badge-bug">CRITICAL</span>
+        </div>
+        <h4>Fund Field Mapping &amp; Sign Inversion</h4>
+        <p class="finding-project">Check Cashing Web App — Money Transfer</p>
+        <p class="finding-desc">Found that the API returned the additional service transaction amount under the <code>maxi</code> parameter, while the frontend rendered it in the <code>intermex</code> field, posting transactions to the wrong service category on daily financial sheets. Also found that negative amounts returned by the API were being converted to positive values by the React component rendering the transaction, inverting the sign and mismatching totals against money transfer debits.</p>
+        <p class="finding-impact"><span class="finding-label">Impact:</span> Financial reporting and debit reconciliation errors across daily transaction sheets.</p>
+        <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+      </article>
+ 
+      <article class="finding-card">
+        <div class="finding-head">
+          <span class="finding-id">BUG-002</span>
+          <span class="badge badge-bug">CRITICAL</span>
+        </div>
+        <h4>OCR Failure Payload &amp; Terminal Session Scoping</h4>
+        <p class="finding-project">Agent POS System</p>
+        <p class="finding-desc">Found that when Gemini OCR failed to parse a check, the system still forwarded routing number, account number, check number, and owner information to the maker instead of blocking submission on an empty or invalid payload, risking downstream processing of unverified checks. Separately found that users provisioned for Terminal 890 could authenticate and transact on Terminal 891, breaking terminal-level access control.</p>
+        <p class="finding-impact"><span class="finding-label">Impact:</span> Business continuity risk from unverified check processing, plus broken terminal-level access control.</p>
+        <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+      </article>
+ 
+      <article class="finding-card">
+        <div class="finding-head">
+          <span class="finding-id">BUG-003</span>
+          <span class="badge badge-bug">CRITICAL</span>
+        </div>
+        <h4>Stale Navigation State After Wallet and Prepaid Detachment</h4>
+        <p class="finding-project">Salarium — Send Money App</p>
+        <p class="finding-desc">After detaching the wallet and prepaid sections from the app, 
+          the newer build was scoped to open into a calculator screen first, letting users calculate the real-time send and receive amount across countries before proceeding. 
+          In the detachment APK and TestFlight build, found that backgrounding the app while the calculator screen was open, then killing and relaunching it, 
+          caused the app to route back to the old wallet section instead of resuming on the calculator. Also found that after completing sign-in and registration, 
+          the app navigated to the prepaid section instead of the recipients list, 
+          which was the intended post-registration flow in the new build.</p>
+        <p class="finding-impact"><span class="finding-label">Impact:</span> Users landed on deprecated screens (wallet, prepaid) that were supposed to be fully detached from the app, 
+          breaking the calculator-first flow on relaunch and the correct post-registration flow into the recipients list.</p>
+        <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+      </article>
+ 
+    </div>
+  </div>
+</section>
 </section>
 
 <!-- ================= ARTIFACTS ================= -->
