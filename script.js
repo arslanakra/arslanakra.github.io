@@ -39,22 +39,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const clampToggles = document.querySelectorAll('[data-clamp-toggle]');
+  document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('article, .log-card, .finding-card');
+      if (!card) return;
 
-  clampToggles.forEach((button) => {
-    button.addEventListener('click', () => {
-      // Find the list or description near this button
-      const card = button.closest('.tc-card, .finding-card, .log-card');
-      const list = card ? card.querySelector('.log-list, .finding-desc') : null;
-
-      if (list) {
-        const isClamped = list.classList.toggle('is-clamped');
-        button.textContent = isClamped ? 'Show more' : 'Show less';
+      const target = card.querySelector('.finding-desc, .tc-desc, .tc-list, .log-list');
+      if (target) {
+        const isClamped = target.classList.contains('is-clamped');
+        if (isClamped) {
+          target.classList.remove('is-clamped');
+          btn.textContent = 'Show less';
+        } else {
+          target.classList.add('is-clamped');
+          btn.textContent = 'Show more';
+        }
       }
     });
   });
-});
 
   /* ---------- Recommendation carousel ---------- */
   const recCarousel = document.querySelector('.rec-carousel');
