@@ -254,6 +254,7 @@
         <li>Validated real-time status updates against the Intermex API to confirm the app reflected accurate transfer states (pending, sent, cancelled)</li>
         <li>Tested TestFlight builds and monitored crash logs to catch issues before release</li>
       </ul>
+      <button class="card-expand" data-clamp-toggle>Show more</button>
     </article>
  
     <article class="tc-card">
@@ -276,6 +277,7 @@
         <li>Tested hardware integration across connected scanners, including flatbed, Aspire, and Epson models</li>
         <li>Automated core regression scenarios with Playwright and validated backend responses via Postman</li>
       </ul>
+      <button class="card-expand" data-clamp-toggle>Show more</button>
     </article>
     
     
@@ -358,6 +360,7 @@
         <p class="finding-desc">Found that the API returned the additional service transaction amount under the <code>maxi</code> parameter, while the frontend rendered it in the <code>intermex</code> field, posting transactions to the wrong service category on daily financial sheets. Also found that negative amounts returned by the API were being converted to positive values by the React component rendering the transaction, inverting the sign and mismatching totals against money transfer debits.</p>
         <p class="finding-impact"><span class="finding-label">Impact:</span> Financial reporting and debit reconciliation errors across daily transaction sheets.</p>
         <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
       </article>
  
       <article class="finding-card">
@@ -370,6 +373,7 @@
         <p class="finding-desc">Found that when Gemini OCR failed to parse a check, the system still forwarded routing number, account number, check number, and owner information to the maker instead of blocking submission on an empty or invalid payload, risking downstream processing of unverified checks. Separately found that users provisioned for Terminal 890 could authenticate and transact on Terminal 891, breaking terminal-level access control.</p>
         <p class="finding-impact"><span class="finding-label">Impact:</span> Business continuity risk from unverified check processing, plus broken terminal-level access control.</p>
         <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
       </article>
  
       <article class="finding-card">
@@ -388,6 +392,7 @@
         <p class="finding-impact"><span class="finding-label">Impact:</span> Users landed on deprecated screens (wallet, prepaid) that were supposed to be fully detached from the app, 
           breaking the calculator-first flow on relaunch and the correct post-registration flow into the recipients list.</p>
         <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
       </article>
  
     </div>
