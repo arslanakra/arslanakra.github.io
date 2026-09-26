@@ -1,3 +1,11 @@
+/* ============ FONT IMPORTS ============
+   Your CSS names 'JetBrains Mono' and 'Inter', but nothing in this file
+   or (most likely) your <head> actually loads them — so the browser
+   falls back to its default serif/system font, which is the "old
+   money" look you're seeing. This import fixes that AND loads the
+   two alternate presets below so switching is instant, no reload. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&family=Source+Serif+4:wght@400;600&display=swap');
+
 /* ============ TOKENS ============ */
 :root{
   --bg:#0F1417;
@@ -30,6 +38,78 @@ html[data-theme="light"]{
   --fail-dim:rgba(217,72,58,0.10);
   --shadow: 0 20px 40px -24px rgba(0,0,0,0.15);
   color-scheme: light;
+}
+
+/* ============ THEME: SLATE ============
+   Navy/graphite base with a teal-cyan "pass" accent instead of green.
+   Reads as precise/technical rather than "eco-green" — a common QA
+   portfolio palette that still signals rigor and calm confidence. */
+html[data-theme="slate"]{
+  --bg:#0B1220;
+  --surface:#121B2E;
+  --surface-2:#182338;
+  --border:#243354;
+  --text:#E7ECF4;
+  --muted:#8C9AB8;
+  --pass:#3DB8DC;
+  --fail:#FF7A6B;
+  --pass-dim:rgba(61,184,220,0.12);
+  --fail-dim:rgba(255,122,107,0.12);
+  --shadow:0 20px 40px -20px rgba(0,0,0,0.55);
+  color-scheme: dark;
+}
+
+/* ============ THEME: LEDGER ============
+   Warm off-white base, graphite text, single restrained amber accent
+   for "verified/pass" states — closer to an audit report than a
+   dashboard. Good if green (pass/fail) feels too literal for the
+   overall brand and you want something calmer for recruiters. */
+html[data-theme="ledger"]{
+  --bg:#F7F5F1;
+  --surface:#FFFFFF;
+  --surface-2:#EFEBE3;
+  --border:#DCD5C7;
+  --text:#22201B;
+  --muted:#6B6558;
+  --pass:#B5792A;
+  --fail:#B0392F;
+  --pass-dim:rgba(181,121,42,0.10);
+  --fail-dim:rgba(176,57,47,0.10);
+  --shadow:0 20px 40px -24px rgba(0,0,0,0.12);
+  color-scheme: light;
+}
+
+/* ============ FONT PRESETS ============
+   Swap by setting data-font on <html>. Default (no attribute, or
+   data-font="terminal") = your current JetBrains Mono / Inter pairing.
+   Wire a small button to cycle these — see the toggle pattern used
+   for data-theme just above, same idea. */
+
+/* Preset 2: "signal" — geometric sans headings, still QA/technical
+   but less terminal, more product-engineering. */
+html[data-font="signal"]{
+  --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  --sans:'Inter', system-ui, -apple-system, sans-serif;
+}
+html[data-font="signal"] .hero h1,
+html[data-font="signal"] .section-title,
+html[data-font="signal"] .brand{
+  font-family:'Space Grotesk', var(--sans);
+  letter-spacing:-0.01em;
+}
+
+/* Preset 3: "report" — reads like a formal QA test report: serif
+   headings for authority, clean sans body, mono kept only for
+   code/data labels. */
+html[data-font="report"]{
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+  --sans:'Sora', system-ui, -apple-system, sans-serif;
+}
+html[data-font="report"] .hero h1,
+html[data-font="report"] .section-title{
+  font-family:'Source Serif 4', Georgia, serif;
+  font-weight:600;
+  letter-spacing:0;
 }
 
 *{box-sizing:border-box; margin:0; padding:0;}
@@ -433,6 +513,7 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:24px;
+  align-items:start;
 }
 .coverage-panel{
   background:var(--surface);
@@ -523,6 +604,7 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:24px;
+  align-items:start; /* stop cards stretching to match the tallest sibling */
 }
 .tc-card{
   background:var(--surface);
@@ -536,6 +618,22 @@ html[data-theme="light"] .btn-primary{color:#fff;}
 .tc-id{font-family:var(--mono); font-size:13px; color:var(--muted);}
 .tc-card h3{font-size:20px; margin-bottom:8px;}
 .tc-desc{color:var(--muted); font-size:15.5px; margin-bottom:14px;}
+.tc-desc.is-clamped{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  overflow:hidden;
+}
+.tc-list.is-clamped li:nth-child(n+5),
+.log-list.is-clamped li:nth-child(n+5){display:none;}
+.card-expand{
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--pass);
+  border-bottom:1px dashed var(--pass);
+  margin-top:2px;
+  display:inline-block;
+}
 .tc-tags{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;}
 .tag{
   font-family:var(--mono);
@@ -560,6 +658,7 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:20px;
+  align-items:start;
 }
 .finding-card{
   background:var(--surface);
@@ -580,6 +679,12 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   margin-bottom:12px;
 }
 .finding-desc{font-size:14px; color:var(--muted); margin-bottom:14px;}
+.finding-desc.is-clamped{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  overflow:hidden;
+}
 .finding-desc code{
   font-family:var(--mono);
   font-size:12.5px;
@@ -647,6 +752,42 @@ html[data-theme="light"] .btn-primary{color:#fff;}
 .rec-status{font-family:var(--mono); font-size:11px; color:var(--pass); letter-spacing:.1em; margin-bottom:14px;}
 .rec-text{font-size:16px; color:var(--text); margin-bottom:16px; max-width:760px;}
 .rec-author{font-family:var(--mono); font-size:13px; color:var(--muted); margin-bottom:10px;}
+
+/* ---- Recommendation carousel: one visible at a time ---- */
+.rec-carousel{position:relative; overflow:hidden;}
+.rec-track{display:flex; transition:transform .5s cubic-bezier(.4,0,.2,1);}
+.rec-slide{
+  flex:0 0 100%;
+  min-width:0;
+}
+.rec-slide .rec-card{margin:0;}
+.rec-nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin-top:20px;
+}
+.rec-arrow{
+  width:34px; height:34px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--text);
+  transition:border-color .2s ease;
+}
+.rec-arrow:hover{border-color:var(--pass);}
+.rec-dots{display:flex; gap:8px;}
+.rec-dot{
+  width:8px; height:8px;
+  border-radius:50%;
+  background:var(--border);
+  transition:background .2s ease, transform .2s ease;
+}
+.rec-dot.is-active{background:var(--pass); transform:scale(1.25);}
+@media (prefers-reduced-motion: reduce){
+  .rec-track{transition:none;}
+}
 
 /* ============ CONTACT ============ */
 .contact-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:40px;}
