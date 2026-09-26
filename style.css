@@ -255,8 +255,10 @@ button{font:inherit; cursor:pointer; background:none; border:none; color:inherit
   color:var(--text);
 }
 .icon-moon{display:none;}
-html[data-theme="light"] .icon-sun{display:none;}
-html[data-theme="light"] .icon-moon{display:block;}
+html[data-theme="light"] .icon-sun,
+html[data-theme="ledger"] .icon-sun{display:none;}
+html[data-theme="light"] .icon-moon,
+html[data-theme="ledger"] .icon-moon{display:block;}
 
 .menu-toggle{
   display:none;
