@@ -1,147 +1,262 @@
-/* ==========================================================
-   PORTFOLIO ENHANCEMENTS
-   Drop this in as a <script> after your existing scripts, and
-   add the small markup snippets noted in each section below.
-   ========================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---------- 1. Card "show more" (pairs with .is-clamped in CSS) ----------
-   HTML pattern for any card that might overflow, e.g. a project card:
+  /* ---------- Theme toggle (now cycles 4 themes instead of 2) ---------- */
+  const html = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const themes = ['dark', 'light', 'slate', 'ledger']; // 'dark' = default, no attribute needed
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  if (savedTheme && themes.includes(savedTheme)) html.setAttribute('data-theme', savedTheme);
 
-   <p class="tc-desc is-clamped" data-clamp>Long description text...</p>
-   <button class="card-expand" data-clamp-toggle>Show more</button>
+  const applyThemeState = () => {
+    const current = html.getAttribute('data-theme') || 'dark';
+    const isLightFamily = current === 'light' || current === 'ledger';
+    themeToggle.setAttribute('aria-pressed', String(isLightFamily));
+  };
+  applyThemeState();
 
-   Works for any element — just add is-clamped + data-clamp to the
-   text, and data-clamp-toggle to a sibling button.
-*/
-document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.previousElementSibling;
-    const expanded = target.classList.toggle('is-clamped') === false;
-    btn.textContent = expanded ? 'Show less' : 'Show more';
-  });
-});
-
-/* ---------- 2. Recommendation carousel ----------
-   HTML pattern:
-
-   <div class="rec-carousel">
-     <div class="rec-track">
-       <div class="rec-slide">
-         <div class="rec-card"> ...recommendation 1... </div>
-       </div>
-       <div class="rec-slide">
-         <div class="rec-card"> ...recommendation 2... </div>
-       </div>
-       <!-- one .rec-slide per recommendation -->
-     </div>
-     <div class="rec-nav">
-       <button class="rec-arrow" data-rec-prev aria-label="Previous">‹</button>
-       <div class="rec-dots"></div>
-       <button class="rec-arrow" data-rec-next aria-label="Next">›</button>
-     </div>
-   </div>
-*/
-(function initRecCarousel() {
-  const carousel = document.querySelector('.rec-carousel');
-  if (!carousel) return;
-
-  const track = carousel.querySelector('.rec-track');
-  const slides = Array.from(carousel.querySelectorAll('.rec-slide'));
-  const dotsWrap = carousel.querySelector('.rec-dots');
-  const prevBtn = carousel.querySelector('[data-rec-prev]');
-  const nextBtn = carousel.querySelector('[data-rec-next]');
-  const nav = carousel.parentElement.querySelector('.rec-nav');
-  let index = 0;
-  let autoTimer = null;
-
-  // Only one recommendation so far — hide arrows/dots, nothing to page through.
-  // This removes itself automatically once you add more .rec-slide entries.
-  if (slides.length <= 1) {
-    if (nav) nav.style.display = 'none';
-    return;
-  }
-
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'rec-dot' + (i === 0 ? ' is-active' : '');
-    dot.setAttribute('aria-label', `Go to recommendation ${i + 1}`);
-    dot.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(dot);
-  });
-  const dots = Array.from(dotsWrap.children);
-
-  function goTo(i) {
-    index = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
-  }
-
-  function restartAuto() {
-    if (autoTimer) clearInterval(autoTimer);
-    autoTimer = setInterval(() => goTo(index + 1), 6000);
-  }
-
-  prevBtn?.addEventListener('click', () => { goTo(index - 1); restartAuto(); });
-  nextBtn?.addEventListener('click', () => { goTo(index + 1); restartAuto(); });
-
-  // Pause autoplay while the user's mouse is over it
-  carousel.addEventListener('mouseenter', () => autoTimer && clearInterval(autoTimer));
-  carousel.addEventListener('mouseleave', restartAuto);
-
-  goTo(0);
-  restartAuto();
-})();
-
-/* ---------- 3. Font preset switcher ----------
-   HTML pattern (e.g. next to your existing theme-toggle button):
-
-   <button class="theme-toggle" data-font-cycle aria-label="Change font style">Aa</button>
-*/
-(function initFontCycle() {
-  const presets = [null, 'signal', 'report']; // null = default "terminal" pairing
-  const btn = document.querySelector('[data-font-cycle]');
-  if (!btn) return;
-
-  let saved = localStorage.getItem('portfolio-font');
-  if (saved && presets.includes(saved === 'terminal' ? null : saved)) {
-    document.documentElement.setAttribute('data-font', saved === 'terminal' ? '' : saved);
-  }
-
-  btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-font') || null;
-    const nextIndex = (presets.indexOf(current) + 1) % presets.length;
-    const next = presets[nextIndex];
-    if (next) {
-      document.documentElement.setAttribute('data-font', next);
-    } else {
-      document.documentElement.removeAttribute('data-font');
-    }
-    localStorage.setItem('portfolio-font', next || 'terminal');
-  });
-})();
-
-/* ---------- 4. Theme cycling (extends your existing light/dark toggle) ----------
-   If you want your existing .theme-toggle button to cycle through
-   FOUR themes instead of two, replace its click handler with this:
-
-   const themes = ['dark', 'light', 'slate', 'ledger']; // 'dark' = default, no attribute
-*/
-(function initThemeCycle() {
-  const themes = ['dark', 'light', 'slate', 'ledger'];
-  const btn = document.querySelector('[data-theme-cycle]'); // give your existing button this attribute
-  if (!btn) return;
-
-  let saved = localStorage.getItem('portfolio-theme');
-  if (saved && saved !== 'dark') document.documentElement.setAttribute('data-theme', saved);
-
-  btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  themeToggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme') || 'dark';
     const next = themes[(themes.indexOf(current) + 1) % themes.length];
-    if (next === 'dark') {
-      document.documentElement.removeAttribute('data-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', next);
-    }
+    html.setAttribute('data-theme', next);
     localStorage.setItem('portfolio-theme', next);
+    applyThemeState();
   });
-})();
+
+  /* ---------- Font pairing switcher ---------- */
+  const fontBtn = document.querySelector('[data-font-cycle]');
+  if (fontBtn) {
+    const fontPresets = [null, 'signal', 'report']; // null = default terminal pairing
+    const savedFont = localStorage.getItem('portfolio-font');
+    if (savedFont && savedFont !== 'terminal') html.setAttribute('data-font', savedFont);
+
+    fontBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-font') || null;
+      const next = fontPresets[(fontPresets.indexOf(current) + 1) % fontPresets.length];
+      if (next) html.setAttribute('data-font', next);
+      else html.removeAttribute('data-font');
+      localStorage.setItem('portfolio-font', next || 'terminal');
+    });
+  }
+
+  /* ---------- Card "show more" (project & log cards) ---------- */
+  document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.previousElementSibling;
+      const expanded = target.classList.toggle('is-clamped') === false;
+      btn.textContent = expanded ? 'Show less' : 'Show more';
+    });
+  });
+
+  /* ---------- Recommendation carousel ---------- */
+  const recCarousel = document.querySelector('.rec-carousel');
+  if (recCarousel) {
+    const track = recCarousel.querySelector('.rec-track');
+    const slides = Array.from(recCarousel.querySelectorAll('.rec-slide'));
+    const dotsWrap = recCarousel.querySelector('.rec-dots');
+    const prevBtn = recCarousel.querySelector('[data-rec-prev]');
+    const nextBtn = recCarousel.querySelector('[data-rec-next]');
+    const nav = recCarousel.parentElement.querySelector('.rec-nav');
+
+    if (slides.length <= 1) {
+      if (nav) nav.style.display = 'none';
+    } else {
+      let index = 0;
+      let autoTimer = null;
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'rec-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', `Go to recommendation ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(dot);
+      });
+      const dots = Array.from(dotsWrap.children);
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+      }
+
+      function restartAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        if (!reduceMotion) autoTimer = setInterval(() => goTo(index + 1), 6000);
+      }
+
+      prevBtn?.addEventListener('click', () => { goTo(index - 1); restartAuto(); });
+      nextBtn?.addEventListener('click', () => { goTo(index + 1); restartAuto(); });
+      recCarousel.addEventListener('mouseenter', () => autoTimer && clearInterval(autoTimer));
+      recCarousel.addEventListener('mouseleave', restartAuto);
+
+      goTo(0);
+      restartAuto();
+    }
+  }
+
+  /* ---------- Mobile drawer ---------- */
+  const menuToggle = document.getElementById('menuToggle');
+  const drawer = document.getElementById('drawer');
+
+  const closeDrawer = () => {
+    drawer.classList.remove('is-open');
+    menuToggle.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('is-open');
+    menuToggle.classList.toggle('is-open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  document.querySelectorAll('.drawer-link').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  /* ---------- Pipeline scrollspy ---------- */
+  const sections = ['home','about','skills','experience','projects','artifacts','contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  const stageLinks = Array.from(document.querySelectorAll('.stage'));
+  const order = sections.map(s => s.id);
+
+  const setActive = (id) => {
+    const idx = order.indexOf(id);
+    stageLinks.forEach(link => {
+      const linkIdx = order.indexOf(link.dataset.target);
+      link.classList.remove('is-active', 'is-done');
+      if (linkIdx === idx) link.classList.add('is-active');
+      else if (linkIdx < idx) link.classList.add('is-done');
+    });
+  };
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },{ rootMargin: '-15% 0px -60% 0px', threshold: 0 });
+
+    sections.forEach(s => observer.observe(s));
+  }
+
+  /* ---------- Hero role rotator ---------- */
+  const rotateEl = document.getElementById('heroRotate');
+  if (rotateEl) {
+    const roles = ['QA Engineer', 'Bug Hunter', 'Database Tester', 'API Tester', 'Regression Specialist'];
+
+    if (reduceMotion) {
+      rotateEl.textContent = roles[0];
+    } else {
+      let roleIndex = 0;
+
+      const deleteRole = () => {
+        const current = roles[roleIndex];
+        let charIndex = current.length;
+        const deleteChar = () => {
+          charIndex--;
+          rotateEl.textContent = current.slice(0, charIndex);
+          if (charIndex > 0) {
+            setTimeout(deleteChar, 35);
+          } else {
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeRole();
+          }
+        };
+        deleteChar();
+      };
+
+      const typeRole = () => {
+        const next = roles[roleIndex];
+        let charIndex = 0;
+        const typeChar = () => {
+          charIndex++;
+          rotateEl.textContent = next.slice(0, charIndex);
+          if (charIndex < next.length) {
+            setTimeout(typeChar, 55);
+          } else {
+            setTimeout(deleteRole, 1600);
+          }
+        };
+        typeChar();
+      };
+
+      typeRole();
+    }
+  }
+
+  /* ---------- Terminal typing animation ---------- */
+  const terminalBody = document.getElementById('terminalBody');
+  if (terminalBody) {
+    const lines = Array.from(terminalBody.querySelectorAll('.t-line'));
+
+    if (reduceMotion) {
+      lines.forEach(line => { line.textContent = line.dataset.text; });
+    } else {
+      lines.forEach(line => { line.textContent = ''; });
+
+      let lineIndex = 0;
+      const typeLine = () => {
+        if (lineIndex >= lines.length) return;
+        const line = lines[lineIndex];
+        const full = line.dataset.text;
+        let charIndex = 0;
+
+        const typeChar = () => {
+          if (charIndex <= full.length) {
+            line.textContent = full.slice(0, charIndex);
+            charIndex++;
+            setTimeout(typeChar, 14);
+          } else {
+            lineIndex++;
+            setTimeout(typeLine, 180);
+          }
+        };
+        typeChar();
+      };
+
+      const startObserver = new IntersectionObserver((entries, obs) => {
+        if (entries[0].isIntersecting) {
+          typeLine();
+          obs.disconnect();
+        }
+      }, { threshold: 0.3 });
+      startObserver.observe(terminalBody);
+    }
+  }
+
+  /* ---------- Fleeing bug ---------- */
+  const bug = document.getElementById('crawlingBug');
+  if (bug) {
+    const placeBugRandomly = () => {
+      const margin = 60;
+      const maxTop = window.innerHeight - margin;
+      const maxLeft = window.innerWidth - margin;
+      const top = margin + Math.random() * (maxTop - margin);
+      const left = margin + Math.random() * (maxLeft - margin);
+      bug.style.top = `${top}px`;
+      bug.style.left = `${left}px`;
+    };
+
+    placeBugRandomly();
+    bug.addEventListener('click', placeBugRandomly);
+    window.addEventListener('resize', placeBugRandomly);
+  }
+
+  /* ---------- Contact form -> mailto ---------- */
+  const form = document.getElementById('ticketForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('tName').value.trim();
+      const email = document.getElementById('tEmail').value.trim();
+      const message = document.getElementById('tMsg').value.trim();
+
+      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+      window.location.href = `mailto:arsalantaqi255@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
+});
