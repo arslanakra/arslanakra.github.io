@@ -639,11 +639,6 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   overflow: hidden !important;
 }
 
-.tc-list.is-clamped li:nth-child(n+5),
-.log-list.is-clamped li:nth-child(n+5){
-  display: list-item;
-}
-
 .card-expand{
   font-family:var(--mono);
   font-size:12.5px;
