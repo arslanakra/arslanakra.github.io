@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Theme toggle (now cycles 4 themes instead of 2) ---------- */
+  /* ---------- Theme toggle (cycles 6 themes) ---------- */
   const html = document.documentElement;
   const themeToggle = document.getElementById('themeToggle');
-  const themes = ['dark', 'light', 'slate', 'ledger']; // 'dark' = default, no attribute needed
+  const themes = ['dark', 'light', 'slate', 'ledger', 'cyberpunk', 'midnight'];
   const savedTheme = localStorage.getItem('portfolio-theme');
   if (savedTheme && themes.includes(savedTheme)) html.setAttribute('data-theme', savedTheme);
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Font pairing switcher ---------- */
   const fontBtn = document.querySelector('[data-font-cycle]');
   if (fontBtn) {
-    const fontPresets = [null, 'signal', 'report']; // null = default terminal pairing
+    const fontPresets = [null, 'signal', 'report'];
     const savedFont = localStorage.getItem('portfolio-font');
     if (savedFont && savedFont !== 'terminal') html.setAttribute('data-font', savedFont);
 
@@ -39,12 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Card "show more" (project & log cards) ---------- */
+  /* ---------- Card "show more" (Project, Log & Bug cards) ---------- */
   document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = btn.previousElementSibling;
-      const expanded = target.classList.toggle('is-clamped') === false;
-      btn.textContent = expanded ? 'Show less' : 'Show more';
+      const card = btn.closest('article, .log-card');
+      if (!card) return;
+
+      const target = card.querySelector('.finding-desc, .tc-desc, .tc-list, .log-list');
+      if (target) {
+        const isCurrentlyClamped = target.classList.contains('is-clamped');
+        if (isCurrentlyClamped) {
+          target.classList.remove('is-clamped');
+          btn.textContent = 'Show less';
+        } else {
+          target.classList.add('is-clamped');
+          btn.textContent = 'Show more';
+        }
+      }
     });
   });
 
