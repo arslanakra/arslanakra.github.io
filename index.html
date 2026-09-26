@@ -332,7 +332,7 @@
         <span class="tc-id">TC-004</span>
         <span class="badge badge-pass">PASS</span>
       </div>
-      <h3>Salarium — Send Money App</h3>
+      <h3>MySalarium — Send Money App</h3>
       <p class="tc-desc">Mobile remittance app built on Intermex APIs, handling send money transfers to single and multiple payees with real-time status tracking.</p>
       <div class="tc-tags">
         <span class="tag">Send Money Flow</span><span class="tag">Multi-Payee Testing</span><span class="tag">Real-Time Status</span><span class="tag">API Testing (Intermex)</span>
@@ -404,9 +404,10 @@
           <span class="badge badge-bug">CRITICAL</span>
         </div>
         <h4>Plaintext Password Storage</h4>
-        <p class="finding-project">Salarium — Send Money App</p>
+        <p class="finding-project">MySalarium — Send Money App</p>
         <p class="finding-desc">Found that user passwords were being saved in local storage instead of secure, encrypted storage, exposing credentials to device-level compromise.</p>
-        <p class="finding-impact"><span class="finding-label">Impact:</span> High severity security risk to user credentials.</p>
+        <p class="finding-desc">After detaching the wallet and prepaid sections from the app, the newer build was scoped to open into a calculator screen first, letting users calculate the real-time send and receive amount across countries before proceeding. In the detachment APK and TestFlight build, found that backgrounding the app while the calculator screen was open, then killing and relaunching it, caused the app to route back to the old wallet section instead of resuming on the calculator. Also found that after completing sign-in and registration, the app navigated to the prepaid section instead of the recipients list, which was the intended post-registration flow in the new build.</p>
+        <p class="finding-impact"><span class="finding-label">Impact:</span> High severity risk of routing users back into deprecated wallet and prepaid flows after detachment, undermining the intended calculator-first and recipients-list experience.</p>
         <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
       </article>
 
