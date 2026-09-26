@@ -1,241 +1,147 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* ==========================================================
+   PORTFOLIO ENHANCEMENTS
+   Drop this in as a <script> after your existing scripts, and
+   add the small markup snippets noted in each section below.
+   ========================================================== */
 
-  /* ---------- Theme toggle ---------- */
-  const html = document.documentElement;
-  const themeToggle = document.getElementById('themeToggle');
-  const savedTheme = localStorage.getItem('portfolio-theme');
+/* ---------- 1. Card "show more" (pairs with .is-clamped in CSS) ----------
+   HTML pattern for any card that might overflow, e.g. a project card:
 
-  if (savedTheme) {
-    html.setAttribute('data-theme', savedTheme);
-  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-    // No saved preference yet — respect the visitor's system setting on first visit.
-    html.setAttribute('data-theme', 'light');
-  }
+   <p class="tc-desc is-clamped" data-clamp>Long description text...</p>
+   <button class="card-expand" data-clamp-toggle>Show more</button>
 
-  const applyThemeState = () => {
-    const isLight = html.getAttribute('data-theme') === 'light';
-    themeToggle.setAttribute('aria-pressed', String(isLight));
-  };
-  applyThemeState();
-
-  themeToggle.addEventListener('click', () => {
-    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('portfolio-theme', next);
-    applyThemeState();
+   Works for any element — just add is-clamped + data-clamp to the
+   text, and data-clamp-toggle to a sibling button.
+*/
+document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.previousElementSibling;
+    const expanded = target.classList.toggle('is-clamped') === false;
+    btn.textContent = expanded ? 'Show less' : 'Show more';
   });
-
-  /* ---------- Mobile drawer ---------- */
-  const menuToggle = document.getElementById('menuToggle');
-  const drawer = document.getElementById('drawer');
-
-  const closeDrawer = () => {
-    drawer.classList.remove('is-open');
-    menuToggle.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  };
-
-  menuToggle.addEventListener('click', () => {
-    const isOpen = drawer.classList.toggle('is-open');
-    menuToggle.classList.toggle('is-open', isOpen);
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  document.querySelectorAll('.drawer-link').forEach(link => {
-    link.addEventListener('click', closeDrawer);
-  });
-
-  /* ---------- Pipeline scrollspy ---------- */
-  const sections = ['home','about','skills','experience','projects','artifacts','contact']
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-
-  const stageLinks = Array.from(document.querySelectorAll('.stage'));
-  const order = sections.map(s => s.id);
-
-  const setActive = (id) => {
-    const idx = order.indexOf(id);
-    stageLinks.forEach(link => {
-      const linkIdx = order.indexOf(link.dataset.target);
-      link.classList.remove('is-active', 'is-done');
-      if (linkIdx === idx) link.classList.add('is-active');
-      else if (linkIdx < idx) link.classList.add('is-done');
-    });
-  };
-
-  if ('IntersectionObserver' in window && sections.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) setActive(entry.target.id);
-      });
-    },{ rootMargin: '-15% 0px -60% 0px', threshold: 0 });
-
-    sections.forEach(s => observer.observe(s));
-  }
-
-  /* ---------- Scroll reveal ---------- */
-  // Fade/slide sections in as they enter the viewport. Skipped entirely
-  // for reduced-motion users (CSS already forces .reveal to full opacity).
-  if (!reduceMotion && 'IntersectionObserver' in window) {
-    const revealTargets = document.querySelectorAll(
-      '.about-grid, .coverage-panel, .log-entry, .tc-card, .finding-card, .artifact-block, .rec-card, .contact-grid'
-    );
-    revealTargets.forEach(el => el.classList.add('reveal'));
-
-    const revealObserver = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-
-    revealTargets.forEach(el => revealObserver.observe(el));
-  }
-
-  /* ---------- Hero role rotator ---------- */
-  const rotateEl = document.getElementById('heroRotate');
-  if (rotateEl) {
-    const roles = ['QA Engineer', 'Bug Hunter', 'Database Tester', 'API Tester', 'Regression Specialist'];
-
-    if (reduceMotion) {
-      rotateEl.textContent = roles[0];
-    } else {
-      let roleIndex = 0;
-
-      const deleteRole = () => {
-        const current = roles[roleIndex];
-        let charIndex = current.length;
-        const deleteChar = () => {
-          charIndex--;
-          rotateEl.textContent = current.slice(0, charIndex);
-          if (charIndex > 0) {
-            setTimeout(deleteChar, 35);
-          } else {
-            roleIndex = (roleIndex + 1) % roles.length;
-            typeRole();
-          }
-        };
-        deleteChar();
-      };
-
-      const typeRole = () => {
-        const next = roles[roleIndex];
-        let charIndex = 0;
-        const typeChar = () => {
-          charIndex++;
-          rotateEl.textContent = next.slice(0, charIndex);
-          if (charIndex < next.length) {
-            setTimeout(typeChar, 55);
-          } else {
-            setTimeout(deleteRole, 1600);
-          }
-        };
-        typeChar();
-      };
-
-      typeRole();
-    }
-  }
-
-  /* ---------- Terminal typing animation ---------- */
-  const terminalBody = document.getElementById('terminalBody');
-  if (terminalBody) {
-    const lines = Array.from(terminalBody.querySelectorAll('.t-line'));
-
-    if (reduceMotion) {
-      lines.forEach(line => { line.textContent = line.dataset.text; });
-    } else {
-      lines.forEach(line => { line.textContent = ''; });
-
-      let lineIndex = 0;
-      const typeLine = () => {
-        if (lineIndex >= lines.length) return;
-        const line = lines[lineIndex];
-        const full = line.dataset.text;
-        let charIndex = 0;
-
-        const typeChar = () => {
-          if (charIndex <= full.length) {
-            line.textContent = full.slice(0, charIndex);
-            charIndex++;
-            setTimeout(typeChar, 14);
-          } else {
-            lineIndex++;
-            setTimeout(typeLine, 180);
-          }
-        };
-        typeChar();
-      };
-
-      const startObserver = new IntersectionObserver((entries, obs) => {
-        if (entries[0].isIntersecting) {
-          typeLine();
-          obs.disconnect();
-        }
-      }, { threshold: 0.3 });
-      startObserver.observe(terminalBody);
-    }
-  }
-
-  /* ---------- Fleeing bug ---------- */
-  const bug = document.getElementById('crawlingBug');
-  if (bug) {
-    const placeBugRandomly = () => {
-      const margin = 60;
-      const maxTop = window.innerHeight - margin;
-      const maxLeft = window.innerWidth - margin;
-      const top = margin + Math.random() * (maxTop - margin);
-      const left = margin + Math.random() * (maxLeft - margin);
-      bug.style.top = `${top}px`;
-      bug.style.left = `${left}px`;
-    };
-
-    placeBugRandomly();
-    bug.addEventListener('click', placeBugRandomly);
-    window.addEventListener('resize', placeBugRandomly);
-  }
-
-  /* ---------- Toast helper ---------- */
-  const toast = document.getElementById('toast');
-  let toastTimer = null;
-  const showToast = (message) => {
-    if (!toast) return;
-    toast.textContent = message;
-    toast.classList.add('is-visible');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2200);
-  };
-
-  /* ---------- Copy email fallback ---------- */
-  const copyEmailBtn = document.getElementById('copyEmailBtn');
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener('click', async () => {
-      const email = 'arsalantaqi255@gmail.com';
-      try {
-        await navigator.clipboard.writeText(email);
-        showToast('Email copied to clipboard');
-      } catch (err) {
-        showToast('Copy failed — email is arsalantaqi255@gmail.com');
-      }
-    });
-  }
-
-  /* ---------- Contact form -> mailto ---------- */
-  const form = document.getElementById('ticketForm');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('tName').value.trim();
-      const email = document.getElementById('tEmail').value.trim();
-      const message = document.getElementById('tMsg').value.trim();
-
-      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-      window.location.href = `mailto:arsalantaqi255@gmail.com?subject=${subject}&body=${body}`;
-      showToast('Opening your email app…');
-    });
-  }
 });
+
+/* ---------- 2. Recommendation carousel ----------
+   HTML pattern:
+
+   <div class="rec-carousel">
+     <div class="rec-track">
+       <div class="rec-slide">
+         <div class="rec-card"> ...recommendation 1... </div>
+       </div>
+       <div class="rec-slide">
+         <div class="rec-card"> ...recommendation 2... </div>
+       </div>
+       <!-- one .rec-slide per recommendation -->
+     </div>
+     <div class="rec-nav">
+       <button class="rec-arrow" data-rec-prev aria-label="Previous">‹</button>
+       <div class="rec-dots"></div>
+       <button class="rec-arrow" data-rec-next aria-label="Next">›</button>
+     </div>
+   </div>
+*/
+(function initRecCarousel() {
+  const carousel = document.querySelector('.rec-carousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.rec-track');
+  const slides = Array.from(carousel.querySelectorAll('.rec-slide'));
+  const dotsWrap = carousel.querySelector('.rec-dots');
+  const prevBtn = carousel.querySelector('[data-rec-prev]');
+  const nextBtn = carousel.querySelector('[data-rec-next]');
+  const nav = carousel.parentElement.querySelector('.rec-nav');
+  let index = 0;
+  let autoTimer = null;
+
+  // Only one recommendation so far — hide arrows/dots, nothing to page through.
+  // This removes itself automatically once you add more .rec-slide entries.
+  if (slides.length <= 1) {
+    if (nav) nav.style.display = 'none';
+    return;
+  }
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'rec-dot' + (i === 0 ? ' is-active' : '');
+    dot.setAttribute('aria-label', `Go to recommendation ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function goTo(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+  }
+
+  function restartAuto() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(index + 1), 6000);
+  }
+
+  prevBtn?.addEventListener('click', () => { goTo(index - 1); restartAuto(); });
+  nextBtn?.addEventListener('click', () => { goTo(index + 1); restartAuto(); });
+
+  // Pause autoplay while the user's mouse is over it
+  carousel.addEventListener('mouseenter', () => autoTimer && clearInterval(autoTimer));
+  carousel.addEventListener('mouseleave', restartAuto);
+
+  goTo(0);
+  restartAuto();
+})();
+
+/* ---------- 3. Font preset switcher ----------
+   HTML pattern (e.g. next to your existing theme-toggle button):
+
+   <button class="theme-toggle" data-font-cycle aria-label="Change font style">Aa</button>
+*/
+(function initFontCycle() {
+  const presets = [null, 'signal', 'report']; // null = default "terminal" pairing
+  const btn = document.querySelector('[data-font-cycle]');
+  if (!btn) return;
+
+  let saved = localStorage.getItem('portfolio-font');
+  if (saved && presets.includes(saved === 'terminal' ? null : saved)) {
+    document.documentElement.setAttribute('data-font', saved === 'terminal' ? '' : saved);
+  }
+
+  btn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-font') || null;
+    const nextIndex = (presets.indexOf(current) + 1) % presets.length;
+    const next = presets[nextIndex];
+    if (next) {
+      document.documentElement.setAttribute('data-font', next);
+    } else {
+      document.documentElement.removeAttribute('data-font');
+    }
+    localStorage.setItem('portfolio-font', next || 'terminal');
+  });
+})();
+
+/* ---------- 4. Theme cycling (extends your existing light/dark toggle) ----------
+   If you want your existing .theme-toggle button to cycle through
+   FOUR themes instead of two, replace its click handler with this:
+
+   const themes = ['dark', 'light', 'slate', 'ledger']; // 'dark' = default, no attribute
+*/
+(function initThemeCycle() {
+  const themes = ['dark', 'light', 'slate', 'ledger'];
+  const btn = document.querySelector('[data-theme-cycle]'); // give your existing button this attribute
+  if (!btn) return;
+
+  let saved = localStorage.getItem('portfolio-theme');
+  if (saved && saved !== 'dark') document.documentElement.setAttribute('data-theme', saved);
+
+  btn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = themes[(themes.indexOf(current) + 1) % themes.length];
+    if (next === 'dark') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', next);
+    }
+    localStorage.setItem('portfolio-theme', next);
+  });
+})();
