@@ -39,16 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Card "show more" (Project, Log & Bug cards) ---------- */
+  /* ---------- Unified Card Toggle Fix (Works across Projects, Logs & Bugs) ---------- */
   document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const card = btn.closest('article, .log-card');
+      const card = btn.closest('article, .log-card, .finding-card');
       if (!card) return;
 
       const target = card.querySelector('.finding-desc, .tc-desc, .tc-list, .log-list');
       if (target) {
-        const isCurrentlyClamped = target.classList.contains('is-clamped');
-        if (isCurrentlyClamped) {
+        const isClamped = target.classList.contains('is-clamped');
+        if (isClamped) {
           target.classList.remove('is-clamped');
           btn.textContent = 'Show less';
         } else {
