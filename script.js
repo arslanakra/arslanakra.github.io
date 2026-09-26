@@ -5,7 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const html = document.documentElement;
   const themeToggle = document.getElementById('themeToggle');
   const savedTheme = localStorage.getItem('portfolio-theme');
-  if (savedTheme) html.setAttribute('data-theme', savedTheme);
+
+  if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    // No saved preference yet — respect the visitor's system setting on first visit.
+    html.setAttribute('data-theme', 'light');
+  }
 
   const applyThemeState = () => {
     const isLight = html.getAttribute('data-theme') === 'light';
@@ -66,6 +72,27 @@ document.addEventListener('DOMContentLoaded', () => {
     },{ rootMargin: '-15% 0px -60% 0px', threshold: 0 });
 
     sections.forEach(s => observer.observe(s));
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  // Fade/slide sections in as they enter the viewport. Skipped entirely
+  // for reduced-motion users (CSS already forces .reveal to full opacity).
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const revealTargets = document.querySelectorAll(
+      '.about-grid, .coverage-panel, .log-entry, .tc-card, .finding-card, .artifact-block, .rec-card, .contact-grid'
+    );
+    revealTargets.forEach(el => el.classList.add('reveal'));
+
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    revealTargets.forEach(el => revealObserver.observe(el));
   }
 
   /* ---------- Hero role rotator ---------- */
@@ -171,6 +198,31 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', placeBugRandomly);
   }
 
+  /* ---------- Toast helper ---------- */
+  const toast = document.getElementById('toast');
+  let toastTimer = null;
+  const showToast = (message) => {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2200);
+  };
+
+  /* ---------- Copy email fallback ---------- */
+  const copyEmailBtn = document.getElementById('copyEmailBtn');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', async () => {
+      const email = 'arsalantaqi255@gmail.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        showToast('Email copied to clipboard');
+      } catch (err) {
+        showToast('Copy failed — email is arsalantaqi255@gmail.com');
+      }
+    });
+  }
+
   /* ---------- Contact form -> mailto ---------- */
   const form = document.getElementById('ticketForm');
   if (form) {
@@ -183,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const subject = encodeURIComponent(`Portfolio contact from ${name}`);
       const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
       window.location.href = `mailto:arsalantaqi255@gmail.com?subject=${subject}&body=${body}`;
+      showToast('Opening your email app…');
     });
   }
 });
