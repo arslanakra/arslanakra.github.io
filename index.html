@@ -5,9 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muhammad Arslan Akram — QA Engineer</title>
 <meta name="description" content="QA Engineer specializing in manual, API, and regression testing across web, mobile, and backend systems.">
+<link rel="canonical" href="https://arslanakra.github.io/">
+<meta name="theme-color" content="#0F1417">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammad Arslan Akram — QA Engineer">
+<meta property="og:description" content="QA Engineer specializing in manual, API, and regression testing across web, mobile, and backend systems.">
+<meta property="og:url" content="https://arslanakra.github.io/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Muhammad Arslan Akram — QA Engineer">
+<meta name="twitter:description" content="QA Engineer specializing in manual, API, and regression testing across web, mobile, and backend systems.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Arslan Akram",
+  "jobTitle": "QA Engineer",
+  "url": "https://arslanakra.github.io/",
+  "email": "mailto:arsalantaqi255@gmail.com",
+  "sameAs": [
+    "https://github.com/arslanakra",
+    "https://www.linkedin.com/in/sqa-arslan-akram/"
+  ],
+  "knowsAbout": ["Manual Testing", "API Testing", "Regression Testing", "SQL", "Postman", "JMeter", "Playwright"]
+}
+</script>
 </head>
 <body>
 
@@ -314,6 +345,71 @@
       </ul>
     </article>
 
+    <article class="tc-card">
+      <div class="tc-head">
+        <span class="tc-id">TC-005</span>
+        <div class="badge-group">
+          <span class="badge badge-bug">🐛 Hardware + OCR</span>
+          <span class="badge badge-pass">PASS</span>
+        </div>
+      </div>
+      <h3>Agent POS System — Check Cashing &amp; OCR Automation</h3>
+      <p class="tc-desc">End-to-end QA for an agent-facing POS system handling check cashing, OCR-based check reading, and multi-scanner hardware integration.</p>
+      <div class="tc-tags">
+        <span class="tag">Playwright Automation</span><span class="tag">API Testing (Postman)</span><span class="tag">OCR Validation</span><span class="tag">Hardware Integration</span>
+      </div>
+      <ul class="tc-list">
+        <li>Tested the full check cashing flow, including terminal registration and auto-approve, auto-decline, and pending-decision paths</li>
+        <li>Validated Gemini OCR extraction and failure handling, covering amount mismatches, missing signatures, and CAR/LAR mismatches</li>
+        <li>Verified check data reading via MICR line parsing</li>
+        <li>Tested hardware integration across connected scanners, including flatbed, Aspire, and Epson models</li>
+        <li>Automated core regression scenarios with Playwright and validated backend responses via Postman</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <div class="findings-block">
+    <p class="panel-header">CRITICAL BUGS CAUGHT</p>
+    <div class="finding-grid">
+
+      <article class="finding-card">
+        <div class="finding-head">
+          <span class="finding-id">BUG-001</span>
+          <span class="badge badge-bug">CRITICAL</span>
+        </div>
+        <h4>Fund Field Mapping &amp; Sign Inversion</h4>
+        <p class="finding-project">Check Cashing Web App — Money Transfer</p>
+        <p class="finding-desc">Found that the API returned the additional service transaction amount under the <code>maxi</code> parameter, while the frontend rendered it in the <code>intermex</code> field, posting transactions to the wrong service category on daily financial sheets. Also found that negative amounts returned by the API were being converted to positive values by the React component rendering the transaction, inverting the sign and mismatching totals against money transfer debits.</p>
+        <p class="finding-impact"><span class="finding-label">Impact:</span> Financial reporting and debit reconciliation errors across daily transaction sheets.</p>
+        <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+      </article>
+
+      <article class="finding-card">
+        <div class="finding-head">
+          <span class="finding-id">BUG-002</span>
+          <span class="badge badge-bug">CRITICAL</span>
+        </div>
+        <h4>OCR Failure Payload &amp; Terminal Session Scoping</h4>
+        <p class="finding-project">Agent POS System</p>
+        <p class="finding-desc">Found that when Gemini OCR failed to parse a check, the system still forwarded routing number, account number, check number, and owner information to the maker instead of blocking submission on an empty or invalid payload, risking downstream processing of unverified checks. Separately found that users provisioned for Terminal 890 could authenticate and transact on Terminal 891, breaking terminal-level access control.</p>
+        <p class="finding-impact"><span class="finding-label">Impact:</span> Business continuity risk from unverified check processing, plus broken terminal-level access control.</p>
+        <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+      </article>
+
+      <article class="finding-card">
+        <div class="finding-head">
+          <span class="finding-id">BUG-003</span>
+          <span class="badge badge-bug">CRITICAL</span>
+        </div>
+        <h4>Plaintext Password Storage</h4>
+        <p class="finding-project">Salarium — Mobile Payroll App</p>
+        <p class="finding-desc">Found that user passwords were being saved in local storage instead of secure, encrypted storage, exposing credentials to device-level compromise.</p>
+        <p class="finding-impact"><span class="finding-label">Impact:</span> High severity security risk to user credentials.</p>
+        <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -375,7 +471,10 @@
       <input type="email" id="tEmail" name="email" placeholder="you@example.com" required>
       <label for="tMsg">Message</label>
       <textarea id="tMsg" name="message" rows="5" placeholder="What would you like to talk about?" required></textarea>
-      <button type="submit" class="btn btn-primary">Send via email</button>
+      <div class="ticket-actions">
+        <button type="submit" class="btn btn-primary">Send via email</button>
+        <button type="button" class="copy-email" id="copyEmailBtn">or copy email address</button>
+      </div>
       <p class="ticket-note">Opens your email app addressed to arsalantaqi255@gmail.com — nothing is sent from this page.</p>
     </form>
     <div class="contact-side">
@@ -399,6 +498,7 @@
 </footer>
 
 <div class="crawling-bug" id="crawlingBug" title="Catch me if you can">🐞</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>
