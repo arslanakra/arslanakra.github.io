@@ -108,11 +108,11 @@ document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
   };
 
   // Auto-play Timer (2 Seconds)
-  let autoPlayTimer = setInterval(scrollNext, 2000);
+  let autoPlayTimer = setInterval(scrollNext, 3000);
 
   const resetAutoPlay = () => {
     clearInterval(autoPlayTimer);
-    autoPlayTimer = setInterval(scrollNext, 2000);
+    autoPlayTimer = setInterval(scrollNext, 3000);
   };
 
   // Pause auto-scroll when user hovers over the cards to read
