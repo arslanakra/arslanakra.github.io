@@ -611,13 +611,45 @@ html[data-theme="light"] .btn-primary{color:#fff;}
 .badge-done{background:var(--surface-2); color:var(--muted); border:1px solid var(--border);}
 .badge-bug{background:var(--fail-dim); color:var(--fail);}
 
-/* ============ PROJECTS ============ */
-.tc-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-  align-items:start;
+/* ============ PROJECTS & CAROUSEL ============ */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
+
+.carousel-track {
+  display: flex !important;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  width: 100%;
+  scrollbar-width: none; /* Hide scrollbars for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbars for IE/Edge */
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Hide scrollbars for Chrome/Safari */
+}
+
+.tc-grid,
+.finding-grid {
+  display: flex !important;
+  width: 100%;
+}
+
+.tc-card,
+.finding-card {
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
 .tc-card{
   background:var(--surface);
   border:1px solid var(--border);
@@ -630,6 +662,41 @@ html[data-theme="light"] .btn-primary{color:#fff;}
 .tc-id{font-family:var(--mono); font-size:13px; color:var(--muted);}
 .tc-card h3{font-size:20px; margin-bottom:8px;}
 .tc-desc{color:var(--muted); font-size:15.5px; margin-bottom:14px;}
+
+/* Navigation Buttons for Carousel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  font-family: var(--mono);
+  box-shadow: var(--shadow);
+}
+
+.carousel-btn:hover {
+  background: var(--surface);
+  border-color: var(--pass);
+  color: var(--pass);
+}
+
+.carousel-btn.prev { left: -15px; }
+.carousel-btn.next { right: -15px; }
+
+.carousel-btn.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* LINE CLAMPING & SHOW MORE FIXES */
 .is-clamped {
@@ -673,12 +740,7 @@ html[data-theme="light"] .btn-primary{color:#fff;}
 
 /* ============ FINDINGS ============ */
 .findings-block{margin-top:40px;}
-.finding-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:20px;
-  align-items:start;
-}
+
 .finding-card{
   background:var(--surface);
   border:1px solid var(--border);
@@ -920,8 +982,6 @@ a:focus-visible, button:focus-visible{
   .hero-grid{grid-template-columns:1fr; gap:40px;}
   .about-grid{grid-template-columns:1fr;}
   .coverage-grid{grid-template-columns:1fr;}
-  .tc-grid{grid-template-columns:1fr;}
-  .finding-grid{grid-template-columns:1fr 1fr;}
   .contact-grid{grid-template-columns:1fr;}
   .doc-grid{grid-template-columns:1fr;}
   .shot-grid{grid-template-columns:repeat(2,1fr);}
@@ -937,7 +997,6 @@ a:focus-visible, button:focus-visible{
   .rec-card{padding:24px;}
   .log{padding-left:16px;}
   .log-meta{margin-left:-25px;}
-  .finding-grid{grid-template-columns:1fr;}
 }
 
 /* ============ BUG ============ */
