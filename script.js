@@ -39,24 +39,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('article, .log-card, .finding-card');
-      if (!card) return;
+document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('article, .log-card, .finding-card');
 
-      const target = card.querySelector('.finding-desc, .tc-desc, .tc-list, .log-list');
-      if (target) {
-        const isClamped = target.classList.contains('is-clamped');
-        if (isClamped) {
-          target.classList.remove('is-clamped');
-          btn.textContent = 'Show less';
-        } else {
-          target.classList.add('is-clamped');
-          btn.textContent = 'Show more';
-        }
-      }
-    });
+    if (!card) return;
+
+    /*
+     * Find the element that is actually clamped.
+     *
+     * Project cards use .log-list.is-clamped
+     * Finding cards use .finding-desc.is-clamped
+     */
+    const target = card.querySelector(
+      '.finding-desc.is-clamped, .log-list.is-clamped, .finding-desc, .log-list'
+    );
+
+    if (!target) return;
+
+    const isClamped = target.classList.contains('is-clamped');
+
+    if (isClamped) {
+      // Expand
+      target.classList.remove('is-clamped');
+      btn.textContent = 'Show less';
+    } else {
+      // Collapse
+      target.classList.add('is-clamped');
+      btn.textContent = 'Show more';
+    }
   });
+});
 
   /* ---------- Recommendation carousel ---------- */
   const recCarousel = document.querySelector('.rec-carousel');
