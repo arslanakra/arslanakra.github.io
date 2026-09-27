@@ -71,51 +71,65 @@ document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
   });
 });
 
-  /* ---------- Recommendation carousel ---------- */
-  const recCarousel = document.querySelector('.rec-carousel');
-  if (recCarousel) {
-    const track = recCarousel.querySelector('.rec-track');
-    const slides = Array.from(recCarousel.querySelectorAll('.rec-slide'));
-    const dotsWrap = recCarousel.querySelector('.rec-dots');
-    const prevBtn = recCarousel.querySelector('[data-rec-prev]');
-    const nextBtn = recCarousel.querySelector('[data-rec-next]');
-    const nav = recCarousel.parentElement.querySelector('.rec-nav');
+document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+  const track = wrapper.querySelector('[data-carousel]');
+  const prevBtn = wrapper.querySelector('.carousel-btn.prev');
+  const nextBtn = wrapper.querySelector('.carousel-btn.next');
 
-    if (slides.length <= 1) {
-      if (nav) nav.style.display = 'none';
+  if (!track || !prevBtn || !nextBtn) return;
+
+  // Calculates width of 1 card + grid gap
+  const getScrollAmount = () => {
+    const card = track.querySelector('.tc-card, .finding-card');
+    const gap = parseInt(getComputedStyle(track).gap) || 0;
+    return card ? card.offsetWidth + gap : track.clientWidth;
+  };
+
+  // Next / Prev click handlers
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    resetAutoPlay();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    scrollNext();
+    resetAutoPlay();
+  });
+
+  // Function to move to next slide or loop back to start
+  const scrollNext = () => {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    // If we've reached the end, wrap back to the beginning
+    if (Math.ceil(track.scrollLeft) >= maxScroll - 5) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
     } else {
-      let index = 0;
-      let autoTimer = null;
-
-      slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'rec-dot' + (i === 0 ? ' is-active' : '');
-        dot.setAttribute('aria-label', `Go to recommendation ${i + 1}`);
-        dot.addEventListener('click', () => goTo(i));
-        dotsWrap.appendChild(dot);
-      });
-      const dots = Array.from(dotsWrap.children);
-
-      function goTo(i) {
-        index = (i + slides.length) % slides.length;
-        track.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
-      }
-
-      function restartAuto() {
-        if (autoTimer) clearInterval(autoTimer);
-        if (!reduceMotion) autoTimer = setInterval(() => goTo(index + 1), 6000);
-      }
-
-      prevBtn?.addEventListener('click', () => { goTo(index - 1); restartAuto(); });
-      nextBtn?.addEventListener('click', () => { goTo(index + 1); restartAuto(); });
-      recCarousel.addEventListener('mouseenter', () => autoTimer && clearInterval(autoTimer));
-      recCarousel.addEventListener('mouseleave', restartAuto);
-
-      goTo(0);
-      restartAuto();
+      track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     }
-  }
+  };
+
+  // Auto-play Timer (2 Seconds)
+  let autoPlayTimer = setInterval(scrollNext, 2000);
+
+  const resetAutoPlay = () => {
+    clearInterval(autoPlayTimer);
+    autoPlayTimer = setInterval(scrollNext, 2000);
+  };
+
+  // Pause auto-scroll when user hovers over the cards to read
+  wrapper.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+  wrapper.addEventListener('mouseleave', () => resetAutoPlay());
+
+  // Update button visibility on scroll
+  const updateButtons = () => {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    prevBtn.classList.toggle('is-hidden', track.scrollLeft <= 5);
+    nextBtn.classList.toggle('is-hidden', track.scrollLeft >= maxScroll - 5);
+  };
+
+  track.addEventListener('scroll', updateButtons);
+  window.addEventListener('resize', updateButtons);
+  updateButtons();
+});
 
   /* ---------- Mobile drawer ---------- */
   const menuToggle = document.getElementById('menuToggle');
