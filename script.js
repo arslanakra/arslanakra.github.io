@@ -40,31 +40,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 document.querySelectorAll('[data-clamp-toggle]').forEach(btn => {
+  const card = btn.closest('article, .log-card, .finding-card');
+  if (!card) return;
+
+  const target = card.querySelector(
+    '.finding-desc.is-clamped, .log-list.is-clamped, .finding-desc, .log-list'
+  );
+  if (!target) return;
+
+  // Check if content actually overflows while clamped
+  const isOverflowing = target.scrollHeight > target.clientHeight;
+
+  if (!isOverflowing) {
+    // Hide or remove the button if the content fits naturally
+    btn.style.display = 'none';
+    return;
+  }
+
+  // Handle click toggle for overflowing elements
   btn.addEventListener('click', () => {
-    const card = btn.closest('article, .log-card, .finding-card');
-
-    if (!card) return;
-
-    /*
-     * Find the element that is actually clamped.
-     *
-     * Project cards use .log-list.is-clamped
-     * Finding cards use .finding-desc.is-clamped
-     */
-    const target = card.querySelector(
-      '.finding-desc.is-clamped, .log-list.is-clamped, .finding-desc, .log-list'
-    );
-
-    if (!target) return;
-
     const isClamped = target.classList.contains('is-clamped');
 
     if (isClamped) {
-      // Expand
       target.classList.remove('is-clamped');
       btn.textContent = 'Show less';
     } else {
-      // Collapse
       target.classList.add('is-clamped');
       btn.textContent = 'Show more';
     }
