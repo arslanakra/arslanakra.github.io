@@ -1582,3 +1582,206 @@ html[data-theme="light"] .btn-primary { color: #fff; }
   .log { padding-left: 16px; }
   .log-meta { margin-left: -25px; }
 }
+
+/* ============ SKILLS PIPELINE VISUAL ============ */
+.pipeline-graph-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 32px 36px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.pipeline-graph {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 150px;
+  padding: 0 2%;
+}
+
+.pipeline-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: visible;
+}
+
+.pipeline-path-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 2;
+  stroke-dasharray: 5 7;
+}
+
+.pipeline-pulse {
+  fill: none;
+  stroke: var(--pass);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 18 800;
+  filter: drop-shadow(0 0 4px var(--pass));
+  animation: flowPulse 4.5s linear infinite;
+}
+
+.pipeline-pulse.pulse-b {
+  animation-delay: 2.25s;
+  opacity: 0.65;
+}
+
+@keyframes flowPulse {
+  0%   { stroke-dashoffset: 820; opacity: 0; }
+  6%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.loose-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pass);
+  box-shadow: 0 0 8px var(--pass);
+  z-index: 1;
+  animation: looseBlink 2.6s ease-in-out infinite;
+}
+
+.ld1 { top: 30%; left: 6%;  animation-delay: 0s; }
+.ld2 { top: 62%; left: 11%; animation-delay: 0.6s; }
+.ld3 { top: 58%; left: 32%; animation-delay: 1.2s; }
+.ld4 { top: 24%; left: 89%; animation-delay: 1.8s; }
+
+@keyframes looseBlink {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50%      { opacity: 1;    transform: scale(1.15); }
+}
+
+.pipeline-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.node-title {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pass);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.node-ring {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.node-ring::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--pass-dim);
+  border-radius: 50%;
+  animation: ringPing 3s ease-out infinite;
+}
+
+.node-ring-2 {
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--pass);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.node-core {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--pass);
+  box-shadow: 0 0 10px var(--pass), 0 0 2px var(--pass);
+  animation: coreGlow 2.2s ease-in-out infinite;
+}
+
+.node-ring-double .node-core {
+  box-shadow: 0 0 10px var(--pass), 0 -14px 0 -3px var(--pass), 0 0 8px 2px var(--pass);
+}
+
+@keyframes ringPing {
+  0%   { transform: scale(0.7); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes coreGlow {
+  0%, 100% { opacity: 0.75; transform: scale(0.92); }
+  50%      { opacity: 1;    transform: scale(1.08); }
+}
+
+.node-pill {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+
+/* --- Tools marquee row (reuses .marquee-container / .chip-track / .track-left) --- */
+.tools-marquee {
+  padding: 4px 0;
+}
+
+.tool-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tool-chip .tool-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.tool-chip .tag {
+  margin-left: 2px;
+}
+
+@media (max-width: 720px) {
+  .pipeline-graph-card { padding: 36px 14px 28px; }
+  .node-title { font-size: 10.5px; letter-spacing: 0.06em; }
+  .node-ring { width: 38px; height: 38px; }
+  .node-core { width: 10px; height: 10px; }
+  .node-pill { font-size: 10.5px; padding: 5px 10px; }
+  .pipeline-graph { gap: 2px; }
+}
