@@ -11,7 +11,7 @@
 <style>
   .pipeline-viz-section {
     padding-top: 26px;
-    padding-bottom: 30px;
+    padding-bottom: 36px;
   }
 
   .pipeline-viz-section .stage-tag {
@@ -23,11 +23,11 @@
 
   .pipeline-viz-section .section-title {
     font-family: var(--mono);
-    font-size: clamp(48px, 6vw, 86px);
+    font-size: clamp(48px, 6vw, 92px);
     font-weight: 700;
-    line-height: 0.95;
+    line-height: 0.92;
     letter-spacing: -0.06em;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
   }
 
   .custom-pipeline-wrap {
@@ -39,8 +39,8 @@
   .custom-pipeline-curve {
     position: relative;
     width: 100%;
-    height: 180px;
-    margin-bottom: 10px;
+    height: 170px;
+    margin-bottom: 12px;
   }
 
   .custom-pipeline-curve svg {
@@ -58,15 +58,15 @@
   }
 
   .custom-pipeline-curve .curve-base {
-    stroke: rgba(127, 156, 176, 0.18);
-    stroke-width: 10;
+    stroke: rgba(135, 151, 165, 0.22);
+    stroke-width: 12;
   }
 
   .custom-pipeline-curve .curve-glow {
-    stroke: rgba(91, 232, 204, 0.55);
+    stroke: rgba(99, 235, 214, 0.58);
     stroke-width: 4;
-    filter: drop-shadow(0 0 10px rgba(91, 232, 204, 0.8));
-    stroke-dasharray: 10 16;
+    filter: drop-shadow(0 0 12px rgba(69, 206, 194, 0.9));
+    stroke-dasharray: 12 18;
     animation: flow 3.4s linear infinite;
   }
 
@@ -77,32 +77,32 @@
 
   .moving-bug {
     position: absolute;
-    right: 12%;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
     font-size: 28px;
     filter: drop-shadow(0 0 12px rgba(255, 98, 152, 0.8));
     animation: bugFloat 6s ease-in-out infinite;
   }
 
   @keyframes bugFloat {
-    0%, 100% { transform: translateY(-50%) translateX(0); }
-    50% { transform: translateY(-58%) translateX(8px); }
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
   }
 
   .custom-pipeline-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: start;
-    gap: 38px;
+    gap: 18px;
   }
 
   .custom-pipeline-step-list {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    margin-left: 8px;
-    padding-top: 16px;
+    margin-left: 0;
+    padding-top: 12px;
   }
 
   .custom-pipeline-step {
@@ -115,17 +115,17 @@
 
   .custom-pipeline-step strong {
     font-family: var(--mono);
-    font-size: clamp(18px, 1.8vw, 26px);
+    font-size: clamp(18px, 1.8vw, 28px);
     font-weight: 700;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.05em;
     color: var(--text);
     text-transform: uppercase;
-    line-height: 1.05;
+    line-height: 1.08;
   }
 
   .custom-pipeline-step span {
     font-family: var(--sans);
-    font-size: clamp(16px, 1.5vw, 22px);
+    font-size: clamp(15px, 1.5vw, 23px);
     font-weight: 500;
     letter-spacing: -0.03em;
     color: rgba(232, 237, 239, 0.9);
@@ -135,8 +135,9 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
-    margin-top: 16px;
-    margin-left: 4px;
+    margin-top: 10px;
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .tool-row {
@@ -145,13 +146,13 @@
     gap: 12px;
     color: var(--text);
     font-family: var(--mono);
-    font-size: clamp(18px, 1.8vw, 24px);
+    font-size: clamp(16px, 1.5vw, 24px);
     letter-spacing: -0.02em;
     opacity: 0.9;
   }
 
   .tool-row .tool-icon {
-    width: 26px;
+    width: 22px;
     text-align: center;
     color: rgba(255,255,255,0.9);
   }
@@ -164,8 +165,7 @@
 
   @media (max-width: 860px) {
     .custom-pipeline-grid {
-      grid-template-columns: 1fr;
-      gap: 18px;
+      gap: 14px;
     }
 
     .custom-pipeline-wrap {
@@ -177,7 +177,6 @@
     }
 
     .custom-pipeline-step-list {
-      margin-left: 0;
       gap: 12px;
     }
 
@@ -324,8 +323,8 @@
   <div class="custom-pipeline-wrap">
     <div class="custom-pipeline-curve">
       <svg viewBox="0 0 1200 180" preserveAspectRatio="none" aria-hidden="true">
-        <path class="curve-base" d="M 30 130 Q 220 60 430 130 T 1170 130" />
-        <path class="curve-glow" d="M 30 130 Q 220 60 430 130 T 1170 130" />
+        <path class="curve-base" d="M 30 120 Q 220 60 430 120 T 1170 120" />
+        <path class="curve-glow" d="M 30 120 Q 220 60 430 120 T 1170 120" />
       </svg>
       <span class="moving-bug" aria-label="bug">🐞</span>
     </div>
