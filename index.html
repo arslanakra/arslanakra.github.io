@@ -8,6 +8,184 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .pipeline-viz-section {
+    padding-top: 26px;
+    padding-bottom: 30px;
+  }
+
+  .pipeline-viz-section .stage-tag {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .pipeline-viz-section .section-title {
+    font-family: var(--mono);
+    font-size: clamp(48px, 6vw, 86px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    margin-bottom: 36px;
+  }
+
+  .custom-pipeline-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .custom-pipeline-curve {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+
+  .custom-pipeline-curve svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .custom-pipeline-curve path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .custom-pipeline-curve .curve-base {
+    stroke: rgba(127, 156, 176, 0.18);
+    stroke-width: 10;
+  }
+
+  .custom-pipeline-curve .curve-glow {
+    stroke: rgba(91, 232, 204, 0.55);
+    stroke-width: 4;
+    filter: drop-shadow(0 0 10px rgba(91, 232, 204, 0.8));
+    stroke-dasharray: 10 16;
+    animation: flow 3.4s linear infinite;
+  }
+
+  @keyframes flow {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: 220; }
+  }
+
+  .moving-bug {
+    position: absolute;
+    right: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    filter: drop-shadow(0 0 12px rgba(255, 98, 152, 0.8));
+    animation: bugFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes bugFloat {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-58%) translateX(8px); }
+  }
+
+  .custom-pipeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 38px;
+  }
+
+  .custom-pipeline-step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-left: 8px;
+    padding-top: 16px;
+  }
+
+  .custom-pipeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    color: var(--text);
+  }
+
+  .custom-pipeline-step strong {
+    font-family: var(--mono);
+    font-size: clamp(18px, 1.8vw, 26px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+
+  .custom-pipeline-step span {
+    font-family: var(--sans);
+    font-size: clamp(16px, 1.5vw, 22px);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    color: rgba(232, 237, 239, 0.9);
+  }
+
+  .custom-pipeline-tool-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 16px;
+    margin-left: 4px;
+  }
+
+  .tool-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: clamp(18px, 1.8vw, 24px);
+    letter-spacing: -0.02em;
+    opacity: 0.9;
+  }
+
+  .tool-row .tool-icon {
+    width: 26px;
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .tool-row .tool-tag {
+    margin-left: 6px;
+    color: rgba(232, 237, 239, 0.8);
+    font-size: 0.75em;
+  }
+
+  @media (max-width: 860px) {
+    .custom-pipeline-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .custom-pipeline-wrap {
+      min-height: auto;
+    }
+
+    .custom-pipeline-curve {
+      height: 120px;
+    }
+
+    .custom-pipeline-step-list {
+      margin-left: 0;
+      gap: 12px;
+    }
+
+    .custom-pipeline-tool-list {
+      margin-top: 0;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -140,87 +318,49 @@
 
 <!-- ================= SKILLS ================= -->
 <section class="section pipeline-viz-section" id="pipeline-viz">
-    <p class="stage-tag">STAGE 02 · SKILLS PIPELINE</p>
-    <h2 class="section-title">Coverage report</h2>
+  <p class="stage-tag">STAGE 02 · SKILLS PIPELINE</p>
+  <h2 class="section-title">Coverage report</h2>
 
-    <!-- TOP GRAPH: Pipeline Process Nodes -->
-    <div class="pipeline-graph-card">
-      <div class="pipeline-graph">
-        
-        <!-- Connecting Curved Path & Pulse Overlay -->
-        <svg class="pipeline-svg" viewBox="0 0 1000 120" preserveAspectRatio="none">
-          <!-- Background Dashed Curve -->
-          <path d="M 50 60 Q 200 30, 350 60 T 650 60 T 950 60" class="pipeline-path-bg" />
-          
-          <!-- Animated Light Pulses -->
-          <path d="M 50 60 Q 200 30, 350 60 T 650 60 T 950 60" class="pipeline-pulse pulse-primary" />
-          <path d="M 50 60 Q 200 30, 350 60 T 650 60 T 950 60" class="pipeline-pulse pulse-secondary" />
-        </svg>
-
-        <!-- Floating Ambient Particles -->
-        <span class="particle p1"></span>
-        <span class="particle p2"></span>
-        <span class="particle p3"></span>
-        <span class="particle p4"></span>
-        <span class="particle p5"></span>
-
-        <!-- Node 1 -->
-        <div class="pipeline-node" style="left: 10%;">
-          <span class="node-title">COMMIT</span>
-          <div class="node-ring">
-            <div class="node-core"></div>
-          </div>
-          <div class="node-pill">VCS Push</div>
-        </div>
-
-        <!-- Node 2 -->
-        <div class="pipeline-node" style="left: 35%;">
-          <span class="node-title">UNIT & INTEGRATION</span>
-          <div class="node-ring">
-            <div class="node-core"></div>
-          </div>
-          <div class="node-pill">Jest / API</div>
-        </div>
-
-        <!-- Node 3 -->
-        <div class="pipeline-node" style="left: 60%;">
-          <span class="node-title">UI E2E SUITE</span>
-          <div class="node-ring">
-            <div class="node-core"></div>
-          </div>
-          <div class="node-pill">Playwright</div>
-        </div>
-
-        <!-- Node 4 -->
-        <div class="pipeline-node" style="left: 85%;">
-          <span class="node-title">INSIGHTS DELIVERY</span>
-          <div class="node-ring">
-            <div class="node-core"></div>
-          </div>
-          <div class="node-pill">Report</div>
-        </div>
-      </div>
+  <div class="custom-pipeline-wrap">
+    <div class="custom-pipeline-curve">
+      <svg viewBox="0 0 1200 180" preserveAspectRatio="none" aria-hidden="true">
+        <path class="curve-base" d="M 30 130 Q 220 60 430 130 T 1170 130" />
+        <path class="curve-glow" d="M 30 130 Q 220 60 430 130 T 1170 130" />
+      </svg>
+      <span class="moving-bug" aria-label="bug">🐞</span>
     </div>
 
-    <!-- BOTTOM GRID: Tool Pills -->
-    <div class="tools-pill-bar">
-      <div class="tool-pill">
-        <span class="tool-icon">🛠</span>
-        <span class="tool-name">Postman</span>
-        <span class="tool-tag">API</span>
+    <div class="custom-pipeline-grid">
+      <div class="custom-pipeline-step-list">
+        <div class="custom-pipeline-step">
+          <strong>COMMIT</strong>
+          <span>VCS Push</span>
+        </div>
+
+        <div class="custom-pipeline-step">
+          <strong>UNIT &amp; INTEGRATION</strong>
+          <span>Jest / API</span>
+        </div>
+
+        <div class="custom-pipeline-step">
+          <strong>UI E2E SUITE</strong>
+          <span>Playwright</span>
+        </div>
+
+        <div class="custom-pipeline-step">
+          <strong>INSIGHTS DELIVERY</strong>
+          <span>Report</span>
+        </div>
       </div>
-      <div class="tool-pill">
-        <span class="tool-icon">📋</span>
-        <span class="tool-name">REST Assured</span>
-        <span class="tool-tag">API</span>
-      </div>
-      <div class="tool-pill">
-        <span class="tool-icon">🎭</span>
-        <span class="tool-name">GitHub Actions</span>
-        <span class="tool-tag">CI/CD</span>
+
+      <div class="custom-pipeline-tool-list">
+        <div class="tool-row"><span class="tool-icon">🛠</span><span>Postman API</span></div>
+        <div class="tool-row"><span class="tool-icon">▣</span><span>REST Assured API</span></div>
+        <div class="tool-row"><span class="tool-icon">⚙</span><span>GitHub Actions CI/CD</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- ================= EXPERIENCE ================= -->
 <section class="section" id="experience">
@@ -283,12 +423,10 @@
   <p class="stage-tag">STAGE 04 · PROJECTS</p>
   <h2 class="section-title">Case files</h2>
 
-  <!-- 1. Case Files Carousel Wrapper -->
   <div class="carousel-wrapper">
     <button class="carousel-btn prev" aria-label="Previous Project">&larr;</button>
 
     <div class="tc-grid carousel-track" data-carousel>
-      
       <article class="tc-card">
         <div class="tc-head">
           <span class="tc-id">TC-001</span>
@@ -306,7 +444,7 @@
           <li>Validated real-time status updates against the Intermex API to confirm the app reflected accurate transfer states (pending, sent, cancelled)</li>
           <li>Tested TestFlight builds and monitored crash logs to catch issues before release</li>
         </ul>
-        <button class="card-expand" data-clamp-toggle>Show more</button> 
+        <button class="card-expand" data-clamp-toggle>Show more</button>
       </article>
 
       <article class="tc-card">
@@ -396,7 +534,6 @@
         </ul>
         <button class="card-expand" data-clamp-toggle>Show more</button>
       </article>
-
     </div>
 
     <button class="carousel-btn next" aria-label="Next Project">&rarr;</button>
@@ -405,12 +542,10 @@
   <div class="findings-block">
     <p class="panel-header">CRITICAL BUGS CAUGHT</p>
 
-    <!-- 2. Critical Bugs Carousel Wrapper -->
     <div class="carousel-wrapper">
       <button class="carousel-btn prev" aria-label="Previous Bug">&larr;</button>
 
       <div class="finding-grid carousel-track" data-carousel>
-
         <article class="finding-card">
           <div class="finding-head">
             <span class="finding-id">BUG-001</span>
@@ -444,12 +579,11 @@
           </div>
           <h4>Stale Navigation State After Wallet and Prepaid Detachment</h4>
           <p class="finding-project">MySalarium - Send Money App</p>
-          <p class="finding-desc is-clamped">After detaching the wallet and prepaid sections from the app, the newer build was scoped to open into a calculator screen first, letting users calculate the real-time send and receive amount across countries before proceeding. In the detachment APK and TestFlight build, found that backgrounding the app while the calculator screen was open, then killing and relaunching it, caused the app to route back to the old wallet section instead of resuming on the calculator.</p>
+          <p class="finding-desc is-clamped">After detaching the wallet and prepaid sections from the app, the newer build was scoped to open into a calculator screen first, letting users calculate the real-time send and receive amount across countries before proceeding.</p>
           <p class="finding-impact"><span class="finding-label">Impact:</span> Users landed on deprecated screens (wallet, prepaid) that were supposed to be fully detached from the app, breaking the calculator-first flow on relaunch.</p>
           <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
           <button class="card-expand" data-clamp-toggle>Show more</button>
         </article>
-
       </div>
 
       <button class="carousel-btn next" aria-label="Next Bug">&rarr;</button>
@@ -495,13 +629,10 @@
 <section class="section rec-section">
   <div class="rec-carousel">
     <div class="rec-track">
-
       <div class="rec-slide">
         <div class="rec-card">
           <p class="rec-status">APPROVED BY REVIEWER</p>
-          <p class="rec-text">&ldquo;Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach.
-          His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset.
-          A great team player, he ensures product quality and stability. Highly recommended!&rdquo;</p>
+          <p class="rec-text">&ldquo;Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach. His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset. A great team player, he ensures product quality and stability. Highly recommended!&rdquo;</p>
           <p class="rec-author">Asim Junaid, .NET Developer (ASP.NET Core / MVC)</p>
         </div>
       </div>
@@ -509,12 +640,10 @@
       <div class="rec-slide">
         <div class="rec-card">
           <p class="rec-status">APPROVED BY REVIEWER</p>
-          <p class="rec-text">&ldquo;I've worked with Arslan and was consistently impressed by their attention to detail, strong testing skills, and collaborative attitude. 
-            They play a key role in ensuring high-quality releases and are a great asset to any QA team.&rdquo;</p>
+          <p class="rec-text">&ldquo;I've worked with Arslan and was consistently impressed by their attention to detail, strong testing skills, and collaborative attitude. They play a key role in ensuring high-quality releases and are a great asset to any QA team.&rdquo;</p>
           <p class="rec-author">Abdullah Sameer, Software Engineer</p>
         </div>
       </div>
-
     </div>
     <div class="rec-nav">
       <button class="rec-arrow" data-rec-prev aria-label="Previous recommendation">‹</button>
