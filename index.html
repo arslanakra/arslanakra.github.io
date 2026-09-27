@@ -138,18 +138,18 @@
   </div>
 </section>
 
-<!-- ================= SKILLS ================= -->
+<!-- ================= SKILLS ================= 
 <section class="section" id="skills">
   <p class="stage-tag">STAGE 02 · SKILLS</p>
   <h2 class="section-title">Coverage report</h2>
   <div class="coverage-grid">
     
-    <!-- PANEL 1: TESTING TYPES (Moves Right to Left) -->
+    <!-- PANEL 1: TESTING TYPES (Moves Right to Left) 
     <div class="coverage-panel">
       <p class="panel-header">MODULE: TESTING TYPES</p>
       <div class="marquee-container">
         <div class="chip-track track-left">
-          <!-- Original Group -->
+          <!-- Original Group 
           <div class="chip-group">
             <span class="chip"><span class="status-dot"></span>Manual Testing - Web</span>
             <span class="chip"><span class="status-dot"></span>Manual Testing - Mobile</span>
@@ -165,7 +165,7 @@
             <span class="chip"><span class="status-dot"></span>Test Documentations</span>
             <span class="chip"><span class="status-dot"></span>Cross-Browser / Cross-Device Testing</span>
           </div>
-          <!-- Duplicate Group for Seamless Loop -->
+          <!-- Duplicate Group for Seamless Loop 
           <div class="chip-group" aria-hidden="true">
             <span class="chip"><span class="status-dot"></span>Manual Testing - Web</span>
             <span class="chip"><span class="status-dot"></span>Manual Testing - Mobile</span>
@@ -185,12 +185,12 @@
       </div>
     </div>
 
-    <!-- PANEL 2: TOOLS & PLATFORMS (Moves Left to Right for visual contrast) -->
+    <!-- PANEL 2: TOOLS & PLATFORMS (Moves Left to Right for visual contrast) 
     <div class="coverage-panel">
       <p class="panel-header">MODULE: TOOLS &amp; PLATFORMS</p>
       <div class="marquee-container">
         <div class="chip-track track-right">
-          <!-- Original Group -->
+          <!-- Original Group 
           <div class="chip-group">
             <span class="chip chip-tool"><span class="status-dot"></span>Jira</span>
             <span class="chip chip-tool"><span class="status-dot"></span>Git</span>
@@ -200,7 +200,7 @@
             <span class="chip chip-tool"><span class="status-dot"></span>Playwright</span>
             <span class="chip chip-tool"><span class="status-dot"></span>Figma</span>
           </div>
-          <!-- Duplicate Group for Seamless Loop -->
+          <!-- Duplicate Group for Seamless Loop -
           <div class="chip-group" aria-hidden="true">
             <span class="chip chip-tool"><span class="status-dot"></span>Jira</span>
             <span class="chip chip-tool"><span class="status-dot"></span>Git</span>
@@ -216,7 +216,99 @@
 
   </div>
 </section>
+-->
+<section class="section pipeline-viz-section" id="pipeline-viz">
+    <p class="stage-tag">STAGE 02 · AUTOMATION PIPELINE</p>
+    <h2 class="section-title">Testing Pipeline</h2>
 
+    <!-- TOP GRAPH: Pipeline Process Nodes -->
+    <div class="pipeline-graph-card">
+      <div class="pipeline-graph">
+        
+        <!-- Connecting Curved Path & Pulse Overlay -->
+        <svg class="pipeline-svg" viewBox="0 0 1000 120" preserveAspectRatio="none">
+          <!-- Background Dashed Curve -->
+          <path d="M 125 60 Q 250 30, 375 60 T 625 60 T 875 60" class="pipeline-path-bg" />
+          
+          <!-- Animated Light Pulses -->
+          <path d="M 125 60 Q 250 30, 375 60 T 625 60 T 875 60" class="pipeline-pulse pulse-primary" />
+          <path d="M 125 60 Q 250 30, 375 60 T 625 60 T 875 60" class="pipeline-pulse pulse-secondary" />
+        </svg>
+
+        <!-- Floating Ambient Particles -->
+        <span class="particle p1"></span>
+        <span class="particle p2"></span>
+        <span class="particle p3"></span>
+        <span class="particle p4"></span>
+        <span class="particle p5"></span>
+
+        <!-- Node 1 -->
+        <div class="pipeline-node" style="left: 12.5%;">
+          <span class="node-title">COMMIT</span>
+          <div class="node-ring">
+            <div class="node-core"></div>
+          </div>
+          <div class="node-pill">VCS Push</div>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="pipeline-node" style="left: 37.5%;">
+          <span class="node-title">UNIT & INTEGRATION</span>
+          <div class="node-ring">
+            <div class="node-core"></div>
+          </div>
+          <div class="node-pill">Jest / API</div>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="pipeline-node" style="left: 62.5%;">
+          <span class="node-title">UI E2E SUITE</span>
+          <div class="node-ring">
+            <div class="node-core"></div>
+          </div>
+          <div class="node-pill">Playwright</div>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="pipeline-node" style="left: 87.5%;">
+          <span class="node-title">INSIGHTS DELIVERY</span>
+          <div class="node-ring">
+            <div class="node-core"></div>
+          </div>
+          <div class="node-pill">Report</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM GRID: Tool Pills -->
+    <div class="tools-pill-bar">
+      <div class="tool-pill">
+        <span class="tool-icon">🛠</span>
+        <span class="tool-name">Postman</span>
+        <span class="tool-tag">API</span>
+      </div>
+      <div class="tool-pill">
+        <span class="tool-icon">⇄</span>
+        <span class="tool-name">REST Assured</span>
+        <span class="tool-tag">API</span>
+      </div>
+      <div class="tool-pill">
+        <span class="tool-icon">⚙</span>
+        <span class="tool-name">GitHub Actions</span>
+        <span class="tool-tag">CI/CD</span>
+      </div>
+      <div class="tool-pill">
+        <span class="tool-icon">🎭</span>
+        <span class="tool-name">Playwright</span>
+        <span class="tool-tag">E2E</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+  
 <!-- ================= EXPERIENCE ================= -->
 <section class="section" id="experience">
   <p class="stage-tag">STAGE 03 · EXPERIENCE</p>
