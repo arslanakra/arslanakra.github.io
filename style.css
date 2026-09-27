@@ -544,10 +544,101 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   background:var(--pass-dim);
   color:var(--pass);
   border:1px solid transparent;
-  transition:transform .15s ease;
+  transition:transform .15s ease, border-color .2s ease;
+  cursor:pointer;
+  white-space:nowrap;
 }
-.chip:hover{transform:translateY(-2px);}
+.chip:hover{
+  transform:scale(1.05);
+  border-color:#2ec4b6 !important;
+}
 .chip-tool{background:var(--surface-2); color:var(--text); border-color:var(--border);}
+
+/* --- Marquee Container & Edge Mask --- */
+.marquee-container {
+  overflow: hidden !important;
+  user-select: none;
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  
+  /* Smooth CSS Edge Mask Gradient */
+  mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+  );
+}
+
+/* --- The Flex Track --- */
+.chip-track {
+  display: flex !important;
+  width: max-content !important;
+  gap: 15px;
+  will-change: transform;
+}
+
+.chip-group {
+  flex-shrink: 0 !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+/* --- Status Dot --- */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #2ec4b6;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 8px #2ec4b6;
+  flex-shrink: 0;
+}
+
+/* --- Interactive Pause --- */
+.marquee-container:hover .chip-track {
+  animation-play-state: paused;
+}
+
+/* --- Animations: Left & Right Pipelines --- */
+.track-left {
+  animation: scrollLeft 35s linear infinite;
+}
+
+.track-right {
+  animation: scrollRight 25s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 7.5px)); 
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(calc(-50% - 7.5px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 /* ============ EXPERIENCE (LOG) ============ */
 .log{
@@ -627,12 +718,12 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   scroll-snap-type: x mandatory;
   padding: 1rem 0;
   width: 100%;
-  scrollbar-width: none; /* Hide scrollbars for Firefox */
-  -ms-overflow-style: none; /* Hide scrollbars for IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .carousel-track::-webkit-scrollbar {
-  display: none; /* Hide scrollbars for Chrome/Safari */
+  display: none;
 }
 
 .tc-grid,
@@ -663,7 +754,6 @@ html[data-theme="light"] .btn-primary{color:#fff;}
 .tc-card h3{font-size:20px; margin-bottom:8px;}
 .tc-desc{color:var(--muted); font-size:15.5px; margin-bottom:14px;}
 
-/* Navigation Buttons for Carousel */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -698,7 +788,6 @@ html[data-theme="light"] .btn-primary{color:#fff;}
   pointer-events: none;
 }
 
-/* LINE CLAMPING & SHOW MORE FIXES */
 .is-clamped {
   display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
@@ -1017,86 +1106,3 @@ a:focus-visible, button:focus-visible{
 @media (prefers-reduced-motion: reduce){
   .crawling-bug{animation:none; transition:none;}
 }
-/* --- Marquee Container Settings --- */
-.marquee-container {
-  overflow: hidden;
-  user-select: none;
-  display: flex;
-  width: 100%;
-  /* Optional: Creates a professional fade-out mask on left/right edges */
-  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
-  padding: 10px 0;
-}
-
-/* --- The Flex Track --- */
-.chip-track {
-  display: flex;
-  width: max-content;
-  gap: 15px; /* Spacing between the original and duplicate group */
-}
-
-.chip-group {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 15px; /* Spacing between individual chips */
-}
-
-/* --- QA Green Build Status Dot --- */
-.status-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: #2ec4b6; /* High-visibility QA Green */
-  border-radius: 50%;
-  margin-right: 8px;
-  box-shadow: 0 0 8px #2ec4b6;
-  flex-shrink: 0;
-}
-
-/* --- Interactive Hover Behaviour --- */
-.marquee-container:hover .chip-track {
-  animation-play-state: paused; /* Pauses smoothly when recruiter hovers */
-}
-
-.chip {
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.chip:hover {
-  transform: scale(1.05);
-  border-color: #2ec4b6 !important; /* Visual confirmation on selection */
-}
-
-/* --- Animations: Left & Right Pipelines --- */
-.track-left {
-  animation: scrollLeft 35s linear infinite;
-}
-
-.track-right {
-  animation: scrollRight 25s linear infinite; /* Slightly faster/different speed for dynamic contrast */
-}
-
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* Shifts exactly half the width of the combined (original + clone) track */
-    transform: translateX(calc(-50% - 7.5px)); 
-  }
-}
-
-@keyframes scrollRight {
-  0% {
-    transform: translateX(calc(-50% - 7.5px));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
