@@ -330,3 +330,28 @@ body {
     display: none;
   }
 }
+.marquee-wrapper {
+  overflow: hidden;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-content span {
+  display: inline-block;
+  margin-right: 30px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--primary-color);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
