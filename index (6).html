@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Arslan Akram - QA Engineer</title>
+<meta name="description" content="QA Engineer specializing in manual, API, and regression testing across web, mobile, and backend systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PIPELINE NAV ================= -->
+<header class="pipeline" id="pipeline">
+  <div class="pipeline-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">&gt;_</span>
+      <span class="brand-text">arslan<span class="cursor-blink">.</span>akram</span>
+    </a>
+
+    <nav class="stages" id="stages" aria-label="Page sections">
+      <a href="#home" class="stage" data-target="home"><span class="stage-dot"></span><span class="stage-label">Home</span></a>
+      <span class="stage-line"></span>
+      <a href="#about" class="stage" data-target="about"><span class="stage-dot"></span><span class="stage-label">About</span></a>
+      <span class="stage-line"></span>
+      <a href="#skills" class="stage" data-target="skills"><span class="stage-label">Skills</span></a>
+      <span class="stage-line"></span>
+      <a href="#experience" class="stage" data-target="experience"><span class="stage-dot"></span><span class="stage-label">Experience</span></a>
+      <span class="stage-line"></span>
+      <a href="#projects" class="stage" data-target="projects"><span class="stage-dot"></span><span class="stage-label">Projects</span></a>
+      <span class="stage-line"></span>
+      <a href="#artifacts" class="stage" data-target="artifacts"><span class="stage-dot"></span><span class="stage-label">Artifacts</span></a>
+      <span class="stage-line"></span>
+      <a href="#contact" class="stage" data-target="contact"><span class="stage-dot"></span><span class="stage-label">Contact</span></a>
+    </nav>
+
+    <div class="pipeline-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cycle color theme" aria-pressed="false" title="Cycle theme: dark / light / slate / ledger / cyberpunk / midnight">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+      <button class="theme-toggle" data-font-cycle aria-label="Change font style" title="Try a different font pairing">Aa</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer">
+  <a href="#home" class="drawer-link" data-target="home">Home</a>
+  <a href="#about" class="drawer-link" data-target="about">About</a>
+  <a href="#skills" class="drawer-link" data-target="skills">Skills</a>
+  <a href="#experience" class="drawer-link" data-target="experience">Experience</a>
+  <a href="#projects" class="drawer-link" data-target="projects">Projects</a>
+  <a href="#artifacts" class="drawer-link" data-target="artifacts">Artifacts</a>
+  <a href="#contact" class="drawer-link" data-target="contact">Contact</a>
+</div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="section hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">🔍 currently scanning for defects</p>
+      <h1>Hi, I&rsquo;m Muhammad Arslan<span class="hero-cursor">|</span></h1>
+      <p class="hero-role">I&rsquo;m a <span class="hero-rotate" id="heroRotate">SQA Engineer</span></p>
+      <p class="hero-quote">&ldquo;Testers don&rsquo;t break the product, they break illusions about the product.&rdquo;<span>- Michael Bolton</span></p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View test cases</a>
+        <a href="https://arslanakra.github.io/resume/M%20Arslan%20SQA-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download resume</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/arslanakra" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sqa-arslan-akram/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:arsalantaqi255@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <div class="terminal" id="terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+        <span class="terminal-title">test_portfolio.spec.ts</span>
+      </div>
+      <div class="scan-line" aria-hidden="true"></div>
+      <div class="terminal-body" id="terminalBody">
+        <div class="t-line" data-text="$ run-suite --profile=career"></div>
+        <div class="t-line" data-text="describe('Muhammad Arslan Akram')"></div>
+        <div class="t-line t-indent" data-text="&#10003; role: 'QA Engineer'"></div>
+        <div class="t-line t-indent" data-text="&#10003; experience: '2+ years'"></div>
+        <div class="t-line t-indent" data-text="&#10003; stack: 'Postman, JMeter, SQL, Playwright'"></div>
+        <div class="t-line t-indent" data-text="&#10003; bug_rate: 'reduced'"></div>
+        <div class="t-line t-result" data-text="Suite passed - 1 spec, 0 failures"></div>
+        <div class="t-line t-cursor" data-text=""></div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+    <span>scroll</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <p class="stage-tag">STAGE 01 · ABOUT</p>
+  <h2 class="section-title">Summary</h2>
+  <div class="about-grid">
+    <p class="about-text">
+      As a Software QA Engineer with over two years of experience, I specialize in delivering high-quality,
+      stable products across web, mobile, and backend systems. I excel at manual testing, API testing,
+      regression cycles, and backend validation using tools like Postman, JMeter, and SQL. I have a proven
+      track record of reducing production bug rates by designing targeted test scenarios and consistently
+      collaborating with cross-functional teams. My experience spans financial applications, chat-based
+      systems, and restaurant POS platforms.
+    </p>
+    <div class="about-side">
+      <div class="info-card">
+        <p class="info-label">Education</p>
+        <p class="info-title">BS Information Technology</p>
+        <p class="info-sub">Muhammad Nawaz Sharif University of Agriculture, Multan</p>
+        <p class="info-sub">Major: Software Engineering, Android Development, DBMS</p>
+        <p class="info-date">Aug 2018 - Jul 2022</p>
+      </div>
+      <div class="info-card">
+        <p class="info-label">Certifications</p>
+        <ul class="cert-list">
+          <li><a href="https://arslanakra.github.io/assets/certificates/SixSigmaYellowBelt-MArslanAkram.pdf" target="_blank" rel="noopener">Six Sigma Yellow Belt - GoLeanSixSigma</a></li>
+          <li><a href="https://arslanakra.github.io/assets/certificates/Adv-Playwright.png" target="_blank" rel="noopener">Advanced Playwright - Test Automation University</a></li>
+          <li><a href="https://arslanakra.github.io/assets/certificates/Web-Elements.png" target="_blank" rel="noopener">Web Element Locator Strategies - Applitools</a></li>
+          <li><a href="https://arslanakra.github.io/assets/certificates/TestCaseManagement-MArslanAkram.pdf" target="_blank" rel="noopener">Test Case Management - 10Pearls University</a></li>
+        </ul>
+        <a class="info-more" href="https://www.linkedin.com/in/sqa-arslan-akram/details/certifications/" target="_blank" rel="noopener">View more on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS / PIPELINE ================= -->
+<section class="section" id="skills">
+  <p class="stage-tag">STAGE 02 · SKILLS PIPELINE</p>
+  <h2 class="section-title">Coverage report</h2>
+
+  <div class="pipeline-graph-card">
+    <div class="pipeline-graph">
+      <svg class="pipeline-svg" viewBox="0 0 1000 140" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 90 70 Q 215 30, 340 70 T 590 70 T 840 70 T 910 70" class="pipeline-path-bg" />
+        <path d="M 90 70 Q 215 30, 340 70 T 590 70 T 840 70 T 910 70" class="pipeline-pulse pulse-a" />
+        <path d="M 90 70 Q 215 30, 340 70 T 590 70 T 840 70 T 910 70" class="pipeline-pulse pulse-b" />
+      </svg>
+
+      <span class="loose-dot ld1"></span>
+      <span class="loose-dot ld2"></span>
+      <span class="loose-dot ld3"></span>
+      <span class="loose-dot ld4"></span>
+
+      <div class="pipeline-node">
+        <span class="node-title">Commit</span>
+        <div class="node-ring"><span class="node-ring-2"></span><span class="node-core"></span></div>
+        <span class="node-pill">VCS Push</span>
+      </div>
+
+      <div class="pipeline-node">
+        <span class="node-title">Unit &amp; Integration</span>
+        <div class="node-ring"><span class="node-ring-2"></span><span class="node-core"></span></div>
+        <span class="node-pill">Jest / API</span>
+      </div>
+
+      <div class="pipeline-node">
+        <span class="node-title">UI E2E Suite</span>
+        <div class="node-ring"><span class="node-ring-2"></span><span class="node-core"></span></div>
+        <span class="node-pill">Playwright</span>
+      </div>
+
+      <div class="pipeline-node">
+        <span class="node-title">Insights Delivery</span>
+        <div class="node-ring node-ring-double"><span class="node-ring-2"></span><span class="node-core"></span></div>
+        <span class="node-pill">Report</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee-container tools-marquee">
+    <div class="chip-track track-left">
+      <div class="chip-group">
+        <span class="tool-chip"><span class="tool-icon">&#128268;</span>Postman<span class="tag">API</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#8644;</span>REST Assured<span class="tag">API</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#9881;</span>GitHub Actions<span class="tag">CI/CD</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#127917;</span>Playwright<span class="tag">E2E</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#128202;</span>JMeter<span class="tag">LOAD</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#128190;</span>MySQL<span class="tag">DB</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#128203;</span>Jira<span class="tag">TRACK</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#127794;</span>Git<span class="tag">VCS</span></span>
+      </div>
+      <div class="chip-group" aria-hidden="true">
+        <span class="tool-chip"><span class="tool-icon">&#128268;</span>Postman<span class="tag">API</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#8644;</span>REST Assured<span class="tag">API</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#9881;</span>GitHub Actions<span class="tag">CI/CD</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#127917;</span>Playwright<span class="tag">E2E</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#128202;</span>JMeter<span class="tag">LOAD</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#128190;</span>MySQL<span class="tag">DB</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#128203;</span>Jira<span class="tag">TRACK</span></span>
+        <span class="tool-chip"><span class="tool-icon">&#127794;</span>Git<span class="tag">VCS</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="section" id="experience">
+  <p class="stage-tag">STAGE 03 · EXPERIENCE</p>
+  <h2 class="section-title">Execution log</h2>
+  <div class="log">
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-dot"></span>
+        <span class="log-date">Aug 2024 → Present</span>
+      </div>
+      <div class="log-card">
+        <div class="log-card-head">
+          <h3>Green Fin Technologies</h3>
+          <div class="badge-group">
+            <span class="badge badge-bug">🐛 −15% bug ratio</span>
+            <span class="badge badge-pass">RUNNING</span>
+          </div>
+        </div>
+        <p class="log-role">SQA Engineer</p>
+        <ul class="log-list is-clamped">
+          <li>Performed functional, regression, UI/UX, and API testing across web and mobile platforms</li>
+          <li>Validated backend APIs with Postman; load tested endpoints using JMeter</li>
+          <li>Reviewed error logs and created high-priority test scenarios to catch issues early</li>
+          <li>Tested and validated TestFlight builds for mobile apps before production releases</li>
+          <li>Reduced bug ratio by 15% through proactive error resolution</li>
+          <li>Collaborated with developers, designers, and product managers during UAT cycles</li>
+          <li>Produced QA reports, wrote test plans, and shared progress with stakeholders</li>
+        </ul>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-dot log-dot-done"></span>
+        <span class="log-date">Sep 2022 → Jul 2024</span>
+      </div>
+      <div class="log-card">
+        <div class="log-card-head">
+          <h3>Software Technologies</h3>
+          <span class="badge badge-done">PASS</span>
+        </div>
+        <p class="log-role">SQA Engineer</p>
+        <ul class="log-list is-clamped">
+          <li>Led QA for a multi-restaurant POS system (Pistachio) and handled hotel management app QA</li>
+          <li>Created detailed test cases, resolution reports, and executed complete E2E testing</li>
+          <li>Performed regression testing and documented bugs in Jira with clear reproduction steps</li>
+          <li>Collaborated across UI/UX, frontend, and backend teams for quality assurance</li>
+          <li>Contributed to improving QA processes through better documentation and error tracking</li>
+        </ul>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
+  <p class="stage-tag">STAGE 04 · PROJECTS</p>
+  <h2 class="section-title">Case files</h2>
+
+  <!-- 1. Case Files Carousel Wrapper -->
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" aria-label="Previous Project">&larr;</button>
+
+    <div class="tc-grid carousel-track" data-carousel>
+      
+      <article class="tc-card">
+        <div class="tc-head">
+          <span class="tc-id">TC-001</span>
+          <span class="badge badge-pass">RUNNING</span>
+        </div>
+        <h3>MySalarium - Send Money App</h3>
+        <p class="tc-desc">Mobile remittance app built on Intermex APIs, handling send money transfers to single and multiple payees with real-time status tracking.</p>
+        <div class="tc-tags">
+          <span class="tag">Send Money Flow</span><span class="tag">Multi-Payee Testing</span><span class="tag">Real-Time Status</span><span class="tag">API Testing (Intermex)</span>
+        </div>
+        <ul class="log-list is-clamped">
+          <li>Tested the core send money flow and the send again flow for repeat transfers</li>
+          <li>Verified transfers to a single payee and across multiple payees in one session</li>
+          <li>Tested cancel transfer scenarios, including cancellation at different stages of an in-flight transaction</li>
+          <li>Validated real-time status updates against the Intermex API to confirm the app reflected accurate transfer states (pending, sent, cancelled)</li>
+          <li>Tested TestFlight builds and monitored crash logs to catch issues before release</li>
+        </ul>
+        <button class="card-expand" data-clamp-toggle>Show more</button> 
+      </article>
+
+      <article class="tc-card">
+        <div class="tc-head">
+          <span class="tc-id">TC-002</span>
+          <div class="badge-group">
+            <span class="badge badge-bug">🐛 Hardware + OCR</span>
+            <span class="badge badge-pass">RUNNING</span>
+          </div>
+        </div>
+        <h3>Agent POS System - Check Cashing &amp; OCR Automation</h3>
+        <p class="tc-desc">End-to-end QA for an agent-facing POS system handling check cashing, OCR-based check reading, and multi-scanner hardware integration.</p>
+        <div class="tc-tags">
+          <span class="tag">Playwright Automation</span><span class="tag">API Testing (Postman)</span><span class="tag">OCR Validation</span><span class="tag">Hardware Integration</span>
+        </div>
+        <ul class="log-list is-clamped">
+          <li>Tested the full check cashing flow, including terminal registration and auto-approve, auto-decline, and pending-decision paths</li>
+          <li>Validated Gemini OCR extraction and failure handling, covering amount mismatches, missing signatures, and CAR/LAR mismatches</li>
+          <li>Verified check data reading via MICR line parsing</li>
+          <li>Tested hardware integration across connected scanners, including flatbed, Aspire, and Epson models</li>
+          <li>Automated core regression scenarios with Playwright and validated backend responses via Postman</li>
+        </ul>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
+      </article>
+
+      <article class="tc-card">
+        <div class="tc-head">
+          <span class="tc-id">TC-003</span>
+          <div class="badge-group">
+            <span class="badge badge-bug">🐛 −30% bug ratio</span>
+            <span class="badge badge-pass">RUNNING</span>
+          </div>
+        </div>
+        <h3>Check Cashing Web App + Back Office</h3>
+        <p class="tc-desc">Customer-facing platform and its Back Office for accounts &amp; approval handling.</p>
+        <div class="tc-tags">
+          <span class="tag">Regression Testing</span><span class="tag">Compliance (CTR/SAR)</span><span class="tag">User Permissions</span>
+        </div>
+        <ul class="log-list is-clamped">
+          <li>Tested modules like approvals, user permissions, and reporting</li>
+          <li>Created test cases, resolution reports, and QA documentation</li>
+          <li>Performed regression testing during critical rollouts</li>
+          <li>Reduced bug ratio by 30% through preemptive scenario writing</li>
+          <li>Tested CTR and SAR modules for compliance and transaction monitoring</li>
+        </ul>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
+      </article>
+
+      <article class="tc-card">
+        <div class="tc-head">
+          <span class="tc-id">TC-004</span>
+          <div class="badge-group">
+            <span class="badge badge-bug">🐛 100+ scenarios</span>
+            <span class="badge badge-pass">RUNNING</span>
+          </div>
+        </div>
+        <h3>Chat App QA - Web &amp; Mobile</h3>
+        <p class="tc-desc">End-to-end QA for a real-time messaging app across mobile and web platforms with socket integration.</p>
+        <div class="tc-tags">
+          <span class="tag">Manual Testing</span><span class="tag">API Testing</span><span class="tag">Socket Validation</span>
+        </div>
+        <ul class="log-list is-clamped">
+          <li>Performed manual testing on both web and mobile clients</li>
+          <li>Reviewed frontend codebase and validated socket responses</li>
+          <li>Tested API endpoints and ensured message sync across devices</li>
+          <li>Analyzed error logs and created 100+ new test scenarios</li>
+          <li>Tested TestFlight builds and reduced post-release bug count</li>
+        </ul>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
+      </article>
+
+      <article class="tc-card">
+        <div class="tc-head">
+          <span class="tc-id">TC-005</span>
+          <span class="badge badge-pass">RUNNING</span>
+        </div>
+        <h3>Check Cashing Mobile App</h3>
+        <p class="tc-desc">Mobile version of a check cashing app built for real-time financial transactions.</p>
+        <div class="tc-tags">
+          <span class="tag">KYC Flow</span><span class="tag">API Testing</span><span class="tag">Crash Scenarios</span>
+        </div>
+        <ul class="log-list is-clamped">
+          <li>Tested transaction, KYC flow, receipt, and history modules</li>
+          <li>Performed API testing via Postman and backend data validation</li>
+          <li>Tested TestFlight builds and assisted in minimizing production issues</li>
+          <li>Created test cases and simulated edge-case crash scenarios</li>
+        </ul>
+        <button class="card-expand" data-clamp-toggle>Show more</button>
+      </article>
+
+    </div>
+
+    <button class="carousel-btn next" aria-label="Next Project">&rarr;</button>
+  </div>
+
+  <div class="findings-block">
+    <p class="panel-header">CRITICAL BUGS CAUGHT</p>
+
+    <!-- 2. Critical Bugs Carousel Wrapper -->
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" aria-label="Previous Bug">&larr;</button>
+
+      <div class="finding-grid carousel-track" data-carousel>
+
+        <article class="finding-card">
+          <div class="finding-head">
+            <span class="finding-id">BUG-001</span>
+            <span class="badge badge-bug">CRITICAL</span>
+          </div>
+          <h4>Fund Field Mapping &amp; Sign Inversion</h4>
+          <p class="finding-project">Check Cashing Web App - Money Transfer</p>
+          <p class="finding-desc is-clamped">Found that the API returned the additional service transaction amount under the <code>maxi</code> parameter, while the frontend rendered it in the <code>intermex</code> field, posting transactions to the wrong service category on daily financial sheets. Also found that negative amounts returned by the API were being converted to positive values by the React component rendering the transaction, inverting the sign and mismatching totals against money transfer debits.</p>
+          <p class="finding-impact"><span class="finding-label">Impact:</span> Financial reporting and debit reconciliation errors across daily transaction sheets.</p>
+          <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+          <button class="card-expand" data-clamp-toggle>Show more</button>
+        </article>
+
+        <article class="finding-card">
+          <div class="finding-head">
+            <span class="finding-id">BUG-002</span>
+            <span class="badge badge-bug">CRITICAL</span>
+          </div>
+          <h4>OCR Failure Payload &amp; Terminal Session Scoping</h4>
+          <p class="finding-project">Agent POS System</p>
+          <p class="finding-desc is-clamped">Found that when Gemini OCR failed to parse a check, the system still forwarded routing number, account number, check number, and owner information to the maker instead of blocking submission on an empty or invalid payload, risking downstream processing of unverified checks. Separately found that users provisioned for Terminal 890 could authenticate and transact on Terminal 891, breaking terminal-level access control.</p>
+          <p class="finding-impact"><span class="finding-label">Impact:</span> Business continuity risk from unverified check processing, plus broken terminal-level access control.</p>
+          <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+          <button class="card-expand" data-clamp-toggle>Show more</button>
+        </article>
+
+        <article class="finding-card">
+          <div class="finding-head">
+            <span class="finding-id">BUG-003</span>
+            <span class="badge badge-bug">CRITICAL</span>
+          </div>
+          <h4>Stale Navigation State After Wallet and Prepaid Detachment</h4>
+          <p class="finding-project">MySalarium - Send Money App</p>
+          <p class="finding-desc is-clamped">After detaching the wallet and prepaid sections from the app, 
+            the newer build was scoped to open into a calculator screen first, letting users calculate the real-time send and receive amount across countries before proceeding. 
+            In the detachment APK and TestFlight build, found that backgrounding the app while the calculator screen was open, then killing and relaunching it, 
+            caused the app to route back to the old wallet section instead of resuming on the calculator. Also found that after completing sign-in and registration, 
+            the app navigated to the prepaid section instead of the recipients list, 
+            which was the intended post-registration flow in the new build.</p>
+          <p class="finding-impact"><span class="finding-label">Impact:</span> Users landed on deprecated screens (wallet, prepaid) that were supposed to be fully detached from the app, 
+            breaking the calculator-first flow on relaunch and the correct post-registration flow into the recipients list.</p>
+          <p class="finding-status"><span class="finding-label">Status:</span> <span class="badge badge-pass">FIXED</span></p>
+          <button class="card-expand" data-clamp-toggle>Show more</button>
+        </article>
+
+      </div>
+
+      <button class="carousel-btn next" aria-label="Next Bug">&rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARTIFACTS ================= -->
+<section class="section" id="artifacts">
+  <p class="stage-tag">STAGE 05 · ARTIFACTS</p>
+  <h2 class="section-title">Attached evidence</h2>
+
+  <div class="artifact-block">
+    <p class="panel-header">DOCUMENTS</p>
+    <div class="doc-grid">
+      <a class="doc-card" href="https://arslanakra.github.io/assets/documentation/Test%20Cases%20Automation%20Playground%20CRM.pdf" target="_blank" rel="noopener">
+        <span class="doc-icon">PDF</span><span>Playground CRM - Test Cases</span>
+      </a>
+      <a class="doc-card" href="https://arslanakra.github.io/assets/documentation/Test_Cases_Module1.xlsx" target="_blank" rel="noopener">
+        <span class="doc-icon">XLS</span><span>Module 1 - Test Cases</span>
+      </a>
+      <a class="doc-card" href="https://arslanakra.github.io/assets/documentation/Pentest_Vulnerabilty_Report.pdf" target="_blank" rel="noopener">
+        <span class="doc-icon">PDF</span><span>Pentest - Vulnerability Report</span>
+      </a>
+      <a class="doc-card" href="https://arslanakra.github.io/assets/documentation/Login_Bypass_Report_Bug_001.pdf" target="_blank" rel="noopener">
+        <span class="doc-icon">BUG</span><span>Bug Report - Login Bypass</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="artifact-block">
+    <p class="panel-header">SCREENSHOTS</p>
+    <div class="shot-grid">
+      <a href="https://arslanakra.github.io/assets/screenshots/DB2.jpg" target="_blank" rel="noopener" class="shot"><img src="https://arslanakra.github.io/assets/screenshots/DB2.jpg" alt="SQL query to find object in database" loading="lazy"><span>Query: Find Object in DB</span></a>
+      <a href="https://arslanakra.github.io/assets/screenshots/DB3.jpg" target="_blank" rel="noopener" class="shot"><img src="https://arslanakra.github.io/assets/screenshots/DB3.jpg" alt="SQL query with where and order by" loading="lazy"><span>Query: Where &amp; Order By</span></a>
+      <a href="https://arslanakra.github.io/assets/screenshots/DB1.jpg" target="_blank" rel="noopener" class="shot"><img src="https://arslanakra.github.io/assets/screenshots/DB1.jpg" alt="SQL group by records" loading="lazy"><span>Query: Group By Records</span></a>
+      <a href="https://arslanakra.github.io/assets/screenshots/Postman.jpeg" target="_blank" rel="noopener" class="shot"><img src="https://arslanakra.github.io/assets/screenshots/Postman.jpeg" alt="Postman JSON response" loading="lazy"><span>Postman - JSON &amp; Results</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RECOMMENDATION ================= -->
+<section class="section rec-section">
+  <div class="rec-carousel">
+    <div class="rec-track">
+
+      <div class="rec-slide">
+        <div class="rec-card">
+          <p class="rec-status">APPROVED BY REVIEWER</p>
+          <p class="rec-text">&ldquo;Arslan is an exceptional QA Engineer with a keen eye for detail and a structured testing approach.
+          His expertise in manual testing, API testing with Postman, and error analysis makes him a valuable asset.
+          A great team player, he ensures product quality and stability. Highly recommended!&rdquo;</p>
+          <p class="rec-author">Asim Junaid, .NET Developer (ASP.NET Core / MVC)</p>
+        </div>
+      </div>
+
+      <div class="rec-slide">
+        <div class="rec-card">
+          <p class="rec-status">APPROVED BY REVIEWER</p>
+          <p class="rec-text">&ldquo;I've worked with Arslan and was consistently impressed by their attention to detail, strong testing skills, and collaborative attitude. 
+            They play a key role in ensuring high-quality releases and are a great asset to any QA team.&rdquo;</p>
+          <p class="rec-author">Abdullah Sameer, Software Engineer</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="rec-nav">
+      <button class="rec-arrow" data-rec-prev aria-label="Previous recommendation">‹</button>
+      <div class="rec-dots"></div>
+      <button class="rec-arrow" data-rec-next aria-label="Next recommendation">›</button>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:16px;"><a class="info-more" href="https://www.linkedin.com/in/sqa-arslan-akram/details/recommendations/" target="_blank" rel="noopener">View more on LinkedIn →</a></p>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <p class="stage-tag">STAGE 06 · CONTACT</p>
+  <h2 class="section-title">Open a ticket</h2>
+  <div class="contact-grid">
+    <form class="ticket" id="ticketForm">
+      <label for="tName">Name</label>
+      <input type="text" id="tName" name="name" placeholder="Your name" required>
+      <label for="tEmail">Email</label>
+      <input type="email" id="tEmail" name="email" placeholder="you@example.com" required>
+      <label for="tMsg">Message</label>
+      <textarea id="tMsg" name="message" rows="5" placeholder="What would you like to talk about?" required></textarea>
+      <button type="submit" class="btn btn-primary">Send via email</button>
+      <p class="ticket-note">Opens your email app</p>
+    </form>
+    <div class="contact-side">
+      <a class="contact-link" href="mailto:arsalantaqi255@gmail.com">
+        <span class="contact-label">Email</span><span>arsalantaqi255@gmail.com</span>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/sqa-arslan-akram/" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span><span>sqa-arslan-akram</span>
+      </a>
+      <a class="contact-link" href="https://github.com/arslanakra" target="_blank" rel="noopener">
+        <span class="contact-label">GitHub</span><span>@arslanakra</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <p>// build: passing · Multan, Pakistan</p>
+  <p>&copy; 2026 Muhammad Arslan Akram</p>
+</footer>
+
+<div class="crawling-bug" id="crawlingBug" title="Catch me if you can">🐞</div>
+<script src="script.js"></script>
+</body>
+</html>
